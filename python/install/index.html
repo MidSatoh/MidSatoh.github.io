@@ -61,12 +61,12 @@ vagrantやDockerなどの仮想環境については使用しない前提とな�
 <script src="/js/mermaid.min.js" defer></script>
 <div class="mermaid" align="center">
     
-graph TD;
-    A[Python3のインストール] --> B{複数の<br>バージョンの<br>切り替え}
-    B -->|必要| F[pyenvまたはwin-pyenvで<br>インストールする]
-    B -->|不要| D{統計などで利用する}
-    D -->|利用する| G[Anacondaをインストールする]
-    D -->|利用しない| H[インストーラでインストールする]
+graph LR;
+    A{複数の<br>バージョンの<br>切り替え}
+    A -->|必要| B[pyenvまたはwin-pyenvで<br>インストールする]
+    A -->|不要| C{統計などで<br>利用する}
+    C -->|利用する| D[Anacondaを<br>インストールする]
+    C -->|利用しない| E[Pythonインストーラで<br>インストールする]
 
 </div>
 <div class="edit-meta">
