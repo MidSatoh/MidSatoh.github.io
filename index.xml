@@ -49,6 +49,25 @@ Eclipseの設定（Windowsの場合は[ウィンドウ] -&amp;gt; [設定]、Mac
     </item>
     
     <item>
+      <title>Pythonインストーラによるインストール</title>
+      <link>https://midsatoh.github.io/python/install/install_soft/</link>
+      <pubDate>Tue, 19 Nov 2019 14:31:47 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/python/install/install_soft/</guid>
+      <description> インストーラの入手 インストーラは、Pythonの公式サイトから入手する。
+Python公式サイト：https://www.python.org/
+公式サイトの「Downloads」リンクからダウンロード可能。 ただし、Downloadsに記載されているボタンからダウンロードすると32bit版のインストーラになるため、必ずOS別のリンクに一度移動する。
+OSの選択が完了したら、バージョンの選択をする。 先頭にアクセス時の最新バージョンが記載されているため、そちらを選択する。
+バージョン別のダウンロードサイトへ移動する。
+ダウンロードサイトの下部に、OS別のインストーラを選択するリンクがあるため、そちらからOS別のインストーラを使用してインストールする。
+Macの場合はpkgファイル、Windowsの場合はexeファイルがダウンロードされるため、ダウンロード後は指示に従ってインストールする。
+インストール 基本的にはデフォルト設定のままでインストールする。
+インストールの確認 コマンドプロンプト（Macの場合はターミナル）を起動し、Macの場合はpython3、Windowsの場合はpythonコマンドを実行する。 実行結果が以下のような画面となればインストール完了。
+終了する場合は、quit()またはexit()を入力し、終了させる。
+&amp;gt;&amp;gt;&amp;gt; quit()</description>
+    </item>
+    
+    <item>
       <title>Pythonの特徴</title>
       <link>https://midsatoh.github.io/python/python_aspects/</link>
       <pubDate>Mon, 18 Nov 2019 09:40:10 +0900</pubDate>
