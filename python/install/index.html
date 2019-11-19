@@ -3,7 +3,7 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>環境設定 - My New Hugo Site</title>
+<title>環境設定 - MID-S</title>
 <meta name="generator" content="Hugo 0.59.0" />
 <link href="https://midsatoh.github.io/index.xml" rel="alternate" type="application/rss+xml">
 <link rel="canonical" href="https://midsatoh.github.io/python/install/">
@@ -20,7 +20,7 @@
 </style>
 </head>
 <body><div class="container"><header>
-<h1>My New Hugo Site</h1>
+<h1>MID-S</h1>
 
 </header>
 <div class="global-menu">
@@ -50,9 +50,25 @@ vagrantやDockerなどの仮想環境については使用しない前提とな�
 
 <p>Qiitaで掲載していた過去の記事</p>
 
-<p><a href="https://qiita.com/ms-rock/items/6e4498a5963f3d9c4a67">Pythonインストール（Mac編）（旧）</a></p>
+<p><a href="https://qiita.com/ms-rock/items/6e4498a5963f3d9c4a67" target="_blank">Pythonインストール（Mac編）（旧）</a></p>
 
-<p><a href="https://qiita.com/ms-rock/items/72b8f1abc661c539bb09">Python3インストール（Mac編）</a></p>
+<p><a href="https://qiita.com/ms-rock/items/72b8f1abc661c539bb09" target="_blank">Python3インストール（Mac編）</a></p>
+
+<h2 id="インストールするバージョンやその他のアプリの選択方法">インストールするバージョンやその他のアプリの選択方法</h2>
+
+<p>Pythonのインストール方法は、利用する環境やプログラムの方針によって選択する必要がある。</p>
+
+<script src="/js/mermaid.min.js" defer></script>
+<div class="mermaid" align="center">
+    
+graph TD;
+    A[Python3のインストール] --> B{複数の<br>バージョンの<br>切り替え}
+    B -->|必要| F[pyenvまたはwin-pyenvで<br>インストールする]
+    B -->|不要| D{統計などで利用する}
+    D -->|利用する| G[Anacondaをインストールする]
+    D -->|利用しない| H[インストーラでインストールする]
+
+</div>
 <div class="edit-meta">
 Last updated on 14 Nov 2019
 
@@ -84,8 +100,15 @@ Published on 14 Nov 2019
 <li class=""><a href="/java/">Java</a>
   
 <ul class="sub-menu">
+
+<li class=""><a href="/java/install/">環境設定</a>
+  
+<ul class="sub-menu">
 <li class=""><a href="/java/install/openjdk/">OpenJDKのインストール</a></li>
 <li class=""><a href="/java/install/eclipse/">Eclipseのインストールと設定</a></li>
+</ul>
+  
+</li>
 </ul>
   
 </li>
