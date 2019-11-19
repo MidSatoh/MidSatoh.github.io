@@ -1,1 +1,0 @@
-# MidSatoh.github.io
