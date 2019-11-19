@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Eclipseのインストールと設定 - My New Hugo Site</title>
+<meta name="generator" content="Hugo 0.59.0" />
+<link href="https://midsatoh.github.io/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://midsatoh.github.io/java/install/eclipse/">
+<link rel="stylesheet" href="https://midsatoh.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://midsatoh.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://midsatoh.github.io/js/bundle.js"></script><style>
+:root {
+  
+  
+}
+</style>
+</head>
+<body><div class="container"><header>
+<h1>My New Hugo Site</h1>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Eclipseのインストールと設定</h1>
+
+<h2 id="eclipseのインストール">Eclipseのインストール</h2>
+
+<p>Javaの開発用IDEと言えば、基本的に無償で利用可能であるEclipseや有償だが高機能なIntellJ IDEAなどが有名。</p>
+
+<p>Eclipse2018からはMergeDoc ProjectにてSpringToolSuiteも日本語プラグインPleiadesと同梱されるようになったためこちらを利用することにする。</p>
+
+<p>MergeDoc Project公式サイト：<a href="https://mergedoc.osdn.jp">https://mergedoc.osdn.jp</a></p>
+
+<p><img src="/images/install/02_MergeDoc_site.png" alt="MergeDoc Project公式サイトより" /></p>
+
+<p>自身のプラットフォームに合わせ、JavaのFull Editionをダウンロードし、zipファイルの解凍をする。</p>
+
+<div class="panel panel-notice"><div class="panel-header">
+<h3>notice</h3>
+</div><div class="panel-body">
+
+Windows の場合はエクスプローラーによる解凍は失敗するため、[7Zip](https://sevenzip.osdn.jp)などの解凍ソフトが必要になる。
+
+</div>
+</div>
+
+<h2 id="eclipseの環境設定">Eclipseの環境設定</h2>
+
+<p>インストールしたOpenJDKをEclipseで適用させるためには、JREの設定が必要となる。</p>
+
+<p>Eclipseの設定（Windowsの場合は[ウィンドウ] -&gt; [設定]、Macの場合は[Eclipse]-&gt;[環境設定])より、[Java]-&gt;[インストール済みのJRE]を開く。</p>
+
+<p><img src="/images/install/03_Eclipse_JRE01.png" alt="インストール済みのJRE" /></p>
+
+<p>[追加]ボタンを押下し、標準VMを選択する。</p>
+
+<p><img src="/images/install/03_Eclipse_JRE02.png" alt="標準VM" /></p>
+
+<p>[JREホーム]のディレクトリで、AdoptOpenJDKをインストールした箇所を選択する。JRE名は任意。</p>
+
+<p><img src="/images/install/03_Eclipse_JRE03.png" alt="JREホーム" /></p>
+
+<p>デフォルトのインストール場所は以下の通り。</p>
+
+<ul>
+<li>Windows : C:\Program Files (x86)\AdoptOpenJDK\jdk-11.0.X.XX-hotspot</li>
+<li>Mac : /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home</li>
+</ul>
+
+<p>追加後、追加したJREにチェックを入れてから適用するとデフォルトでAdoptOpenJDKを利用して実行される。</p>
+
+<p><img src="/images/install/03_Eclipse_JRE04.png" alt="デフォルトJRE" /></p>
+<div class="edit-meta">
+Last updated on 30 Oct 2019
+
+
+<br>
+Published on 30 Oct 2019
+<br></div><nav class="pagination"><a class="nav nav-prev" href="/java/install/openjdk/" title="OpenJDKのインストール"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - OpenJDKのインストール</a>
+<a class="nav nav-next" href="/java/install/openjdk/" title="OpenJDKのインストール">Next - OpenJDKのインストール <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://midsatoh.github.io/">Home</a></li>
+
+<li class=""><a href="/python/">Python</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="/python/python_aspects/">Pythonの特徴</a></li>
+
+<li class=""><a href="/python/install/">環境設定</a>
+  
+</li>
+</ul>
+  
+</li>
+
+<li class="parent"><a href="/java/">Java</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="/java/install/openjdk/">OpenJDKのインストール</a></li>
+<li class="active"><a href="/java/install/eclipse/">Eclipseのインストールと設定</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://midsatoh.github.io/java/install/openjdk/</loc>
+    <lastmod>2019-10-30T11:03:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/java/install/eclipse/</loc>
+    <lastmod>2019-10-30T14:01:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/python/</loc>
+    <lastmod>2019-11-13T17:08:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/java/</loc>
+    <lastmod>2019-11-19T09:32:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/</loc>
+    <lastmod>2019-11-18T09:40:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/python/python_aspects/</loc>
+    <lastmod>2019-11-18T09:40:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/python/install/</loc>
+    <lastmod>2019-11-14T13:27:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/tags/eclipse/</loc>
+    <lastmod>2019-10-30T14:01:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/tags/java/</loc>
+    <lastmod>2019-10-30T14:01:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/tags/</loc>
+    <lastmod>2019-10-30T14:01:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/tags/openjdk/</loc>
+    <lastmod>2019-10-30T11:03:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/categories/</loc>
+  </url>
+  
+</urlset>

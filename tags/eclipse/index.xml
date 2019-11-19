@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>eclipse on My New Hugo Site</title>
+    <link>https://midsatoh.github.io/tags/eclipse/</link>
+    <description>Recent content in eclipse on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 30 Oct 2019 14:01:47 +0900</lastBuildDate>
+    
+	<atom:link href="https://midsatoh.github.io/tags/eclipse/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Eclipseのインストールと設定</title>
+      <link>https://midsatoh.github.io/java/install/eclipse/</link>
+      <pubDate>Wed, 30 Oct 2019 14:01:47 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/java/install/eclipse/</guid>
+      <description>Eclipseのインストール Javaの開発用IDEと言えば、基本的に無償で利用可能であるEclipseや有償だが高機能なIntellJ IDEAなどが有名。
+Eclipse2018からはMergeDoc ProjectにてSpringToolSuiteも日本語プラグインPleiadesと同梱されるようになったためこちらを利用することにする。
+MergeDoc Project公式サイト：https://mergedoc.osdn.jp
+自身のプラットフォームに合わせ、JavaのFull Editionをダウンロードし、zipファイルの解凍をする。
+notice Windows の場合はエクスプローラーによる解凍は失敗するため、[7Zip](https://sevenzip.osdn.jp)などの解凍ソフトが必要になる。   Eclipseの環境設定 インストールしたOpenJDKをEclipseで適用させるためには、JREの設定が必要となる。
+Eclipseの設定（Windowsの場合は[ウィンドウ] -&amp;gt; [設定]、Macの場合は[Eclipse]-&amp;gt;[環境設定])より、[Java]-&amp;gt;[インストール済みのJRE]を開く。
+[追加]ボタンを押下し、標準VMを選択する。
+[JREホーム]のディレクトリで、AdoptOpenJDKをインストールした箇所を選択する。JRE名は任意。
+デフォルトのインストール場所は以下の通り。
+ Windows : C:\Program Files (x86)\AdoptOpenJDK\jdk-11.0.X.XX-hotspot Mac : /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home  追加後、追加したJREにチェックを入れてから適用するとデフォルトでAdoptOpenJDKを利用して実行される。</description>
+    </item>
+    
+  </channel>
+</rss>
