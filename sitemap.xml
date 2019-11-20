@@ -3,13 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://midsatoh.github.io/python/install/install_soft/</loc>
+    <lastmod>2019-11-19T14:31:47+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://midsatoh.github.io/java/install/openjdk/</loc>
     <lastmod>2019-10-30T11:03:04+09:00</lastmod>
   </url>
   
   <url>
+    <loc>https://midsatoh.github.io/python/install/anaconda/</loc>
+    <lastmod>2019-11-20T08:29:31+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://midsatoh.github.io/java/install/eclipse/</loc>
     <lastmod>2019-10-30T14:01:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/python/install/pyenv/</loc>
+    <lastmod>2019-11-14T13:14:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/python/install/pyenv-win/</loc>
+    <lastmod>2019-11-20T13:23:47+09:00</lastmod>
   </url>
   
   <url>
@@ -20,16 +40,6 @@
   <url>
     <loc>https://midsatoh.github.io/java/</loc>
     <lastmod>2019-11-19T09:32:02+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://midsatoh.github.io/python/install/anaconda/</loc>
-    <lastmod>2019-11-20T08:29:31+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://midsatoh.github.io/python/install/install_soft/</loc>
-    <lastmod>2019-11-19T14:31:47+09:00</lastmod>
   </url>
   
   <url>
@@ -50,11 +60,6 @@
   <url>
     <loc>https://midsatoh.github.io/python/install/</loc>
     <lastmod>2019-11-14T13:27:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://midsatoh.github.io/python/install/pyenv/</loc>
-    <lastmod>2019-11-14T13:14:00+09:00</lastmod>
   </url>
   
   <url>

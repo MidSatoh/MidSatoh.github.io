@@ -12,56 +12,6 @@
     
     
     <item>
-      <title>OpenJDKのインストール</title>
-      <link>https://midsatoh.github.io/java/install/openjdk/</link>
-      <pubDate>Wed, 30 Oct 2019 11:03:04 +0900</pubDate>
-      
-      <guid>https://midsatoh.github.io/java/install/openjdk/</guid>
-      <description> OpenJDK OracleJavaが有償化されたため、現在無償でJavaでの開発を行う際にはOpenJDKを利用する必要がある。
-OpenJDK公式サイト：http://openjdk.java.net
-よりソースコードからコンパイルする方法もあるが、初級者が学習する際にはバイナリでの提供を行っている団体のサイトより取得する。
-今回は、様々なプラットフォームに対応済みであるAdoptOpenJDKを利用する。
-AdoptOpenJDK公式サイト：https://adoptopenjdk.net
-AdoptOpenJDK 公式サイトにアクセスすると、以下のような画面となる。
- Choose a Version
- OpenJDKのバージョンを指定する。基本的にLTS（long term support：長期間サポートあり)を選択する。  Choose a JVM
- JavaVMを指定する。HotSpotはサン・マイクロシステムズが開発したオリジナルのJVM、OpenJ9はIBMが開発した別実装のJVMとなる。基本的にはHotSpotで問題ない。  ダウンロード
- 1、2 を指定後、ダウンロード可能となる。基本的にサイトにアクセスしたプラットフォームで利用可能なバージョンがダウンロード可能となるが、必要に応じてOther platformsのリンクより別のプラットフォーム向けのダウンロードも可能。  インストール
- macの場合はpkgファイル、Windowsの場合はmsiファイルでのダウンロードとなるため、実行後は指示に従ってインストールを実施する。   </description>
-    </item>
-    
-    <item>
-      <title>Eclipseのインストールと設定</title>
-      <link>https://midsatoh.github.io/java/install/eclipse/</link>
-      <pubDate>Wed, 30 Oct 2019 14:01:47 +0900</pubDate>
-      
-      <guid>https://midsatoh.github.io/java/install/eclipse/</guid>
-      <description>Eclipseのインストール Javaの開発用IDEと言えば、基本的に無償で利用可能であるEclipseや有償だが高機能なIntellJ IDEAなどが有名。
-Eclipse2018からはMergeDoc ProjectにてSpringToolSuiteも日本語プラグインPleiadesと同梱されるようになったためこちらを利用することにする。
-MergeDoc Project公式サイト：https://mergedoc.osdn.jp
-自身のプラットフォームに合わせ、JavaのFull Editionをダウンロードし、zipファイルの解凍をする。
-Windows環境での注意 Windows の場合はエクスプローラーによる解凍は失敗するため、7Zip(https://sevenzip.osdn.jp)などの解凍ソフトが必要になる。   Eclipseの環境設定 インストールしたOpenJDKをEclipseで適用させるためには、JREの設定が必要となる。
-Eclipseの設定（Windowsの場合は[ウィンドウ] -&amp;gt; [設定]、Macの場合は[Eclipse]-&amp;gt;[環境設定])より、[Java]-&amp;gt;[インストール済みのJRE]を開く。
-[追加]ボタンを押下し、標準VMを選択する。
-[JREホーム]のディレクトリで、AdoptOpenJDKをインストールした箇所を選択する。JRE名は任意。
-デフォルトのインストール場所は以下の通り。
- Windows : C:\Program Files (x86)\AdoptOpenJDK\jdk-11.0.X.XX-hotspot Mac : /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home  追加後、追加したJREにチェックを入れてから適用するとデフォルトでAdoptOpenJDKを利用して実行される。</description>
-    </item>
-    
-    <item>
-      <title>Anacondaのインストール（インストーラ版）</title>
-      <link>https://midsatoh.github.io/python/install/anaconda/</link>
-      <pubDate>Wed, 20 Nov 2019 08:29:31 +0900</pubDate>
-      
-      <guid>https://midsatoh.github.io/python/install/anaconda/</guid>
-      <description>Anacondaとは Pythonでは数値計算やデータ解析、グラフの描画などを作成することができるが、その際に必要なライブラリは通常pipコマンドなどで自身でインストールする。 Anacondaとは、このような計算系の作業に必要なライブラリやツールを一括でインストールすることができるディストリビューション（ツール群）である。
-Anacondaで用意されている主なライブラリ    ライブラリ名 概要     NumPy 多次元配列、ベクトルなどの数値計算で主に利用されるデータ型や関数など   SciPy 線形代数や積分などの科学技術計算など   Matplotlib グラフ描画に必要な関数など   Pandas 数表や時系列データなどを使用し、データ解析を行うデータ型や関数など    Anacondaに含まれる主なツール    ツール名 概要     conda パッケージ管理・仮想環境構築   JupyterLab/Jupyter Notebook Webベースの統合開発環境   Spyder 統合開発環境    Anacondaのダウンロード Anaconda公式サイト：https://www.anaconda.com/distribution/
-公式サイトのdownloadボタン、またはページ下部に移動するとダウンロード用のリンクがある。
-Python3系を利用しているAnacondaを選択し、ダウンロードを開始する。Windowsの場合はexeファイル、Macの場合はpkgファイルがダウンロードされる。
-Anacondaのインストール 基本的にはデフォルトでインストールする。 Anacondaはツールなども含まれるため、インストールには時間がかかる。</description>
-    </item>
-    
-    <item>
       <title>Pythonインストーラによるインストール</title>
       <link>https://midsatoh.github.io/python/install/install_soft/</link>
       <pubDate>Tue, 19 Nov 2019 14:31:47 +0900</pubDate>
@@ -81,16 +31,53 @@ Macの場合はpkgファイル、Windowsの場合はexeファイルがダウン�
     </item>
     
     <item>
-      <title>Pythonの特徴</title>
-      <link>https://midsatoh.github.io/python/python_aspects/</link>
-      <pubDate>Mon, 18 Nov 2019 09:40:10 +0900</pubDate>
+      <title>OpenJDKのインストール</title>
+      <link>https://midsatoh.github.io/java/install/openjdk/</link>
+      <pubDate>Wed, 30 Oct 2019 11:03:04 +0900</pubDate>
       
-      <guid>https://midsatoh.github.io/python/python_aspects/</guid>
-      <description>利用する、システムに採用する側から見た特徴 Pythonをこれから利用する側からみた特徴としては「豊富なライブラリ」「様々なサイトやサービスで利用されている実績」が有利な特徴と言える。特に、ライブラリについては多岐にわたっている。
- 画像／動画処理 数値計算／統計処理 ファイル入出力処理 データベース処理 ネットワーク処理  などの、自力で作成するには複雑な作業やセキュリティの考慮などが必要な処理や、多くの場所で利用可能な処理について、様々なライブラリが配布されている。 このようなライブラリを利用し、組み合わせることで用途に合わせたプログラムを作成することが可能となっている。
-プログラムを作成する、実装する側から見た特徴 Pythonを使って実際にプログラムを作成する・実装する立場から見た特徴としては、「学習コストの低さ」が大きな特徴と言えるであろう。
-例えば、「変数numに代入された値が10より大きい場合は&amp;rdquo;Over 10&amp;rdquo;と表示、そうでなければ&amp;rdquo;Other&amp;rdquo;と表示」というプログラムを、Javaで書いた場合とPythonで書いた場合で比較してみる。
-Javaで書いた場合(その1) class Sample { public static void main(String[] args){ int num = 11; if (num &amp;gt; 10){ System.out.println(&amp;#34;Over 10&amp;#34;); } else { System.out.println(&amp;#34;Other&amp;#34;); } } } Javaで書いた場合(その2) class Sample { public static void main(String[] args){ int num = 11; if (num &amp;gt; 10) System.out.println(&amp;#34;Over 10&amp;#34;); else System.out.println(&amp;#34;Other&amp;#34;); } } Pythonで書いた場合 num = 11 if num &amp;gt; 10: print(&amp;#39;Over 10&amp;#39;) else: print(&amp;#39;Other&amp;#39;) Javaの場合、同じ内容を記載した場合でも{}の有無、インデント（字下げ）の位置などが揃っていなくとも記述が可能。また、スクリプトを実行する場合でも必ずクラスが必要であるなどのルールが複雑である。 Pythonの場合、スクリプト実行の場合は必要な処理をファイルに記載するのみで実行が可能である。また、記述ルールにインデント（字下げ）が含まれるため、Pythonの初心者でも、熟練者でも同一の内容であれば基本的な記述方法は同じである。</description>
+      <guid>https://midsatoh.github.io/java/install/openjdk/</guid>
+      <description> OpenJDK OracleJavaが有償化されたため、現在無償でJavaでの開発を行う際にはOpenJDKを利用する必要がある。
+OpenJDK公式サイト：http://openjdk.java.net
+よりソースコードからコンパイルする方法もあるが、初級者が学習する際にはバイナリでの提供を行っている団体のサイトより取得する。
+今回は、様々なプラットフォームに対応済みであるAdoptOpenJDKを利用する。
+AdoptOpenJDK公式サイト：https://adoptopenjdk.net
+AdoptOpenJDK 公式サイトにアクセスすると、以下のような画面となる。
+ Choose a Version
+ OpenJDKのバージョンを指定する。基本的にLTS（long term support：長期間サポートあり)を選択する。  Choose a JVM
+ JavaVMを指定する。HotSpotはサン・マイクロシステムズが開発したオリジナルのJVM、OpenJ9はIBMが開発した別実装のJVMとなる。基本的にはHotSpotで問題ない。  ダウンロード
+ 1、2 を指定後、ダウンロード可能となる。基本的にサイトにアクセスしたプラットフォームで利用可能なバージョンがダウンロード可能となるが、必要に応じてOther platformsのリンクより別のプラットフォーム向けのダウンロードも可能。  インストール
+ macの場合はpkgファイル、Windowsの場合はmsiファイルでのダウンロードとなるため、実行後は指示に従ってインストールを実施する。   </description>
+    </item>
+    
+    <item>
+      <title>Anacondaのインストール（インストーラ版）</title>
+      <link>https://midsatoh.github.io/python/install/anaconda/</link>
+      <pubDate>Wed, 20 Nov 2019 08:29:31 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/python/install/anaconda/</guid>
+      <description>Anacondaとは Pythonでは数値計算やデータ解析、グラフの描画などを作成することができるが、その際に必要なライブラリは通常pipコマンドなどで自身でインストールする。 Anacondaとは、このような計算系の作業に必要なライブラリやツールを一括でインストールすることができるディストリビューション（ツール群）である。
+Anacondaで用意されている主なライブラリ    ライブラリ名 概要     NumPy 多次元配列、ベクトルなどの数値計算で主に利用されるデータ型や関数など   SciPy 線形代数や積分などの科学技術計算など   Matplotlib グラフ描画に必要な関数など   Pandas 数表や時系列データなどを使用し、データ解析を行うデータ型や関数など    Anacondaに含まれる主なツール    ツール名 概要     conda パッケージ管理・仮想環境構築   JupyterLab/Jupyter Notebook Webベースの統合開発環境   Spyder 統合開発環境    Anacondaのダウンロード Anaconda公式サイト：https://www.anaconda.com/distribution/
+公式サイトのdownloadボタン、またはページ下部に移動するとダウンロード用のリンクがある。
+Python3系を利用しているAnacondaを選択し、ダウンロードを開始する。Windowsの場合はexeファイル、Macの場合はpkgファイルがダウンロードされる。
+Anacondaのインストール 基本的にはデフォルトでインストールする。 Anacondaはツールなども含まれるため、インストールには時間がかかる。</description>
+    </item>
+    
+    <item>
+      <title>Eclipseのインストールと設定</title>
+      <link>https://midsatoh.github.io/java/install/eclipse/</link>
+      <pubDate>Wed, 30 Oct 2019 14:01:47 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/java/install/eclipse/</guid>
+      <description>Eclipseのインストール Javaの開発用IDEと言えば、基本的に無償で利用可能であるEclipseや有償だが高機能なIntellJ IDEAなどが有名。
+Eclipse2018からはMergeDoc ProjectにてSpringToolSuiteも日本語プラグインPleiadesと同梱されるようになったためこちらを利用することにする。
+MergeDoc Project公式サイト：https://mergedoc.osdn.jp
+自身のプラットフォームに合わせ、JavaのFull Editionをダウンロードし、zipファイルの解凍をする。
+Windows環境での注意 Windows の場合はエクスプローラーによる解凍は失敗するため、7Zip(https://sevenzip.osdn.jp)などの解凍ソフトが必要になる。   Eclipseの環境設定 インストールしたOpenJDKをEclipseで適用させるためには、JREの設定が必要となる。
+Eclipseの設定（Windowsの場合は[ウィンドウ] -&amp;gt; [設定]、Macの場合は[Eclipse]-&amp;gt;[環境設定])より、[Java]-&amp;gt;[インストール済みのJRE]を開く。
+[追加]ボタンを押下し、標準VMを選択する。
+[JREホーム]のディレクトリで、AdoptOpenJDKをインストールした箇所を選択する。JRE名は任意。
+デフォルトのインストール場所は以下の通り。
+ Windows : C:\Program Files (x86)\AdoptOpenJDK\jdk-11.0.X.XX-hotspot Mac : /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home  追加後、追加したJREにチェックを入れてから適用するとデフォルトでAdoptOpenJDKを利用して実行される。</description>
     </item>
     
     <item>
@@ -116,6 +103,36 @@ brew installコマンドを実施する際には、インターネットに接�
 % brew install pyenv Mac OS Catalinaからは、ターミナルのデフォルトシェルがbashからzshとなった。 そのため、pyenvの設定内容を~/.zprofileに以下を追加する。
 export PYENV_ROOT=${HOME}/.pyenv if [ -d &amp;#34;${PYENV_ROOT}&amp;#34; ]; then export PATH=${PYENV_ROOT}/bin:$PATH eval &amp;#34;$(pyenv init -)&amp;#34; fi zshではなくbashを利用しているMacの場合は、上記の内容は「~/.bash_profile」に記載する。   pyenvインストールの確認 pyenvのコマンドを実行し、インストールが完了しているか確認する。 今回はpyenvでインストールできるバージョンの一覧を表示させてみる。
 % pyenv install -l Available versions: 2.</description>
+    </item>
+    
+    <item>
+      <title>pyenv-winによるインストール（Windows）</title>
+      <link>https://midsatoh.github.io/python/install/pyenv-win/</link>
+      <pubDate>Wed, 20 Nov 2019 13:23:47 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/python/install/pyenv-win/</guid>
+      <description>pyenv-winとは Windows環境で、Macと同様にPythonのバージョンを切り替えて使用したい場合に利用するツールである。 Windows環境では、Python3.6とPython3.8などを切り替える程度であればインストーラで複数のバージョンをインストールするのみで問題はない。 しかし、例えばPython3.6.5とPython3.6.9を切り替える必要がある、などの細かい変更が必要な場合は、Macと同様にpyenvによる環境切り替えが必要になる。 このような環境切り替えを可能にするのが、pyenv-win(pyenv for Windows)である。
+pyenv-winのインストール（Pythonインストール済み) pyenv-winは事前にインストーラでPythonをインストールしておく必要がある。 まだインストールしていない場合は、Pythonインストーラによるインストールでインストールしておく。
+Pythonがインストールされたら、pipコマンドを使用してpyenv-winをインストールする。
+&amp;gt; pip install pyenv-win --target %USERPROFILE%/.pyenv pyenv-winのインストールが完了したら、環境変数に次の値を追加する。 Windows10のスタートボタン-&amp;gt;設定で検索画面に「環境変数」と入力する。
+環境変数画面から、Pathが設定されている箇所を選び、編集ボタンを押す。もしPathが存在しない場合は新規でPathを作成する。
+追加ボタンを押下し、以下の2つを追加する。
+ %USERPROFILE%.pyenv\pyenv-win\bin %USERPROFILE%.pyenv\pyenv-win\shims  すでにインストール済みのPythonのフォルダに環境変数が設定済みの場合は、今回追加したPathが先頭になるように上へや下へボタンを使って移動する。
+設定が完了したら、OKボタンを押して設定を終了する。
+pyenv-winによるインストールおよび切り替えはMacと同様なのでpyenvによるインストール（Mac） を参考とすること。</description>
+    </item>
+    
+    <item>
+      <title>Pythonの特徴</title>
+      <link>https://midsatoh.github.io/python/python_aspects/</link>
+      <pubDate>Mon, 18 Nov 2019 09:40:10 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/python/python_aspects/</guid>
+      <description>利用する、システムに採用する側から見た特徴 Pythonをこれから利用する側からみた特徴としては「豊富なライブラリ」「様々なサイトやサービスで利用されている実績」が有利な特徴と言える。特に、ライブラリについては多岐にわたっている。
+ 画像／動画処理 数値計算／統計処理 ファイル入出力処理 データベース処理 ネットワーク処理  などの、自力で作成するには複雑な作業やセキュリティの考慮などが必要な処理や、多くの場所で利用可能な処理について、様々なライブラリが配布されている。 このようなライブラリを利用し、組み合わせることで用途に合わせたプログラムを作成することが可能となっている。
+プログラムを作成する、実装する側から見た特徴 Pythonを使って実際にプログラムを作成する・実装する立場から見た特徴としては、「学習コストの低さ」が大きな特徴と言えるであろう。
+例えば、「変数numに代入された値が10より大きい場合は&amp;rdquo;Over 10&amp;rdquo;と表示、そうでなければ&amp;rdquo;Other&amp;rdquo;と表示」というプログラムを、Javaで書いた場合とPythonで書いた場合で比較してみる。
+Javaで書いた場合(その1) class Sample { public static void main(String[] args){ int num = 11; if (num &amp;gt; 10){ System.out.println(&amp;#34;Over 10&amp;#34;); } else { System.out.println(&amp;#34;Other&amp;#34;); } } } Javaで書いた場合(その2) class Sample { public static void main(String[] args){ int num = 11; if (num &amp;gt; 10) System.out.println(&amp;#34;Over 10&amp;#34;); else System.out.println(&amp;#34;Other&amp;#34;); } } Pythonで書いた場合 num = 11 if num &amp;gt; 10: print(&amp;#39;Over 10&amp;#39;) else: print(&amp;#39;Other&amp;#39;) Javaの場合、同じ内容を記載した場合でも{}の有無、インデント（字下げ）の位置などが揃っていなくとも記述が可能。また、スクリプトを実行する場合でも必ずクラスが必要であるなどのルールが複雑である。 Pythonの場合、スクリプト実行の場合は必要な処理をファイルに記載するのみで実行が可能である。また、記述ルールにインデント（字下げ）が含まれるため、Pythonの初心者でも、熟練者でも同一の内容であれば基本的な記述方法は同じである。</description>
     </item>
     
   </channel>
