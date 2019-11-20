@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>Anacondaのインストール（インストーラ版）</title>
+      <link>https://midsatoh.github.io/python/install/anaconda/</link>
+      <pubDate>Wed, 20 Nov 2019 08:29:31 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/python/install/anaconda/</guid>
+      <description>Anacondaとは Pythonでは数値計算やデータ解析、グラフの描画などを作成することができるが、その際に必要なライブラリは通常pipコマンドなどで自身でインストールする。 Anacondaとは、このような計算系の作業に必要なライブラリやツールを一括でインストールすることができるディストリビューション（ツール群）である。
+Anacondaで用意されている主なライブラリ    ライブラリ名 概要     NumPy 多次元配列、ベクトルなどの数値計算で主に利用されるデータ型や関数など   SciPy 線形代数や積分などの科学技術計算など   Matplotlib グラフ描画に必要な関数など   Pandas 数表や時系列データなどを使用し、データ解析を行うデータ型や関数など    Anacondaに含まれる主なツール    ツール名 概要     conda パッケージ管理・仮想環境構築   JupyterLab/Jupyter Notebook Webベースの統合開発環境   Spyder 統合開発環境    Anacondaのダウンロード Anaconda公式サイト：https://www.anaconda.com/distribution/
+公式サイトのdownloadボタン、またはページ下部に移動するとダウンロード用のリンクがある。
+Python3系を利用しているAnacondaを選択し、ダウンロードを開始する。Windowsの場合はexeファイル、Macの場合はpkgファイルがダウンロードされる。
+Anacondaのインストール 基本的にはデフォルトでインストールする。 Anacondaはツールなども含まれるため、インストールには時間がかかる。</description>
+    </item>
+    
+    <item>
       <title>Pythonインストーラによるインストール</title>
       <link>https://midsatoh.github.io/python/install/install_soft/</link>
       <pubDate>Tue, 19 Nov 2019 14:31:47 +0900</pubDate>
@@ -28,6 +41,31 @@ Macの場合はpkgファイル、Windowsの場合はexeファイルがダウン�
 インストールの確認 コマンドプロンプト（Macの場合はターミナル）を起動し、Macの場合はpython3、Windowsの場合はpythonコマンドを実行する。 実行結果が以下のような画面となればインストール完了。
 終了する場合は、quit()またはexit()を入力し、終了させる。
 &amp;gt;&amp;gt;&amp;gt; quit()</description>
+    </item>
+    
+    <item>
+      <title>pyenvによるインストール（Mac）</title>
+      <link>https://midsatoh.github.io/python/install/pyenv/</link>
+      <pubDate>Thu, 14 Nov 2019 13:14:00 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/python/install/pyenv/</guid>
+      <description>pyenvとは Macのように、OSにPythonがプリインストールされているようなマシンを利用する場合、インストーラなどでpythonをインストールしてPATHを切り替えてしまったり、PythonのバージョンによってはOSの挙動や別のアプリケーションに影響を及ぼす可能性がある。 そのため、インストーラを使用するのではなく開発用のディレクトリ毎に切り替えることが必要になる場合が多い。
+Macで複数のPythonをインストールし、開発環境を切り替えるためのツールがpyenvである。
+pyenvをインストールするには、MacportやHomebrewというMacでのパッケージ管理システムを利用してインストールすることが多い。
+本サイトでは、Homebrewからpyenvをインストールする。
+Homebrewのインストール Homebrewとは、Macで開発を行う場合のパッケージ管理ツールである。 ただし、Homebrewを使用する場合は
+ XCodeまたはApple DeveloperサイトからXCodeコマンドラインツールのインストール インターネットへの安定した接続環境  が前提となる。 XCodeをインストールしている場合は問題がないが、XCodeはMacOSおよびiOS、iPadOS開発用の統合開発環境であるためサイズがかなり大きい。 マシンスペックなどの問題でXCodeをインストールできない場合は、軽量なXCode小マンドラインツールをインストールする必要がある。
+XCodeコマンドラインツールのインストール XCodeコマンドラインツールは、Appleの開発者用サイトからダウンロード可能である。 その際には、Appleアカウントが必要となる。
+Apple Developer Site：https://developer.apple.com/develop/
+ダウンロードリンクを押すと、Appleアカウントでのログインが求められる。 ログインするとツールの検索画面となるので、検索画面に「command line」、ReleaseDateを降順にすると最新版のツールを探すことが可能となる。betaがついていないツールをダウンロードすると良い。
+ダウンロードしたpkgファイルを利用し、インストールする。
+Homebrewのインストール 初めて使用する場合は、以下のサイトからインストールコマンドをコピーして、ターミナルに貼り付けて実行することでインストールが可能。
+Homebrew
+pyenvのインストール homebrewがインストールされると、brewコマンドが利用可能となる。brew install インストールするパッケージで様々な開発ツールがインストール可能となる。
+brew installコマンドを実施する際には、インターネットに接続されている必要がある。 pyenvのインストールは、以下のコマンドとなる。
+% brew install pyenv Mac OS Catalinaからは、ターミナルのデフォルトシェルがbashからzshとなった。 そのため、pyenvの設定内容を~/.zprofileに以下を追加する。
+export PYENV_ROOT=${HOME}/.pyenv if [ -d &amp;#34;${PYENV_ROOT}&amp;#34; ]; then export PATH=${PYENV_ROOT}/bin:$PATH eval &amp;#34;$(pyenv init -)&amp;#34; fi zshではなくbashを利用しているMacの場合は、上記の内容は「~/.bash_profile」に記載する。   pyenvインストールの確認 pyenvのコマンドを実行し、インストールが完了しているか確認する。 今回はpyenvでインストールできるバージョンの一覧を表示させてみる。
+% pyenv install -l Available versions: 2.</description>
     </item>
     
   </channel>
