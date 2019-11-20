@@ -12,22 +12,19 @@
     
     
     <item>
-      <title>Pythonインストーラによるインストール</title>
-      <link>https://midsatoh.github.io/python/install/install_soft/</link>
-      <pubDate>Tue, 19 Nov 2019 14:31:47 +0900</pubDate>
+      <title>インストール方法の選択</title>
+      <link>https://midsatoh.github.io/python/install/select_soft/</link>
+      <pubDate>Wed, 20 Nov 2019 16:44:20 +0900</pubDate>
       
-      <guid>https://midsatoh.github.io/python/install/install_soft/</guid>
-      <description> インストーラの入手 インストーラは、Pythonの公式サイトから入手する。
-Python公式サイト：https://www.python.org/
-公式サイトの「Downloads」リンクからダウンロード可能。 ただし、Downloadsに記載されているボタンからダウンロードすると32bit版のインストーラになるため、必ずOS別のリンクに一度移動する。
-OSの選択が完了したら、バージョンの選択をする。 先頭にアクセス時の最新バージョンが記載されているため、そちらを選択する。
-バージョン別のダウンロードサイトへ移動する。
-ダウンロードサイトの下部に、OS別のインストーラを選択するリンクがあるため、そちらからOS別のインストーラを使用してインストールする。
-Macの場合はpkgファイル、Windowsの場合はexeファイルがダウンロードされるため、ダウンロード後は指示に従ってインストールする。
-インストール 基本的にはデフォルト設定のままでインストールする。
-インストールの確認 コマンドプロンプト（Macの場合はターミナル）を起動し、Macの場合はpython3、Windowsの場合はpythonコマンドを実行する。 実行結果が以下のような画面となればインストール完了。
-終了する場合は、quit()またはexit()を入力し、終了させる。
-&amp;gt;&amp;gt;&amp;gt; quit()</description>
+      <guid>https://midsatoh.github.io/python/install/select_soft/</guid>
+      <description> インストールするバージョンやその他のアプリの選択方法 Pythonのインストール方法は、利用する環境やプログラムの方針によって選択する必要がある。
+ graph LR; A{複数の
+バージョンの
+切り替え} A --|必要| B[pyenvまたはpyenv-winで
+インストールする] A --|不要| C{統計などで
+利用する} C --|利用する| D[Anacondaを
+インストールする] C --|利用しない| E[Pythonインストーラで
+インストールする]  </description>
     </item>
     
     <item>
@@ -50,16 +47,22 @@ AdoptOpenJDK 公式サイトにアクセスすると、以下のような画面�
     </item>
     
     <item>
-      <title>Anacondaのインストール（インストーラ版）</title>
-      <link>https://midsatoh.github.io/python/install/anaconda/</link>
-      <pubDate>Wed, 20 Nov 2019 08:29:31 +0900</pubDate>
+      <title>Pythonインストーラによるインストール</title>
+      <link>https://midsatoh.github.io/python/install/install_soft/</link>
+      <pubDate>Tue, 19 Nov 2019 14:31:47 +0900</pubDate>
       
-      <guid>https://midsatoh.github.io/python/install/anaconda/</guid>
-      <description>Anacondaとは Pythonでは数値計算やデータ解析、グラフの描画などを作成することができるが、その際に必要なライブラリは通常pipコマンドなどで自身でインストールする。 Anacondaとは、このような計算系の作業に必要なライブラリやツールを一括でインストールすることができるディストリビューション（ツール群）である。
-Anacondaで用意されている主なライブラリ    ライブラリ名 概要     NumPy 多次元配列、ベクトルなどの数値計算で主に利用されるデータ型や関数など   SciPy 線形代数や積分などの科学技術計算など   Matplotlib グラフ描画に必要な関数など   Pandas 数表や時系列データなどを使用し、データ解析を行うデータ型や関数など    Anacondaに含まれる主なツール    ツール名 概要     conda パッケージ管理・仮想環境構築   JupyterLab/Jupyter Notebook Webベースの統合開発環境   Spyder 統合開発環境    Anacondaのダウンロード Anaconda公式サイト：https://www.anaconda.com/distribution/
-公式サイトのdownloadボタン、またはページ下部に移動するとダウンロード用のリンクがある。
-Python3系を利用しているAnacondaを選択し、ダウンロードを開始する。Windowsの場合はexeファイル、Macの場合はpkgファイルがダウンロードされる。
-Anacondaのインストール 基本的にはデフォルトでインストールする。 Anacondaはツールなども含まれるため、インストールには時間がかかる。</description>
+      <guid>https://midsatoh.github.io/python/install/install_soft/</guid>
+      <description> インストーラの入手 インストーラは、Pythonの公式サイトから入手する。
+Python公式サイト：https://www.python.org/
+公式サイトの「Downloads」リンクからダウンロード可能。 ただし、Downloadsに記載されているボタンからダウンロードすると32bit版のインストーラになるため、必ずOS別のリンクに一度移動する。
+OSの選択が完了したら、バージョンの選択をする。 先頭にアクセス時の最新バージョンが記載されているため、そちらを選択する。
+バージョン別のダウンロードサイトへ移動する。
+ダウンロードサイトの下部に、OS別のインストーラを選択するリンクがあるため、そちらからOS別のインストーラを使用してインストールする。
+Macの場合はpkgファイル、Windowsの場合はexeファイルがダウンロードされるため、ダウンロード後は指示に従ってインストールする。
+インストール 基本的にはデフォルト設定のままでインストールする。
+インストールの確認 コマンドプロンプト（Macの場合はターミナル）を起動し、Macの場合はpython3、Windowsの場合はpythonコマンドを実行する。 実行結果が以下のような画面となればインストール完了。
+終了する場合は、quit()またはexit()を入力し、終了させる。
+&amp;gt;&amp;gt;&amp;gt; quit()</description>
     </item>
     
     <item>
@@ -78,6 +81,19 @@ Eclipseの設定（Windowsの場合は[ウィンドウ] -&amp;gt; [設定]、Mac
 [JREホーム]のディレクトリで、AdoptOpenJDKをインストールした箇所を選択する。JRE名は任意。
 デフォルトのインストール場所は以下の通り。
  Windows : C:\Program Files (x86)\AdoptOpenJDK\jdk-11.0.X.XX-hotspot Mac : /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home  追加後、追加したJREにチェックを入れてから適用するとデフォルトでAdoptOpenJDKを利用して実行される。</description>
+    </item>
+    
+    <item>
+      <title>Anacondaのインストール（インストーラ版）</title>
+      <link>https://midsatoh.github.io/python/install/anaconda/</link>
+      <pubDate>Wed, 20 Nov 2019 08:29:31 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/python/install/anaconda/</guid>
+      <description>Anacondaとは Pythonでは数値計算やデータ解析、グラフの描画などを作成することができるが、その際に必要なライブラリは通常pipコマンドなどで自身でインストールする。 Anacondaとは、このような計算系の作業に必要なライブラリやツールを一括でインストールすることができるディストリビューション（ツール群）である。
+Anacondaで用意されている主なライブラリ    ライブラリ名 概要     NumPy 多次元配列、ベクトルなどの数値計算で主に利用されるデータ型や関数など   SciPy 線形代数や積分などの科学技術計算など   Matplotlib グラフ描画に必要な関数など   Pandas 数表や時系列データなどを使用し、データ解析を行うデータ型や関数など    Anacondaに含まれる主なツール    ツール名 概要     conda パッケージ管理・仮想環境構築   JupyterLab/Jupyter Notebook Webベースの統合開発環境   Spyder 統合開発環境    Anacondaのダウンロード Anaconda公式サイト：https://www.anaconda.com/distribution/
+公式サイトのdownloadボタン、またはページ下部に移動するとダウンロード用のリンクがある。
+Python3系を利用しているAnacondaを選択し、ダウンロードを開始する。Windowsの場合はexeファイル、Macの場合はpkgファイルがダウンロードされる。
+Anacondaのインストール 基本的にはデフォルトでインストールする。 Anacondaはツールなども含まれるため、インストールには時間がかかる。</description>
     </item>
     
     <item>

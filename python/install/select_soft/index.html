@@ -3,10 +3,10 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>OpenJDKのインストール - MID-S</title>
+<title>インストール方法の選択 - MID-S</title>
 <meta name="generator" content="Hugo 0.59.0" />
 <link href="https://midsatoh.github.io/index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="https://midsatoh.github.io/java/install/openjdk/">
+<link rel="canonical" href="https://midsatoh.github.io/python/install/select_soft/">
 <link rel="stylesheet" href="https://midsatoh.github.io/css/theme.min.css">
 <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <link rel="stylesheet" href="https://midsatoh.github.io/css/chroma.min.css">
@@ -30,59 +30,31 @@
 </nav>
 </div>
 <div class="content-container">
-<main><h1>OpenJDKのインストール</h1>
+<main><h1>インストール方法の選択</h1>
 
-<h2 id="openjdk">OpenJDK</h2>
+<h2 id="インストールするバージョンやその他のアプリの選択方法">インストールするバージョンやその他のアプリの選択方法</h2>
 
-<p>OracleJavaが有償化されたため、現在無償でJavaでの開発を行う際にはOpenJDKを利用する必要がある。</p>
+<p>Pythonのインストール方法は、利用する環境やプログラムの方針によって選択する必要がある。</p>
 
-<p>OpenJDK公式サイト：<a href="http://openjdk.java.net" target="_blank">http://openjdk.java.net</a></p>
+<script src="/js/mermaid.min.js" defer></script>
+<div class="mermaid" align="center">
+    
+graph LR;
+    A{複数の<br>バージョンの<br>切り替え}
+    A -->|必要| B[pyenvまたはpyenv-winで<br>インストールする]
+    A -->|不要| C{統計などで<br>利用する}
+    C -->|利用する| D[Anacondaを<br>インストールする]
+    C -->|利用しない| E[Pythonインストーラで<br>インストールする]
 
-<p>よりソースコードからコンパイルする方法もあるが、初級者が学習する際にはバイナリでの提供を行っている団体のサイトより取得する。</p>
-
-<p>今回は、様々なプラットフォームに対応済みであるAdoptOpenJDKを利用する。</p>
-
-<p>AdoptOpenJDK公式サイト：<a href="https://adoptopenjdk.net" target="_blank">https://adoptopenjdk.net</a></p>
-
-<h3 id="adoptopenjdk">AdoptOpenJDK</h3>
-
-<p>公式サイトにアクセスすると、以下のような画面となる。</p>
-
-<p><img src="/images/java/install/01_AdoptOpenJDK_site.png" alt="AdoptOpenJDKサイトより" /></p>
-
-<ol>
-<li><p>Choose a Version</p>
-
-<ul>
-<li>OpenJDKのバージョンを指定する。基本的にLTS（long term support：長期間サポートあり)を選択する。</li>
-</ul></li>
-
-<li><p>Choose a JVM</p>
-
-<ul>
-<li>JavaVMを指定する。HotSpotはサン・マイクロシステムズが開発したオリジナルのJVM、OpenJ9はIBMが開発した別実装のJVMとなる。基本的にはHotSpotで問題ない。</li>
-</ul></li>
-
-<li><p>ダウンロード</p>
-
-<ul>
-<li>1、2 を指定後、ダウンロード可能となる。基本的にサイトにアクセスしたプラットフォームで利用可能なバージョンがダウンロード可能となるが、必要に応じてOther platformsのリンクより別のプラットフォーム向けのダウンロードも可能。</li>
-</ul></li>
-
-<li><p>インストール</p>
-
-<ul>
-<li>macの場合はpkgファイル、Windowsの場合はmsiファイルでのダウンロードとなるため、実行後は指示に従ってインストールを実施する。</li>
-</ul></li>
-</ol>
+</div>
 <div class="edit-meta">
-Last updated on 30 Oct 2019
+Last updated on 20 Nov 2019
 
 
 <br>
-Published on 30 Oct 2019
-<br></div><nav class="pagination"><a class="nav nav-prev" href="/java/install/" title="環境設定"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - 環境設定</a>
-<a class="nav nav-next" href="/java/install/eclipse/" title="Eclipseのインストールと設定">Next - Eclipseのインストールと設定 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+Published on 20 Nov 2019
+<br></div><nav class="pagination"><a class="nav nav-prev" href="/python/install/" title="環境設定"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - 環境設定</a>
+<a class="nav nav-next" href="/python/install/install_soft/" title="Pythonインストーラによるインストール">Next - Pythonインストーラによるインストール <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
@@ -110,14 +82,14 @@ Published on 30 Oct 2019
 <ul>
 <li class=""><a href="https://midsatoh.github.io/">Home</a></li>
 
-<li class=""><a href="/python/">Python</a>
+<li class="parent"><a href="/python/">Python</a>
   
 <ul class="sub-menu">
 
-<li class=""><a href="/python/install/">環境設定</a>
+<li class="parent"><a href="/python/install/">環境設定</a>
   
 <ul class="sub-menu">
-<li class=""><a href="/python/install/select_soft/">インストール方法の選択</a></li>
+<li class="active"><a href="/python/install/select_soft/">インストール方法の選択</a></li>
 <li class=""><a href="/python/install/install_soft/">Pythonインストーラによるインストール</a></li>
 <li class=""><a href="/python/install/anaconda/">Anacondaのインストール（インストーラ版）</a></li>
 <li class=""><a href="/python/install/pyenv/">pyenvによるインストール（Mac）</a></li>
@@ -130,14 +102,14 @@ Published on 30 Oct 2019
   
 </li>
 
-<li class="parent"><a href="/java/">Java</a>
+<li class=""><a href="/java/">Java</a>
   
 <ul class="sub-menu">
 
-<li class="parent"><a href="/java/install/">環境設定</a>
+<li class=""><a href="/java/install/">環境設定</a>
   
 <ul class="sub-menu">
-<li class="active"><a href="/java/install/openjdk/">OpenJDKのインストール</a></li>
+<li class=""><a href="/java/install/openjdk/">OpenJDKのインストール</a></li>
 <li class=""><a href="/java/install/eclipse/">Eclipseのインストールと設定</a></li>
 </ul>
   
