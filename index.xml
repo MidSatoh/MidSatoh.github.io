@@ -18,7 +18,7 @@
       
       <guid>https://midsatoh.github.io/python/install/select_soft/</guid>
       <description> インストールするバージョンやその他のアプリの選択方法 Pythonのインストール方法は、利用する環境やプログラムの方針によって選択する必要がある。
- graph LR; A{複数の
+mermaid.initialize({startOnLoad:true}); graph LR; A{複数の
 バージョンの
 切り替え} A --|必要| B[pyenvまたはpyenv-winで
 インストールする] A --|不要| C{統計などで
@@ -88,7 +88,7 @@ Macの場合はpkgファイル、Windowsの場合はexeファイルがダウン�
 Eclipse2018からはMergeDoc ProjectにてSpringToolSuiteも日本語プラグインPleiadesと同梱されるようになったためこちらを利用することにする。
 MergeDoc Project公式サイト：https://mergedoc.osdn.jp
 自身のプラットフォームに合わせ、JavaのFull Editionをダウンロードし、zipファイルの解凍をする。
-Windows環境での注意 Windows の場合はエクスプローラーによる解凍は失敗するため、7Zip(https://sevenzip.osdn.jp)などの解凍ソフトが必要になる。   Eclipseの環境設定 インストールしたOpenJDKをEclipseで適用させるためには、JREの設定が必要となる。
+ Windows の場合はエクスプローラーによる解凍は失敗するため、7Zip(https://sevenzip.osdn.jp)などの解凍ソフトが必要になる。  Eclipseの環境設定 インストールしたOpenJDKをEclipseで適用させるためには、JREの設定が必要となる。
 Eclipseの設定（Windowsの場合は[ウィンドウ] -&amp;gt; [設定]、Macの場合は[Eclipse]-&amp;gt;[環境設定])より、[Java]-&amp;gt;[インストール済みのJRE]を開く。
 [追加]ボタンを押下し、標準VMを選択する。
 [JREホーム]のディレクトリで、AdoptOpenJDKをインストールした箇所を選択する。JRE名は任意。
@@ -130,7 +130,8 @@ Homebrew
 pyenvのインストール homebrewがインストールされると、brewコマンドが利用可能となる。brew install インストールするパッケージで様々な開発ツールがインストール可能となる。
 brew installコマンドを実施する際には、インターネットに接続されている必要がある。 pyenvのインストールは、以下のコマンドとなる。
 % brew install pyenv Mac OS Catalinaからは、ターミナルのデフォルトシェルがbashからzshとなった。 そのため、pyenvの設定内容を~/.zprofileに以下を追加する。
-export PYENV_ROOT=${HOME}/.pyenv if [ -d &amp;#34;${PYENV_ROOT}&amp;#34; ]; then export PATH=${PYENV_ROOT}/bin:$PATH eval &amp;#34;$(pyenv init -)&amp;#34; fi zshではなくbashを利用しているMacの場合は、上記の内容は「~/.bash_profile」に記載する。   pyenvインストールの確認 pyenvのコマンドを実行し、インストールが完了しているか確認する。 今回はpyenvでインストールできるバージョンの一覧を表示させてみる。
+export PYENV_ROOT=${HOME}/.pyenv if [ -d &amp;#34;${PYENV_ROOT}&amp;#34; ]; then export PATH=${PYENV_ROOT}/bin:$PATH eval &amp;#34;$(pyenv init -)&amp;#34; fi zshではなくbashを利用しているMacの場合は、上記の内容は「~/.bash_profile」に記載する。
+ pyenvインストールの確認 pyenvのコマンドを実行し、インストールが完了しているか確認する。 今回はpyenvでインストールできるバージョンの一覧を表示させてみる。
 % pyenv install -l Available versions: 2.</description>
     </item>
     

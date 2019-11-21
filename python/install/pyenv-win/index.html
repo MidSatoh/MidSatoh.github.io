@@ -1,36 +1,182 @@
 <!DOCTYPE html>
-<html lang="ja-jp">
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html>
+  <head>
+    <title>MID-S</title>
+    
+      <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>pyenv-winによるインストール（Windows） - MID-S</title>
-<meta name="generator" content="Hugo 0.59.0" />
-<link href="https://midsatoh.github.io/index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="https://midsatoh.github.io/python/install/pyenv-win/">
-<link rel="stylesheet" href="https://midsatoh.github.io/css/theme.min.css">
-<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-<link rel="stylesheet" href="https://midsatoh.github.io/css/chroma.min.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
-<script src="https://midsatoh.github.io/js/bundle.js"></script><style>
-:root {
-  
-  
-}
-</style>
-</head>
-<body><div class="container"><header>
-<h1>MID-S</h1>
+<meta name="revised" content="2019-11-21T16:30:09 JST">
+<title>pyenv-winによるインストール（Windows） :: MID-S</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
 
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/midsatoh.github.io\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/python/install/pyenv-win/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="https://midsatoh.github.io/">MID-S</a>
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
 </header>
-<div class="global-menu">
-<nav>
-<ul>
-<li><a href="/">Home</a></li></ul>
-</nav>
-</div>
-<div class="content-container">
-<main><h1>pyenv-winによるインストール（Windows）</h1>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/python/">Python</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/python/python_aspects/" class="dd-item">
+        <div>
+          <a href="/python/python_aspects/">
+            Pythonの特徴
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/python/install/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/python/install/">環境設定</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/python/install/select_soft/" class="dd-item">
+        <div>
+          <a href="/python/install/select_soft/">
+            インストール方法の選択
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/install_soft/" class="dd-item">
+        <div>
+          <a href="/python/install/install_soft/">
+            Pythonインストーラによるインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/anaconda/" class="dd-item">
+        <div>
+          <a href="/python/install/anaconda/">
+            Anacondaのインストール（インストーラ版）
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/pyenv/" class="dd-item">
+        <div>
+          <a href="/python/install/pyenv/">
+            pyenvによるインストール（Mac）
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/pyenv-win/" class="dd-item active">
+        <div>
+          <a href="/python/install/pyenv-win/">
+            pyenv-winによるインストール（Windows）
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/java/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java/">Java</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="https://midsatoh.github.io/java/install/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java/install/">環境設定</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/java/install/openjdk/" class="dd-item">
+        <div>
+          <a href="/java/install/openjdk/">
+            OpenJDKのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/java/install/eclipse/" class="dd-item">
+        <div>
+          <a href="/java/install/eclipse/">
+            Eclipseのインストールと設定
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/python/" >
+   Python</option> 
+      <option value="/python/python_aspects/" >- Pythonの特徴</option>
+    <option value="/python/install/" >
+  - 
+   環境設定</option> 
+      <option value="/python/install/select_soft/" >-- インストール方法の選択</option>
+      <option value="/python/install/install_soft/" >-- Pythonインストーラによるインストール</option>
+      <option value="/python/install/anaconda/" >-- Anacondaのインストール（インストーラ版）</option>
+      <option value="/python/install/pyenv/" >-- pyenvによるインストール（Mac）</option>
+      <option value="/python/install/pyenv-win/"  selected>-- pyenv-winによるインストール（Windows）</option>
+  
+  
+    <option value="/java/" >
+   Java</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>pyenv-winによるインストール（Windows）</h1>
+    
+    
+    
+    
 
 <h2 id="pyenv-winとは">pyenv-winとは</h2>
 
@@ -45,7 +191,7 @@ Windows環境では、Python3.6とPython3.8などを切り替える程度であ�
 まだインストールしていない場合は、<a href="/python/install/install_soft/" target="_blank">Pythonインストーラによるインストール</a>でインストールしておく。</p>
 
 <p>Pythonがインストールされたら、pipコマンドを使用してpyenv-winをインストールする。</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">&gt; pip install pyenv-win --target %USERPROFILE%/.pyenv</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; pip install pyenv-win --target %USERPROFILE%/.pyenv</code></pre></div>
 <p>pyenv-winのインストールが完了したら、環境変数に次の値を追加する。
 Windows10の<code>スタートボタン</code>-&gt;<code>設定</code>で検索画面に「環境変数」と入力する。</p>
 
@@ -71,15 +217,8 @@ Windows10の<code>スタートボタン</code>-&gt;<code>設定</code>で検索�
 <p>設定が完了したら、<code>OK</code>ボタンを押して設定を終了する。</p>
 
 <p>pyenv-winによるインストールおよび切り替えはMacと同様なので<a href="/python/install/pyenv/#pyenvインストールの確認" target="_blank">pyenvによるインストール（Mac）</a> を参考とすること。</p>
-<div class="edit-meta">
-Last updated on 20 Nov 2019
 
-
-<br>
-Published on 20 Nov 2019
-<br></div><nav class="pagination"><a class="nav nav-prev" href="/python/install/pyenv/" title="pyenvによるインストール（Mac）"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - pyenvによるインストール（Mac）</a>
-<a class="nav nav-next" href="/java/" title="Java">Next - Java <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-</nav><div id="disqus_thread"></div>
+    <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
     
@@ -98,67 +237,73 @@ Published on 20 Nov 2019
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/python/install/pyenv/" title="pyenvによるインストール（Mac）"> <i class="fa fa-chevron-left"></i><label>pyenvによるインストール（Mac）</label></a>
+    <a class="nav nav-next" href="/java/" title="Java" style="margin-right: 0px;"><label>Java</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://midsatoh.github.io/tags/python">python</a>
+      
+        <a class="label label-default" href="https://midsatoh.github.io/tags/pyenv">pyenv</a>
+      
+        <a class="label label-default" href="https://midsatoh.github.io/tags/windows">windows</a>
+      
+    </div>
+    
+
+    
+
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i>  20/11/2019
+    </div>
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
 </footer>
-</main><div class="sidebar">
 
-<nav class="open-menu">
-<ul>
-<li class=""><a href="https://midsatoh.github.io/">Home</a></li>
+<script src="/js/clipboard.min.js"></script>
 
-<li class="parent"><a href="/python/">Python</a>
-  
-<ul class="sub-menu">
-<li class=""><a href="/python/python_aspects/">Pythonの特徴</a></li>
-
-<li class="parent"><a href="/python/install/">環境設定</a>
-  
-<ul class="sub-menu">
-<li class=""><a href="/python/install/select_soft/">インストール方法の選択</a></li>
-<li class=""><a href="/python/install/install_soft/">Pythonインストーラによるインストール</a></li>
-<li class=""><a href="/python/install/anaconda/">Anacondaのインストール（インストーラ版）</a></li>
-<li class=""><a href="/python/install/pyenv/">pyenvによるインストール（Mac）</a></li>
-<li class="active"><a href="/python/install/pyenv-win/">pyenv-winによるインストール（Windows）</a></li>
-</ul>
-  
-</li>
-</ul>
-  
-</li>
-
-<li class=""><a href="/java/">Java</a>
-  
-<ul class="sub-menu">
-
-<li class=""><a href="/java/install/">環境設定</a>
-  
-<ul class="sub-menu">
-<li class=""><a href="/java/install/openjdk/">OpenJDKのインストール</a></li>
-<li class=""><a href="/java/install/eclipse/">Eclipseのインストールと設定</a></li>
-</ul>
-  
-</li>
-</ul>
-  
-</li>
-</ul>
-</nav>
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
 
 
 
-<div class="sidebar-footer"></div>
-</div>
-</div><a href="#" id="backtothetop-fixed" class="backtothetop"
- data-backtothetop-duration="600"
- data-backtothetop-easing="easeOutQuart"
- data-backtothetop-fixed-fadeIn="1000"
- data-backtothetop-fixed-fadeOut="1000"
- data-backtothetop-fixed-bottom="10"
- data-backtothetop-fixed-right="20">
-<span class="fa-layers fa-fw">
-<i class="fas fa-circle"></i>
-<i class="fas fa-arrow-circle-up"></i>
-</span></a>
-</div>
-</body>
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
 </html>

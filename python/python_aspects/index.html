@@ -1,36 +1,175 @@
 <!DOCTYPE html>
-<html lang="ja-jp">
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html>
+  <head>
+    <title>MID-S</title>
+    
+      <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Pythonの特徴 - MID-S</title>
-<meta name="generator" content="Hugo 0.59.0" />
-<link href="https://midsatoh.github.io/index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="https://midsatoh.github.io/python/python_aspects/">
-<link rel="stylesheet" href="https://midsatoh.github.io/css/theme.min.css">
-<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-<link rel="stylesheet" href="https://midsatoh.github.io/css/chroma.min.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
-<script src="https://midsatoh.github.io/js/bundle.js"></script><style>
-:root {
-  
-  
-}
-</style>
-</head>
-<body><div class="container"><header>
-<h1>MID-S</h1>
+<meta name="revised" content="2019-11-21T16:30:09 JST">
+<title>Pythonの特徴 :: MID-S</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
 
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/midsatoh.github.io\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/python/python_aspects/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="https://midsatoh.github.io/">MID-S</a>
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
 </header>
-<div class="global-menu">
-<nav>
-<ul>
-<li><a href="/">Home</a></li></ul>
-</nav>
-</div>
-<div class="content-container">
-<main><h1>Pythonの特徴</h1>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/python/">Python</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/python/python_aspects/" class="dd-item active">
+        <div>
+          <a href="/python/python_aspects/">
+            Pythonの特徴
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/python/install/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/python/install/">環境設定</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/python/install/select_soft/" class="dd-item">
+        <div>
+          <a href="/python/install/select_soft/">
+            インストール方法の選択
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/install_soft/" class="dd-item">
+        <div>
+          <a href="/python/install/install_soft/">
+            Pythonインストーラによるインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/anaconda/" class="dd-item">
+        <div>
+          <a href="/python/install/anaconda/">
+            Anacondaのインストール（インストーラ版）
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/pyenv/" class="dd-item">
+        <div>
+          <a href="/python/install/pyenv/">
+            pyenvによるインストール（Mac）
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/pyenv-win/" class="dd-item">
+        <div>
+          <a href="/python/install/pyenv-win/">
+            pyenv-winによるインストール（Windows）
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/java/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java/">Java</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="https://midsatoh.github.io/java/install/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java/install/">環境設定</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/java/install/openjdk/" class="dd-item">
+        <div>
+          <a href="/java/install/openjdk/">
+            OpenJDKのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/java/install/eclipse/" class="dd-item">
+        <div>
+          <a href="/java/install/eclipse/">
+            Eclipseのインストールと設定
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/python/" >
+   Python</option> 
+      <option value="/python/python_aspects/"  selected>- Pythonの特徴</option>
+    <option value="/python/install/" >
+  - 
+   環境設定</option>
+  
+    <option value="/java/" >
+   Java</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>Pythonの特徴</h1>
+    
+    
+    
+    
 
 <h2 id="利用する-システムに採用する側から見た特徴">利用する、システムに採用する側から見た特徴</h2>
 
@@ -55,34 +194,34 @@
 
 <h3 id="javaで書いた場合-その1">Javaで書いた場合(その1)</h3>
 
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nf">Sample</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">){</span>
-        <span class="kt">int</span> <span class="nf">num</span> <span class="o">=</span> <span class="n">11</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="n">10</span><span class="p">){</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Over 10&#34;</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Other&#34;</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Sample</span> {
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String[] <span style="color:#a6e22e">args</span>){
+        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> 11;
+        <span style="color:#66d9ef">if</span> (num <span style="color:#f92672">&gt;</span> 10){
+            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Over 10&#34;</span>);
+        } <span style="color:#66d9ef">else</span> {
+            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Other&#34;</span>);
+        }
+    }
+}</code></pre></div>
 
 <h3 id="javaで書いた場合-その2">Javaで書いた場合(その2)</h3>
 
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nf">Sample</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">){</span>
-        <span class="kt">int</span> <span class="nf">num</span> <span class="o">=</span> <span class="n">11</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="n">10</span><span class="p">)</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Over 10&#34;</span><span class="p">);</span>
-    <span class="k">else</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Other&#34;</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Sample</span> {
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String[] <span style="color:#a6e22e">args</span>){
+        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> 11;
+            <span style="color:#66d9ef">if</span> (num <span style="color:#f92672">&gt;</span> 10) System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Over 10&#34;</span>);
+    <span style="color:#66d9ef">else</span> System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Other&#34;</span>);
+    }
+}</code></pre></div>
 
 <h3 id="pythonで書いた場合">Pythonで書いた場合</h3>
 
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">num</span> <span class="o">=</span> <span class="mi">11</span>
-<span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Over 10&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Other&#39;</span><span class="p">)</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">num <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>
+<span style="color:#66d9ef">if</span> num <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Over 10&#39;</span>)
+<span style="color:#66d9ef">else</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Other&#39;</span>)</code></pre></div>
 
 <p>Javaの場合、同じ内容を記載した場合でも{}の有無、インデント（字下げ）の位置などが揃っていなくとも記述が可能。また、スクリプトを実行する場合でも必ずクラスが必要であるなどのルールが複雑である。
 Pythonの場合、スクリプト実行の場合は必要な処理をファイルに記載するのみで実行が可能である。また、記述ルールにインデント（字下げ）が含まれるため、Pythonの初心者でも、熟練者でも同一の内容であれば基本的な記述方法は同じである。</p>
@@ -113,15 +252,8 @@ Pythonの場合、スクリプト実行の場合は必要な処理をファイ�
 そのため、C言語などのような機械語に変換済みのプログラムと比べると実行時間が遅くなってしまう。</p>
 
 <p>例えば、速度を重視する箇所についてはC言語やC++言語などで記述し、Pythonではライブラリなどを統括して利用するなど、得意分野ごとの切り分けが必要になるだろう。</p>
-<div class="edit-meta">
-Last updated on 18 Nov 2019
 
-
-<br>
-Published on 18 Nov 2019
-<br></div><nav class="pagination"><a class="nav nav-prev" href="/python/" title="Python"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Python</a>
-<a class="nav nav-next" href="/python/install/" title="環境設定">Next - 環境設定 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-</nav><div id="disqus_thread"></div>
+    <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
     
@@ -140,67 +272,69 @@ Published on 18 Nov 2019
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/python/" title="Python"> <i class="fa fa-chevron-left"></i><label>Python</label></a>
+    <a class="nav nav-next" href="/python/install/" title="環境設定" style="margin-right: 0px;"><label>環境設定</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://midsatoh.github.io/tags/python">python</a>
+      
+    </div>
+    
+
+    
+
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i>  18/11/2019
+    </div>
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
 </footer>
-</main><div class="sidebar">
 
-<nav class="open-menu">
-<ul>
-<li class=""><a href="https://midsatoh.github.io/">Home</a></li>
+<script src="/js/clipboard.min.js"></script>
 
-<li class="parent"><a href="/python/">Python</a>
-  
-<ul class="sub-menu">
-<li class="active"><a href="/python/python_aspects/">Pythonの特徴</a></li>
-
-<li class=""><a href="/python/install/">環境設定</a>
-  
-<ul class="sub-menu">
-<li class=""><a href="/python/install/select_soft/">インストール方法の選択</a></li>
-<li class=""><a href="/python/install/install_soft/">Pythonインストーラによるインストール</a></li>
-<li class=""><a href="/python/install/anaconda/">Anacondaのインストール（インストーラ版）</a></li>
-<li class=""><a href="/python/install/pyenv/">pyenvによるインストール（Mac）</a></li>
-<li class=""><a href="/python/install/pyenv-win/">pyenv-winによるインストール（Windows）</a></li>
-</ul>
-  
-</li>
-</ul>
-  
-</li>
-
-<li class=""><a href="/java/">Java</a>
-  
-<ul class="sub-menu">
-
-<li class=""><a href="/java/install/">環境設定</a>
-  
-<ul class="sub-menu">
-<li class=""><a href="/java/install/openjdk/">OpenJDKのインストール</a></li>
-<li class=""><a href="/java/install/eclipse/">Eclipseのインストールと設定</a></li>
-</ul>
-  
-</li>
-</ul>
-  
-</li>
-</ul>
-</nav>
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
 
 
 
-<div class="sidebar-footer"></div>
-</div>
-</div><a href="#" id="backtothetop-fixed" class="backtothetop"
- data-backtothetop-duration="600"
- data-backtothetop-easing="easeOutQuart"
- data-backtothetop-fixed-fadeIn="1000"
- data-backtothetop-fixed-fadeOut="1000"
- data-backtothetop-fixed-bottom="10"
- data-backtothetop-fixed-right="20">
-<span class="fa-layers fa-fw">
-<i class="fas fa-circle"></i>
-<i class="fas fa-arrow-circle-up"></i>
-</span></a>
-</div>
-</body>
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
 </html>
