@@ -6,10 +6,26 @@
     <description>Recent content in eclipse on MID-S</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 30 Oct 2019 14:01:47 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2019 16:44:20 +0900</lastBuildDate>
     
 	<atom:link href="https://midsatoh.github.io/tags/eclipse/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>インストール方法の選択</title>
+      <link>https://midsatoh.github.io/python/install/select_soft/</link>
+      <pubDate>Wed, 20 Nov 2019 16:44:20 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/python/install/select_soft/</guid>
+      <description> インストールするバージョンやその他のアプリの選択方法 Pythonのインストール方法は、利用する環境やプログラムの方針によって選択する必要がある。
+ graph LR; A{複数の
+バージョンの
+切り替え} A --|必要| B[pyenvまたはpyenv-winで
+インストールする] A --|不要| C{統計などで
+利用する} C --|利用する| D[Anacondaを
+インストールする] C --|利用しない| E[Pythonインストーラで
+インストールする]  </description>
+    </item>
     
     <item>
       <title>Eclipseのインストールと設定</title>

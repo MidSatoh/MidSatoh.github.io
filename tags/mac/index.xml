@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mac on MID-S</title>
+    <link>https://midsatoh.github.io/tags/mac/</link>
+    <description>Recent content in mac on MID-S</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 14 Nov 2019 13:14:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://midsatoh.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pyenvによるインストール（Mac）</title>
+      <link>https://midsatoh.github.io/python/install/pyenv/</link>
+      <pubDate>Thu, 14 Nov 2019 13:14:00 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/python/install/pyenv/</guid>
+      <description>pyenvとは Macのように、OSにPythonがプリインストールされているようなマシンを利用する場合、インストーラなどでpythonをインストールしてPATHを切り替えてしまったり、PythonのバージョンによってはOSの挙動や別のアプリケーションに影響を及ぼす可能性がある。 そのため、インストーラを使用するのではなく開発用のディレクトリ毎に切り替えることが必要になる場合が多い。
+Macで複数のPythonをインストールし、開発環境を切り替えるためのツールがpyenvである。
+pyenvをインストールするには、MacportやHomebrewというMacでのパッケージ管理システムを利用してインストールすることが多い。
+本サイトでは、Homebrewからpyenvをインストールする。
+Homebrewのインストール Homebrewとは、Macで開発を行う場合のパッケージ管理ツールである。 ただし、Homebrewを使用する場合は
+ XCodeまたはApple DeveloperサイトからXCodeコマンドラインツールのインストール インターネットへの安定した接続環境  が前提となる。 XCodeをインストールしている場合は問題がないが、XCodeはMacOSおよびiOS、iPadOS開発用の統合開発環境であるためサイズがかなり大きい。 マシンスペックなどの問題でXCodeをインストールできない場合は、軽量なXCode小マンドラインツールをインストールする必要がある。
+XCodeコマンドラインツールのインストール XCodeコマンドラインツールは、Appleの開発者用サイトからダウンロード可能である。 その際には、Appleアカウントが必要となる。
+Apple Developer Site：https://developer.apple.com/develop/
+ダウンロードリンクを押すと、Appleアカウントでのログインが求められる。 ログインするとツールの検索画面となるので、検索画面に「command line」、ReleaseDateを降順にすると最新版のツールを探すことが可能となる。betaがついていないツールをダウンロードすると良い。
+ダウンロードしたpkgファイルを利用し、インストールする。
+Homebrewのインストール 初めて使用する場合は、以下のサイトからインストールコマンドをコピーして、ターミナルに貼り付けて実行することでインストールが可能。
+Homebrew
+pyenvのインストール homebrewがインストールされると、brewコマンドが利用可能となる。brew install インストールするパッケージで様々な開発ツールがインストール可能となる。
+brew installコマンドを実施する際には、インターネットに接続されている必要がある。 pyenvのインストールは、以下のコマンドとなる。
+% brew install pyenv Mac OS Catalinaからは、ターミナルのデフォルトシェルがbashからzshとなった。 そのため、pyenvの設定内容を~/.zprofileに以下を追加する。
+export PYENV_ROOT=${HOME}/.pyenv if [ -d &amp;#34;${PYENV_ROOT}&amp;#34; ]; then export PATH=${PYENV_ROOT}/bin:$PATH eval &amp;#34;$(pyenv init -)&amp;#34; fi zshではなくbashを利用しているMacの場合は、上記の内容は「~/.bash_profile」に記載する。   pyenvインストールの確認 pyenvのコマンドを実行し、インストールが完了しているか確認する。 今回はpyenvでインストールできるバージョンの一覧を表示させてみる。
+% pyenv install -l Available versions: 2.</description>
+    </item>
+    
+  </channel>
+</rss>
