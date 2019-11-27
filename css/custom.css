@@ -17,7 +17,7 @@
     right: 0;
     top: 4rem;
     /* top: 0; */
-    width: 16rem;
+    width: 17rem;
     border-left: 1px solid #f3f1f1;
     border-bottom: 1px solid #f3f1f1;
 }
@@ -29,6 +29,22 @@
 }
 
 #TableOfContents ul {
+    font-size: 0.9rem;
     list-style: none;
-    padding: 0 1rem
+    padding: 0 1rem;
+    margin-left: 0;
+    margin-right: 0;
 }
+
+#TableOfContents>ul {
+    list-style: none;
+    margin-left: -1rem;
+    margin-right: 0;
+}
+
+#TableOfContents>ul>li>ul {
+    list-style: none;
+    margin-left: -1rem;
+    margin-right: 0;
+}
+
