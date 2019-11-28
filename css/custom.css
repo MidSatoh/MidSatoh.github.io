@@ -6,7 +6,7 @@
 }
 
 #TableOfContents {
-    /* background-color: #f6f6f6; */
+    background-color: #f6f6f6;
     border-radius: .2rem 0 0 .2rem;
     box-sizing: border-box;
     /* max-height: calc(100% - 10.5rem); */
@@ -18,8 +18,8 @@
     top: 4rem;
     /* top: 0; */
     width: 17rem;
-    border-left: 1px solid #f3f1f1;
-    border-bottom: 1px solid #f3f1f1;
+    /* border-left: 1px solid #f3f1f1;
+    border-bottom: 1px solid #f3f1f1; */
 }
 
 #TableOfContents>h1 {
