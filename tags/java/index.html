@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-11-28T17:16:25 JST">
+<meta name="revised" content="2019-11-28T17:55:46 JST">
 <title>java :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -82,21 +82,21 @@
       <li data-nav-id="https://midsatoh.github.io/python/install/anaconda/" class="dd-item">
         <div>
           <a href="/python/install/anaconda/">
-            Anacondaのインストール（インストーラ版）
+            Anacondaのインストール
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
       <li data-nav-id="https://midsatoh.github.io/python/install/pyenv/" class="dd-item">
         <div>
           <a href="/python/install/pyenv/">
-            pyenvによるインストール（Mac）
+            pyenvによるインストール
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
       <li data-nav-id="https://midsatoh.github.io/python/install/pyenv-win/" class="dd-item">
         <div>
           <a href="/python/install/pyenv-win/">
-            pyenv-winによるインストール（Windows）
+            pyenv-winによるインストール
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -191,7 +191,7 @@
         <h2 class="post-title"><a href="/python/install/select_soft/">インストール方法の選択</a></h2>
     </header>
     <section class="post-excerpt">
-        <p> インストールするバージョンやその他のアプリの選択方法 Pythonのインストール方法は、利用する環境やプログラムの方針によって選択する必要がある。
+        <p> インストールするバージョンやソフトウェアの選択方法 Pythonのインストール方法は、利用する環境やプログラムの方針によって選択する必要がある。
 mermaid.initialize({startOnLoad:true}); graph LR; A{複数の
 バージョンの
 切り替え} A --|必要| B[pyenvまたはpyenv-winで
@@ -243,6 +243,35 @@ AdoptOpenJDK 公式サイトにアクセスすると、以下のような画面�
                 <a class="label label-default" href="https://midsatoh.github.io/tags/java/">java</a>
             
                 <a class="label label-default" href="https://midsatoh.github.io/tags/openjdk/">openjdk</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post java">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/java/spring/maven/">Mavenプロジェクトの作成</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Mavenとは Mavenとは、プログラム開発を行う際のコンパイル・テストなどのコマンドやライブラリの自動配置などを担うためのツール群である。 Javaでは、開発環境や実行環境におけるJVMのバージョンやライブラリのバージョンなどが相互に影響しているため、手作業で環境を作成するためには幅広い知識が必要になる。 また、ライブラリによっては相互関係のあるライブラリが多岐にわたっており、それぞれのバージョンを手作業で合わせるのはかなり困難であり、開発者間で環境を合わせることも そのため、ライブラリ管理やコンパイル時・実行時のパス設定などを自動的に設定するためのツールとしてMavenやGradle、過去にはAntが多くのプロジェクトで利用されている。
+統合開発ツールであるEclipseでは、最新の2019.09ではMavenとGradleについては標準で対応している。
+Mavenでできること Mavenは以下のようなコマンドが用意されている。
+   コマンド 概要     mvn architype:generate Mavenプロジェクトを作成する   mvn validate プロジェクトの配置やコンパイルエラーなどがないかを確認する（コンパイルは未実行）   mvn compile プロジェクトのコンパイルを実行し、targetディレクトリを作成する   mvn test テスト（JUnit）を実行する   mvn package jarやwarなどの成果物を作成する（valiate、compile、testを実行し、問題がなければ作成）   mvn install ローカルのリポジトリにパッケージングされた成果物を配置する   mvn deploy インターネット上のリポジトリにパッケージを配置する   mvn clean targetディレクトリを削除し、コンパイル前の状態に戻す   mvn javadoc:javadoc JavaDocを作成する    Mavenのディレクトリ構成 Mavenプロジェクトの標準ディレクトリ構成は以下の通り。 基本的にはデフォルトのまま利用する。
+プロジェクトルート |--- LICENSE.txt # プロジェクトのライセンス情報を記述するファイル |--- README. <a class="read-more" href="/java/spring/maven/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="https://midsatoh.github.io/tags/java/">java</a>
+            
+                <a class="label label-default" href="https://midsatoh.github.io/tags/maven/">maven</a>
+            
+                <a class="label label-default" href="https://midsatoh.github.io/tags/eclipse/">eclipse</a>
             
         
 
@@ -312,7 +341,7 @@ Eclipseの設定（Windowsの場合は[ウィンドウ] -&gt; [設定]、Macの�
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i>  20/11/2019
+        <i class='fa fa-calendar'></i>  25/11/2019
     </div>
     
 

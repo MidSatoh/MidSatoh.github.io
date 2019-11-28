@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2019-11-28T17:55:46 JST">
-<title>Python :: MID-S</title>
+<title>maven :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 
     
   </head>
-  <body data-url="/python/">
+  <body data-url="/tags/maven/">
     
       <header>
   <div class="logo">
@@ -46,11 +46,10 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item parent active haschildren
+    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item haschildren
         ">
       <div>
-      <a href="/python/">Python</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="https://midsatoh.github.io/python/python_aspects/" class="dd-item">
@@ -156,13 +155,8 @@
       <center>Navigation : 
         <select onchange="javascript:location.href = this.value;">
           
-    <option value="/python/"  selected>
-   Python</option> 
-      <option value="/python/python_aspects/" >- Pythonの特徴</option>
-    <option value="/python/install/" >
-  - 
-   環境設定</option>
-  
+    <option value="/python/" >
+   Python</option>
     <option value="/java/" >
    Java</option>
 
@@ -172,7 +166,7 @@
       </center>
     </div>
 
-    <h1>Python</h1>
+    <h1>maven</h1>
 
     
     <script src="/js/custom_toc.js"></script>
@@ -182,20 +176,54 @@
 
 
 
-<h2 id="pythonに関するメモ">Pythonに関するメモ</h2>
+<div class="extra-pagination inner">
+<nav class="pagination" role="navigation">
+	
+	<span class="page-number"> 1  1</span>
+	
+</nav>
 
-<p>python開発における基礎知識など。</p>
+</div>
 
-<ul class="children children-li">
 
-<span><li>
-        <a href="/python/python_aspects/" >Pythonの特徴</a></li>
-</span>
+   <article class="post java">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/java/spring/maven/">Mavenプロジェクトの作成</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Mavenとは Mavenとは、プログラム開発を行う際のコンパイル・テストなどのコマンドやライブラリの自動配置などを担うためのツール群である。 Javaでは、開発環境や実行環境におけるJVMのバージョンやライブラリのバージョンなどが相互に影響しているため、手作業で環境を作成するためには幅広い知識が必要になる。 また、ライブラリによっては相互関係のあるライブラリが多岐にわたっており、それぞれのバージョンを手作業で合わせるのはかなり困難であり、開発者間で環境を合わせることも そのため、ライブラリ管理やコンパイル時・実行時のパス設定などを自動的に設定するためのツールとしてMavenやGradle、過去にはAntが多くのプロジェクトで利用されている。
+統合開発ツールであるEclipseでは、最新の2019.09ではMavenとGradleについては標準で対応している。
+Mavenでできること Mavenは以下のようなコマンドが用意されている。
+   コマンド 概要     mvn architype:generate Mavenプロジェクトを作成する   mvn validate プロジェクトの配置やコンパイルエラーなどがないかを確認する（コンパイルは未実行）   mvn compile プロジェクトのコンパイルを実行し、targetディレクトリを作成する   mvn test テスト（JUnit）を実行する   mvn package jarやwarなどの成果物を作成する（valiate、compile、testを実行し、問題がなければ作成）   mvn install ローカルのリポジトリにパッケージングされた成果物を配置する   mvn deploy インターネット上のリポジトリにパッケージを配置する   mvn clean targetディレクトリを削除し、コンパイル前の状態に戻す   mvn javadoc:javadoc JavaDocを作成する    Mavenのディレクトリ構成 Mavenプロジェクトの標準ディレクトリ構成は以下の通り。 基本的にはデフォルトのまま利用する。
+プロジェクトルート |--- LICENSE.txt # プロジェクトのライセンス情報を記述するファイル |--- README. <a class="read-more" href="/java/spring/maven/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
 
-<span><li>
-        <a href="/python/install/" >環境設定</a></li>
-</span>
-</ul>
+        
+          
+            
+                <a class="label label-default" href="https://midsatoh.github.io/tags/java/">java</a>
+            
+                <a class="label label-default" href="https://midsatoh.github.io/tags/maven/">maven</a>
+            
+                <a class="label label-default" href="https://midsatoh.github.io/tags/eclipse/">eclipse</a>
+            
+        
+
+    </footer>
+</article>
+
+
+<div style="margin-bottom:2rem"></div>
+
+<nav class="pagination" role="navigation">
+	
+	<span class="page-number"> 1  1</span>
+	
+</nav>
+
 
 
 
@@ -203,8 +231,7 @@
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/" title="MID-S"> <i class="fa fa-chevron-left"></i><label>MID-S</label></a>
-    <a class="nav nav-next" href="/python/python_aspects/" title="Pythonの特徴" style="margin-right: 0px;"><label>Pythonの特徴</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-next" href="/python/" title="Python" style="margin-right: 0px;"><label>Python</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -219,7 +246,7 @@
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i>  13/11/2019
+        <i class='fa fa-calendar'></i>  25/11/2019
     </div>
     
 
