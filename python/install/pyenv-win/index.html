@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-11-29T11:32:12 JST">
+<meta name="revised" content="2019-12-03T17:09:34 JST">
 <title>pyenv-winによるインストール :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
       var baseurl = "https:\/\/midsatoh.github.io\/";
 </script>
 <link href="/css/custom.css" rel="stylesheet">
-<meta name="description" content="">
+<meta name="description" content="Pythonインストール手順（pyenv-win版）。WindowsでのPyenvインストール手順となります。">
 
 
 
@@ -206,7 +206,7 @@
     
     
     
-    <div class="addthis_inline_share_toolbox"></div>
+    <div class="addthis_inline_share_toolbox" id="addThis"></div>
     
 
 <h2 id="pyenv-winとは">pyenv-winとは</h2>
@@ -215,6 +215,11 @@
 Windows環境では、Python3.6とPython3.8などを切り替える程度であればインストーラで複数のバージョンをインストールするのみで問題はない。
 しかし、例えばPython3.6.5とPython3.6.9を切り替える必要がある、などの細かい変更が必要な場合は、Macと同様にpyenvによる環境切り替えが必要になる。
 このような環境切り替えを可能にするのが、pyenv-win(pyenv for Windows)である。</p>
+
+<div class="notices info" ><p>
+pyenvはあくまで複数のPythonのバージョンをパッチレベルまで切り替えるためのツールである。
+Windows環境でpyenv-winを利用しなければいけないような状況は多くないだろうが、参考として記載する。
+</p></div>
 
 <h2 id="pyenv-winのインストール">pyenv-winのインストール</h2>
 

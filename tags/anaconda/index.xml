@@ -21,7 +21,9 @@
 Anacondaで用意されている主なライブラリ    ライブラリ名 概要     NumPy 多次元配列、ベクトルなどの数値計算で主に利用されるデータ型や関数など   SciPy 線形代数や積分などの科学技術計算など   Matplotlib グラフ描画に必要な関数など   Pandas 数表や時系列データなどを使用し、データ解析を行うデータ型や関数など    Anacondaに含まれる主なツール    ツール名 概要     conda パッケージ管理・仮想環境構築   JupyterLab/Jupyter Notebook Webベースの統合開発環境   Spyder 統合開発環境    Anacondaのダウンロード Anaconda公式サイト：https://www.anaconda.com/distribution/
 公式サイトのdownloadボタン、またはページ下部に移動するとダウンロード用のリンクがある。
 Python3系を利用しているAnacondaを選択し、ダウンロードを開始する。Windowsの場合はexeファイル、Macの場合はpkgファイルがダウンロードされる。
-Anacondaのインストール 基本的にはデフォルトでインストールする。 Anacondaはツールなども含まれるため、インストールには時間がかかる。</description>
+Anacondaのインストール 基本的にはデフォルトでインストールする。 Anacondaはツールなども含まれるため、インストールには時間がかかる。
+Windows版のインストールについて：Anaconda公式ドキュメント Installing on Windows
+Mac版のインストールについて：Anaconda公式ドキュメント Installing on macOS</description>
     </item>
     
   </channel>
