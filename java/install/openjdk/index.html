@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-12-03T17:09:34 JST">
+<meta name="revised" content="2019-12-09T16:37:12 JST">
 <title>OpenJDKのインストール :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -143,6 +143,36 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="https://midsatoh.github.io/typescript/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/typescript/">Typescript</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/typescript/install/" class="dd-item">
+        <div>
+          <a href="/typescript/install/">
+            Install
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/mac/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/mac/">Mac</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/mac/homebrew/" class="dd-item">
+        <div>
+          <a href="/mac/homebrew/">
+            Homebrewのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
     <li data-nav-id="https://midsatoh.github.io/javascript/" class="dd-item
         ">
       <div>
@@ -175,6 +205,10 @@
   
       <option value="/java/spring/maven/" >- Mavenプロジェクトの作成</option>
   
+    <option value="/typescript/" >
+   Typescript</option>
+    <option value="/mac/" >
+   Mac</option>
     <option value="/javascript/" >
    JavaScript</option>
 
@@ -189,15 +223,13 @@
     
     <section>
         <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#openjdk">OpenJDK</a>
-<ul>
-<li><a href="#adoptopenjdk">AdoptOpenJDK</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#openjdk">OpenJDK</a>
+      <ul>
+        <li><a href="#adoptopenjdk">AdoptOpenJDK</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </section>
     
@@ -206,50 +238,40 @@
     
     
     <div class="addthis_inline_share_toolbox" id="addThis"></div>
-    
-
-<h2 id="openjdk">OpenJDK</h2>
-
+    <h2 id="openjdk">OpenJDK</h2>
 <p>OracleJavaが有償化されたため、現在無償でJavaでの開発を行う際にはOpenJDKを利用する必要がある。</p>
-
-<p>OpenJDK公式サイト：<a href="http://openjdk.java.net" target="_blank">http://openjdk.java.net</a></p>
-
+<p>OpenJDK公式サイト：<a href="http://openjdk.java.net"><a href="http://openjdk.java.net">http://openjdk.java.net</a></a></p>
 <p>よりソースコードからコンパイルする方法もあるが、初級者が学習する際にはバイナリでの提供を行っている団体のサイトより取得する。</p>
-
 <p>今回は、様々なプラットフォームに対応済みであるAdoptOpenJDKを利用する。</p>
-
-<p>AdoptOpenJDK公式サイト：<a href="https://adoptopenjdk.net" target="_blank">https://adoptopenjdk.net</a></p>
-
+<p>AdoptOpenJDK公式サイト：<a href="https://adoptopenjdk.net"><a href="https://adoptopenjdk.net">https://adoptopenjdk.net</a></a></p>
 <h3 id="adoptopenjdk">AdoptOpenJDK</h3>
-
 <p>公式サイトにアクセスすると、以下のような画面となる。</p>
-
-<p><img src="/images/java/install/01_AdoptOpenJDK_site.png?classes=border,shadow&amp;width=70%" alt="AdoptOpenJDKサイトより" /></p>
-
+<p><img src="/images/java/install/01_AdoptOpenJDK_site.png?classes=border,shadow&amp;width=70%25" alt="AdoptOpenJDKサイトより"></p>
 <ol>
-<li><p>Choose a Version</p>
-
+<li>
+<p>Choose a Version</p>
 <ul>
 <li>OpenJDKのバージョンを指定する。基本的にLTS（long term support：長期間サポートあり)を選択する。</li>
-</ul></li>
-
-<li><p>Choose a JVM</p>
-
+</ul>
+</li>
+<li>
+<p>Choose a JVM</p>
 <ul>
 <li>JavaVMを指定する。HotSpotはサン・マイクロシステムズが開発したオリジナルのJVM、OpenJ9はIBMが開発した別実装のJVMとなる。基本的にはHotSpotで問題ない。</li>
-</ul></li>
-
-<li><p>ダウンロード</p>
-
+</ul>
+</li>
+<li>
+<p>ダウンロード</p>
 <ul>
 <li>1、2 を指定後、ダウンロード可能となる。基本的にサイトにアクセスしたプラットフォームで利用可能なバージョンがダウンロード可能となるが、必要に応じてOther platformsのリンクより別のプラットフォーム向けのダウンロードも可能。</li>
-</ul></li>
-
-<li><p>インストール</p>
-
+</ul>
+</li>
+<li>
+<p>インストール</p>
 <ul>
 <li>macの場合はpkgファイル、Windowsの場合はmsiファイルでのダウンロードとなるため、実行後は指示に従ってインストールを実施する。</li>
-</ul></li>
+</ul>
+</li>
 </ol>
 
     

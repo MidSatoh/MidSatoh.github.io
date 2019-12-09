@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-12-03T17:09:34 JST">
+<meta name="revised" content="2019-12-09T16:37:12 JST">
 <title>Pythonの特徴 :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -142,6 +142,36 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="https://midsatoh.github.io/typescript/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/typescript/">Typescript</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/typescript/install/" class="dd-item">
+        <div>
+          <a href="/typescript/install/">
+            Install
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/mac/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/mac/">Mac</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/mac/homebrew/" class="dd-item">
+        <div>
+          <a href="/mac/homebrew/">
+            Homebrewのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
     <li data-nav-id="https://midsatoh.github.io/javascript/" class="dd-item
         ">
       <div>
@@ -171,6 +201,10 @@
   
     <option value="/java/" >
    Java</option>
+    <option value="/typescript/" >
+   Typescript</option>
+    <option value="/mac/" >
+   Mac</option>
     <option value="/javascript/" >
    JavaScript</option>
 
@@ -185,22 +219,21 @@
     
     <section>
         <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#利用面での特徴">利用面での特徴</a></li>
-<li><a href="#実装面での特徴">実装面での特徴</a>
-<ul>
-<li><a href="#javaで書いた場合-その1">Javaで書いた場合(その1)</a></li>
-<li><a href="#javaで書いた場合-その2">Javaで書いた場合(その2)</a></li>
-<li><a href="#pythonで書いた場合">Pythonで書いた場合</a></li>
-</ul></li>
-<li><a href="#導入面での特徴">導入面での特徴</a>
-<ul>
-<li><a href="#pythonの欠点">Pythonの欠点</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#heading">利用面での特徴</a></li>
+    <li><a href="#heading1">実装面での特徴</a>
+      <ul>
+        <li><a href="#java1">Javaで書いた場合(その1)</a></li>
+        <li><a href="#java2">Javaで書いた場合(その2)</a></li>
+        <li><a href="#python">Pythonで書いた場合</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading2">導入面での特徴</a>
+      <ul>
+        <li><a href="#python1">Pythonの欠点</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </section>
     
@@ -209,12 +242,8 @@
     
     
     <div class="addthis_inline_share_toolbox" id="addThis"></div>
-    
-
-<h2 id="利用面での特徴">利用面での特徴</h2>
-
+    <h2 id="heading">利用面での特徴</h2>
 <p>Pythonをこれから利用する側からみた特徴としては「<strong>豊富なライブラリ</strong>」「<strong>様々なサイトやサービスで利用されている実績</strong>」が有利な特徴と言える。特に、ライブラリについては多岐にわたっている。</p>
-
 <ul>
 <li>画像／動画処理</li>
 <li>数値計算／統計処理</li>
@@ -222,75 +251,59 @@
 <li>データベース処理</li>
 <li>ネットワーク処理</li>
 </ul>
-
 <p>などの、自力で作成するには複雑な作業やセキュリティの考慮などが必要な処理や、多くの場所で利用可能な処理について、様々なライブラリが配布されている。
 このようなライブラリを利用し、組み合わせることで用途に合わせたプログラムを作成することが可能となっている。</p>
-
-<h2 id="実装面での特徴">実装面での特徴</h2>
-
+<h2 id="heading1">実装面での特徴</h2>
 <p>Pythonを使って実際にプログラムを作成する・実装する立場から見た特徴としては、「<strong>学習コストの低さ</strong>」が大きな特徴と言えるであろう。</p>
-
-<p>例えば、「変数numに代入された値が10より大きい場合は&rdquo;Over 10&rdquo;と表示、そうでなければ&rdquo;Other&rdquo;と表示」というプログラムを、Javaで書いた場合とPythonで書いた場合で比較してみる。</p>
-
-<h3 id="javaで書いた場合-その1">Javaで書いた場合(その1)</h3>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Sample</span> {
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String[] <span style="color:#a6e22e">args</span>){
-        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> 11;
-        <span style="color:#66d9ef">if</span> (num <span style="color:#f92672">&gt;</span> 10){
-            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Over 10&#34;</span>);
-        } <span style="color:#66d9ef">else</span> {
-            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Other&#34;</span>);
-        }
-    }
-}</code></pre></div>
-
-<h3 id="javaで書いた場合-その2">Javaで書いた場合(その2)</h3>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Sample</span> {
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String[] <span style="color:#a6e22e">args</span>){
-        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> 11;
-            <span style="color:#66d9ef">if</span> (num <span style="color:#f92672">&gt;</span> 10) System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Over 10&#34;</span>);
-    <span style="color:#66d9ef">else</span> System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Other&#34;</span>);
-    }
-}</code></pre></div>
-
-<h3 id="pythonで書いた場合">Pythonで書いた場合</h3>
-
+<p>例えば、「変数numに代入された値が10より大きい場合は&quot;Over 10&quot;と表示、そうでなければ&quot;Other&quot;と表示」というプログラムを、Javaで書いた場合とPythonで書いた場合で比較してみる。</p>
+<h3 id="java1">Javaで書いた場合(その1)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Sample</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> num <span style="color:#f92672">=</span> 11<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>num <span style="color:#f92672">&gt;</span> 10<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Over 10&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Other&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<h3 id="java2">Javaで書いた場合(その2)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Sample</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> num <span style="color:#f92672">=</span> 11<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>num <span style="color:#f92672">&gt;</span> 10<span style="color:#f92672">)</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Over 10&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">else</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Other&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<h3 id="python">Pythonで書いた場合</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">num <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>
 <span style="color:#66d9ef">if</span> num <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>:
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Over 10&#39;</span>)
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Over 10</span><span style="color:#e6db74">&#39;</span>)
 <span style="color:#66d9ef">else</span>:
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Other&#39;</span>)</code></pre></div>
-
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Other</span><span style="color:#e6db74">&#39;</span>)</code></pre></div>
 <p>Javaの場合、同じ内容を記載した場合でも{}の有無、インデント（字下げ）の位置などが揃っていなくとも記述が可能。また、スクリプトを実行する場合でも必ずクラスが必要であるなどのルールが複雑である。
 Pythonの場合、スクリプト実行の場合は必要な処理をファイルに記載するのみで実行が可能である。また、記述ルールにインデント（字下げ）が含まれるため、Pythonの初心者でも、熟練者でも同一の内容であれば基本的な記述方法は同じである。</p>
-
 <p>これらの記述ルールにより、Pythonでは可読性（ソースコード の見やすさ）が高く、プログラミングの学習が容易で理解しやすい、という特徴がある。</p>
-
-<h2 id="導入面での特徴">導入面での特徴</h2>
-
+<h2 id="heading2">導入面での特徴</h2>
 <p>プログラムやシステムを実際に利用するマシンや環境に導入する際、Pythonの場合は以下の作業を行うだけで環境を設定することが可能となる。</p>
-
 <ul>
-<li><p>必要なバージョンのPython実行環境をインストールする</p></li>
-
-<li><p>インストールされた環境に、必要なライブラリを配置する</p></li>
-
-<li><p>プログラムを実行する</p></li>
+<li>
+<p>必要なバージョンのPython実行環境をインストールする</p>
+</li>
+<li>
+<p>インストールされた環境に、必要なライブラリを配置する</p>
+</li>
+<li>
+<p>プログラムを実行する</p>
+</li>
 </ul>
-
 <p>Pythonでは、実行環境をインストールすると、必要なライブラリを依存関係含めて配置するための環境設定用ソフトウェア（pip）が一緒にインストールされることになっている。
 そのため、環境設定用のソフトウェアを別途インストールする必要がなく、またデフォルトの設定のままでも必要な環境を用意することが可能となっている。</p>
-
 <p>また、各OS用の実行環境が用意されているため、プログラム作成時にOSごとのプログラムを改めて作成する必要がない。
 そのため、導入や別環境への移行も容易である。</p>
-
-<h3 id="pythonの欠点">Pythonの欠点</h3>
-
+<h3 id="python1">Pythonの欠点</h3>
 <p>Pythonはスクリプト言語であり、一度コンパイルしたバイトコードを機械語に変換しながら実行している。
 そのため、C言語などのような機械語に変換済みのプログラムと比べると実行時間が遅くなってしまう。</p>
-
 <p>例えば、速度を重視する箇所についてはC言語やC++言語などで記述し、Pythonではライブラリなどを統括して利用するなど、得意分野ごとの切り分けが必要になるだろう。</p>
 
     

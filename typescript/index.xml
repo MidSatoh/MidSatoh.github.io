@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typescript on MID-S</title>
+    <link>https://midsatoh.github.io/typescript/</link>
+    <description>Recent content in Typescript on MID-S</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 04 Dec 2019 16:00:28 +0900</lastBuildDate>
+    
+	<atom:link href="https://midsatoh.github.io/typescript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install</title>
+      <link>https://midsatoh.github.io/typescript/install/</link>
+      <pubDate>Wed, 04 Dec 2019 16:01:51 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/typescript/install/</guid>
+      <description>TypeScriptコンパイラの取得 TypeScriptを利用するためには、TypeScriptのコンパイラが必要となる。 コンパイラはnpmで配布されているものを取得する方法が公式でも推奨されているため、まずはnpmが自身の環境で利用できるかどうかを確認する必要がある。
+npmとは npm(Node Package Manager)とは、サーバーサイドJavaScript環境であるNode.jsのパッケージ管理システムである。 Node.jsをインストールするとバンドルされている。
+Node.jsがインストールされているかどうかは以下のコマンドで確認する。
+% node --version # Node.jsのバージョン確認用コマンド % npm --version # npmのバージョン確認用コマンド インストールされていない場合は、公式サイトからインストーラをダウンロードするか、Macの場合はHomebrewなどでインストールする。
+ Node.js公式サイト（日本語） Homebrewのインストール  npmによるTypeScriptコンパイラの取得 npmが利用できる状態であれば、以下のコマンドでTypeScriptのコンパイラをインストールすることができる。
+% npm install -g typescript TypeScriptのコンパイラは、tscコマンドで実行が可能となる。 npmでのインストールが完了しているか確認するためには、以下のバージョン確認用コマンドを利用する
+tsc --version TypeScript対応エディタ TypeScriptの対応エディタとしては、基本的にはJavaScriptに対応しているものであれば問題はない。 現在、TypeScriptを開発・メンテナンスしているのがMicrosoftであるため、
+ VisualStudio VisualStudio Code  のどちらかを利用すると良いだろう。VisualStudioシリーズ公式サイト
+他にも、
+ WebStorm Eclipse NetBeans  などのIDEや、
+ Sublime Text Emacs Atom  などの高機能エディタも対応している。
+ちなみに、VisualStudio2019はNode.jsを自動インストールするため、マシンスペックなどに余裕がある場合はVisualStudio、単純に動かすだけで良い・環境構築は自分でできるということであればVisualStudio Codeという選択をお勧めする。
+TypeScriptの実行 TypeScriptの実行は、以下の手順で行う。
+mermaid.initialize({startOnLoad:true}); graph LR; A[TypeScriptによる
+コードの作成] -- B[コンパイラでJavaScriptの
+jsファイルへ変換] B -- C[JavaScript実行環境へ</description>
+    </item>
+    
+  </channel>
+</rss>

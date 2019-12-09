@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2019-12-09T16:37:12 JST">
-<title>インストール方法の選択 :: MID-S</title>
+<title>Typescript :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 
     
   </head>
-  <body data-url="/python/install/select_soft/">
+  <body data-url="/typescript/">
     
       <header>
   <div class="logo">
@@ -46,11 +46,10 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item parent haschildren
+    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item haschildren
         ">
       <div>
-      <a href="/python/">Python</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="https://midsatoh.github.io/python/python_aspects/" class="dd-item">
@@ -60,14 +59,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-    <li data-nav-id="https://midsatoh.github.io/python/install/" class="dd-item parent haschildren
+    <li data-nav-id="https://midsatoh.github.io/python/install/" class="dd-item haschildren
         ">
       <div>
-      <a href="/python/install/">環境設定</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/python/install/">環境設定</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="https://midsatoh.github.io/python/install/select_soft/" class="dd-item active">
+      <li data-nav-id="https://midsatoh.github.io/python/install/select_soft/" class="dd-item">
         <div>
           <a href="/python/install/select_soft/">
             インストール方法の選択
@@ -143,10 +141,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="https://midsatoh.github.io/typescript/" class="dd-item haschildren
+    <li data-nav-id="https://midsatoh.github.io/typescript/" class="dd-item parent active haschildren
         ">
       <div>
-      <a href="/typescript/">Typescript</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/typescript/">Typescript</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="https://midsatoh.github.io/typescript/install/" class="dd-item">
@@ -194,22 +193,13 @@
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/python/" >
-   Python</option> 
-      <option value="/python/python_aspects/" >- Pythonの特徴</option>
-    <option value="/python/install/" >
-  - 
-   環境設定</option> 
-      <option value="/python/install/select_soft/"  selected>-- インストール方法の選択</option>
-      <option value="/python/install/install_soft/" >-- Pythonインストーラによるインストール</option>
-      <option value="/python/install/anaconda/" >-- Anacondaのインストール</option>
-      <option value="/python/install/pyenv/" >-- pyenvによるインストール</option>
-      <option value="/python/install/pyenv-win/" >-- pyenv-winによるインストール</option>
-  
-  
+   Python</option>
     <option value="/java/" >
    Java</option>
-    <option value="/typescript/" >
-   Typescript</option>
+    <option value="/typescript/"  selected>
+   Typescript</option> 
+      <option value="/typescript/install/" >- Install</option>
+  
     <option value="/mac/" >
    Mac</option>
     <option value="/javascript/" >
@@ -221,64 +211,74 @@
       </center>
     </div>
 
-    <h1>インストール方法の選択</h1>
+    <h1>Typescript</h1>
 
     
     <script src="/js/custom_toc.js"></script>
     
     
     
-    <div class="addthis_inline_share_toolbox" id="addThis"></div>
-    <h2 id="heading">バージョンやソフトウェアの選択方法</h2>
-<p>Pythonのインストール方法は、利用する環境やプログラムの方針によって選択する必要がある。</p>
-<link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
-<script defer src="/mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
-<div class="mermaid" align="center" >
-graph LR;
-    A{複数の<br>パッチバージョン*注<br>の切り替え}
-    A -->|必要| B[pyenvまたはpyenv-winで<br>インストールする]
-    A -->|不要| C{統計などで<br>利用する}
-    C -->|利用する| D[Anacondaを<br>インストールする]
-    C -->|利用しない or<br>わからない| E[Pythonインストーラで<br>インストールする]
-</div>
-<ul>
-<li>注：3.6.0と3.6.5などのバージョン違い。</li>
-</ul>
 
-    
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5de07c32251c84e0"></script>
-​<script type="text/javascript">
-    var addthis_config = addthis_config||{};
-        addthis_config.data_track_addressbar = false;
-        addthis_config.data_track_clickback = false;
-</script>
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "https-midsatoh-github-io" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<div class="extra-pagination inner">
+<nav class="pagination" role="navigation">
+		
+		<span class="page-number"> 1  1</span>
+		
+</nav>
+</div>
+
+
+   <article class="post typescript">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/typescript/install/">Install</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>TypeScriptコンパイラの取得 TypeScriptを利用するためには、TypeScriptのコンパイラが必要となる。 コンパイラはnpmで配布されているものを取得する方法が公式でも推奨されているため、まずはnpmが自身の環境で利用できるかどうかを確認する必要がある。
+npmとは npm(Node Package Manager)とは、サーバーサイドJavaScript環境であるNode.jsのパッケージ管理システムである。 Node.jsをインストールするとバンドルされている。
+Node.jsがインストールされているかどうかは以下のコマンドで確認する。
+% node --version # Node.jsのバージョン確認用コマンド % npm --version # npmのバージョン確認用コマンド インストールされていない場合は、公式サイトからインストーラをダウンロードするか、Macの場合はHomebrewなどでインストールする。
+ Node.js公式サイト（日本語） Homebrewのインストール  npmによるTypeScriptコンパイラの取得 npmが利用できる状態であれば、以下のコマンドでTypeScriptのコンパイラをインストールすることができる。
+% npm install -g typescript TypeScriptのコンパイラは、tscコマンドで実行が可能となる。 npmでのインストールが完了しているか確認するためには、以下のバージョン確認用コマンドを利用する
+tsc --version TypeScript対応エディタ TypeScriptの対応エディタとしては、基本的にはJavaScriptに対応しているものであれば問題はない。 現在、TypeScriptを開発・メンテナンスしているのがMicrosoftであるため、
+ VisualStudio VisualStudio Code  のどちらかを利用すると良いだろう。VisualStudioシリーズ公式サイト
+他にも、
+ WebStorm Eclipse NetBeans  などのIDEや、
+ Sublime Text Emacs Atom  などの高機能エディタも対応している。
+ちなみに、VisualStudio2019はNode.jsを自動インストールするため、マシンスペックなどに余裕がある場合はVisualStudio、単純に動かすだけで良い・環境構築は自分でできるということであればVisualStudio Codeという選択をお勧めする。
+TypeScriptの実行 TypeScriptの実行は、以下の手順で行う。
+mermaid.initialize({startOnLoad:true}); graph LR; A[TypeScriptによる
+コードの作成] -- B[コンパイラでJavaScriptの
+jsファイルへ変換] B -- C[JavaScript実行環境へ <a class="read-more" href="/typescript/install/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+        
+
+    </footer>
+</article>
+
+
+<div style="margin-bottom:2rem"></div>
+
+<nav class="pagination" role="navigation">
+		
+		<span class="page-number"> 1  1</span>
+		
+</nav>
+
+
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/python/install/" title="環境設定"> <i class="fa fa-chevron-left"></i><label>環境設定</label></a>
-    <a class="nav nav-next" href="/python/install/install_soft/" title="Pythonインストーラによるインストール" style="margin-right: 0px;"><label>Pythonインストーラによるインストール</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/java/spring/maven/" title="Mavenプロジェクトの作成"> <i class="fa fa-chevron-left"></i><label>Mavenプロジェクトの作成</label></a>
+    <a class="nav nav-next" href="/typescript/install/" title="Install" style="margin-right: 0px;"><label>Install</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -288,20 +288,12 @@ graph LR;
 
 <div class="footline">
     
-    <div class="tags"> 
-      
-        <a class="label label-default" href="https://midsatoh.github.io/tags/java">java</a>
-      
-        <a class="label label-default" href="https://midsatoh.github.io/tags/eclipse">eclipse</a>
-      
-    </div>
-    
 
     
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i>  20/11/2019
+        <i class='fa fa-calendar'></i>  04/12/2019
     </div>
     
 

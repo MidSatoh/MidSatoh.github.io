@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-12-03T17:09:34 JST">
+<meta name="revised" content="2019-12-09T16:37:12 JST">
 <title>Anacondaのインストール :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -143,6 +143,36 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="https://midsatoh.github.io/typescript/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/typescript/">Typescript</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/typescript/install/" class="dd-item">
+        <div>
+          <a href="/typescript/install/">
+            Install
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/mac/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/mac/">Mac</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/mac/homebrew/" class="dd-item">
+        <div>
+          <a href="/mac/homebrew/">
+            Homebrewのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
     <li data-nav-id="https://midsatoh.github.io/javascript/" class="dd-item
         ">
       <div>
@@ -178,6 +208,10 @@
   
     <option value="/java/" >
    Java</option>
+    <option value="/typescript/" >
+   Typescript</option>
+    <option value="/mac/" >
+   Mac</option>
     <option value="/javascript/" >
    JavaScript</option>
 
@@ -192,18 +226,16 @@
     
     <section>
         <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#anacondaとは">Anacondaとは</a>
-<ul>
-<li><a href="#anacondaで用意されている主なライブラリ">Anacondaで用意されている主なライブラリ</a></li>
-<li><a href="#anacondaに含まれる主なツール">Anacondaに含まれる主なツール</a></li>
-</ul></li>
-<li><a href="#anacondaのダウンロード">Anacondaのダウンロード</a></li>
-<li><a href="#anacondaのインストール">Anacondaのインストール</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#anaconda">Anacondaとは</a>
+      <ul>
+        <li><a href="#anaconda1">Anacondaで用意されている主なライブラリ</a></li>
+        <li><a href="#anaconda2">Anacondaに含まれる主なツール</a></li>
+      </ul>
+    </li>
+    <li><a href="#anaconda3">Anacondaのダウンロード</a></li>
+    <li><a href="#anaconda4">Anacondaのインストール</a></li>
+  </ul>
 </nav>
     </section>
     
@@ -212,15 +244,10 @@
     
     
     <div class="addthis_inline_share_toolbox" id="addThis"></div>
-    
-
-<h2 id="anacondaとは">Anacondaとは</h2>
-
+    <h2 id="anaconda">Anacondaとは</h2>
 <p>Pythonでは数値計算やデータ解析、グラフの描画などを作成することができるが、その際に必要なライブラリは通常pipコマンドなどで自身でインストールする。
 Anacondaとは、このような計算系の作業に必要なライブラリやツールを一括でインストールすることができるディストリビューション（ツール群）である。</p>
-
-<h3 id="anacondaで用意されている主なライブラリ">Anacondaで用意されている主なライブラリ</h3>
-
+<h3 id="anaconda1">Anacondaで用意されている主なライブラリ</h3>
 <table>
 <thead>
 <tr>
@@ -228,32 +255,26 @@ Anacondaとは、このような計算系の作業に必要なライブラリや
 <th>概要</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>NumPy</td>
 <td>多次元配列、ベクトルなどの数値計算で主に利用されるデータ型や関数など</td>
 </tr>
-
 <tr>
 <td>SciPy</td>
 <td>線形代数や積分などの科学技術計算など</td>
 </tr>
-
 <tr>
 <td>Matplotlib</td>
 <td>グラフ描画に必要な関数など</td>
 </tr>
-
 <tr>
 <td>Pandas</td>
 <td>数表や時系列データなどを使用し、データ解析を行うデータ型や関数など</td>
 </tr>
 </tbody>
 </table>
-
-<h3 id="anacondaに含まれる主なツール">Anacondaに含まれる主なツール</h3>
-
+<h3 id="anaconda2">Anacondaに含まれる主なツール</h3>
 <table>
 <thead>
 <tr>
@@ -261,45 +282,32 @@ Anacondaとは、このような計算系の作業に必要なライブラリや
 <th>概要</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>conda</td>
 <td>パッケージ管理・仮想環境構築</td>
 </tr>
-
 <tr>
 <td>JupyterLab/Jupyter Notebook</td>
 <td>Webベースの統合開発環境</td>
 </tr>
-
 <tr>
 <td>Spyder</td>
 <td>統合開発環境</td>
 </tr>
 </tbody>
 </table>
-
-<h2 id="anacondaのダウンロード">Anacondaのダウンロード</h2>
-
-<p>Anaconda公式サイト：<a href="https://www.anaconda.com/distribution/" target="_blank">https://www.anaconda.com/distribution/</a></p>
-
-<p><img src="/images/python/install/anaconda_download01.png?classes=border,shadow&amp;width=70%" alt="Anaconda公式サイト" /></p>
-
+<h2 id="anaconda3">Anacondaのダウンロード</h2>
+<p>Anaconda公式サイト：<a href="https://www.anaconda.com/distribution/"><a href="https://www.anaconda.com/distribution/">https://www.anaconda.com/distribution/</a></a></p>
+<p><img src="/images/python/install/anaconda_download01.png?classes=border,shadow&amp;width=70%25" alt="Anaconda公式サイト"></p>
 <p>公式サイトのdownloadボタン、またはページ下部に移動するとダウンロード用のリンクがある。</p>
-
-<p><img src="/images/python/install/anaconda_download02.png?classes=border,shadow&amp;width=70%" alt="Anacondaダウンロード" /></p>
-
+<p><img src="/images/python/install/anaconda_download02.png?classes=border,shadow&amp;width=70%25" alt="Anacondaダウンロード"></p>
 <p>Python3系を利用しているAnacondaを選択し、ダウンロードを開始する。Windowsの場合はexeファイル、Macの場合はpkgファイルがダウンロードされる。</p>
-
-<h2 id="anacondaのインストール">Anacondaのインストール</h2>
-
+<h2 id="anaconda4">Anacondaのインストール</h2>
 <p>基本的にはデフォルトでインストールする。
 Anacondaはツールなども含まれるため、インストールには時間がかかる。</p>
-
-<p>Windows版のインストールについて：<a href="https://docs.continuum.io/anaconda/install/windows/" target="_blank">Anaconda公式ドキュメント Installing on Windows</a></p>
-
-<p>Mac版のインストールについて：<a href="https://docs.continuum.io/anaconda/install/mac-os/" target="_blank">Anaconda公式ドキュメント Installing on macOS</a></p>
+<p>Windows版のインストールについて：<a href="https://docs.continuum.io/anaconda/install/windows/">Anaconda公式ドキュメント Installing on Windows</a></p>
+<p>Mac版のインストールについて：<a href="https://docs.continuum.io/anaconda/install/mac-os/">Anaconda公式ドキュメント Installing on macOS</a></p>
 
     
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5de07c32251c84e0"></script>

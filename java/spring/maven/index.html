@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-12-03T17:09:34 JST">
+<meta name="revised" content="2019-12-09T16:37:12 JST">
 <title>Mavenプロジェクトの作成 :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -142,6 +142,36 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="https://midsatoh.github.io/typescript/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/typescript/">Typescript</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/typescript/install/" class="dd-item">
+        <div>
+          <a href="/typescript/install/">
+            Install
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/mac/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/mac/">Mac</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/mac/homebrew/" class="dd-item">
+        <div>
+          <a href="/mac/homebrew/">
+            Homebrewのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
     <li data-nav-id="https://midsatoh.github.io/javascript/" class="dd-item
         ">
       <div>
@@ -171,6 +201,10 @@
    環境設定</option>
       <option value="/java/spring/maven/"  selected>- Mavenプロジェクトの作成</option>
   
+    <option value="/typescript/" >
+   Typescript</option>
+    <option value="/mac/" >
+   Mac</option>
     <option value="/javascript/" >
    JavaScript</option>
 
@@ -185,21 +219,20 @@
     
     <section>
         <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#mavenとは">Mavenとは</a></li>
-<li><a href="#mavenでできること">Mavenでできること</a>
-<ul>
-<li><a href="#mavenのディレクトリ構成">Mavenのディレクトリ構成</a></li>
-</ul></li>
-<li><a href="#pom-project-object-model">POM(Project Object Model)</a>
-<ul>
-<li><a href="#mvnコマンド">mvnコマンド</a></li>
-</ul></li>
-<li><a href="#eclipseでのmavenプロジェクト作成">EclipseでのMavenプロジェクト作成</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#maven">Mavenとは</a></li>
+    <li><a href="#maven1">Mavenでできること</a>
+      <ul>
+        <li><a href="#maven2">Mavenのディレクトリ構成</a></li>
+      </ul>
+    </li>
+    <li><a href="#pomproject-object-model">POM(Project Object Model)</a>
+      <ul>
+        <li><a href="#mvn">mvnコマンド</a></li>
+      </ul>
+    </li>
+    <li><a href="#eclipsemaven">EclipseでのMavenプロジェクト作成</a></li>
+  </ul>
 </nav>
     </section>
     
@@ -208,21 +241,14 @@
     
     
     <div class="addthis_inline_share_toolbox" id="addThis"></div>
-    
-
-<h2 id="mavenとは">Mavenとは</h2>
-
+    <h2 id="maven">Mavenとは</h2>
 <p>Mavenとは、プログラム開発を行う際のコンパイル・テストなどのコマンドやライブラリの自動配置などを担うためのツール群である。
 Javaでは、開発環境や実行環境におけるJVMのバージョンやライブラリのバージョンなどが相互に影響しているため、手作業で環境を作成するためには幅広い知識が必要になる。
 また、ライブラリによっては相互関係のあるライブラリが多岐にわたっており、それぞれのバージョンを手作業で合わせるのはかなり困難であり、開発者間で環境を合わせることも
 そのため、ライブラリ管理やコンパイル時・実行時のパス設定などを自動的に設定するためのツールとしてMavenやGradle、過去にはAntが多くのプロジェクトで利用されている。</p>
-
 <p>統合開発ツールであるEclipseでは、最新の2019.09ではMavenとGradleについては標準で対応している。</p>
-
-<h2 id="mavenでできること">Mavenでできること</h2>
-
+<h2 id="maven1">Mavenでできること</h2>
 <p>Mavenは以下のようなコマンドが用意されている。</p>
-
 <table>
 <thead>
 <tr>
@@ -230,57 +256,46 @@ Javaでは、開発環境や実行環境におけるJVMのバージョンやラ�
 <th>概要</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td><strong>mvn architype:generate</strong></td>
 <td>Mavenプロジェクトを作成する</td>
 </tr>
-
 <tr>
 <td>mvn validate</td>
 <td>プロジェクトの配置やコンパイルエラーなどがないかを確認する（コンパイルは未実行）</td>
 </tr>
-
 <tr>
 <td><strong>mvn compile</strong></td>
 <td>プロジェクトのコンパイルを実行し、targetディレクトリを作成する</td>
 </tr>
-
 <tr>
 <td><strong>mvn test</strong></td>
 <td>テスト（JUnit）を実行する</td>
 </tr>
-
 <tr>
 <td><strong>mvn package</strong></td>
 <td>jarやwarなどの成果物を作成する（valiate、compile、testを実行し、問題がなければ作成）</td>
 </tr>
-
 <tr>
 <td>mvn install</td>
 <td>ローカルのリポジトリにパッケージングされた成果物を配置する</td>
 </tr>
-
 <tr>
 <td>mvn deploy</td>
 <td>インターネット上のリポジトリにパッケージを配置する</td>
 </tr>
-
 <tr>
 <td><strong>mvn clean</strong></td>
 <td>targetディレクトリを削除し、コンパイル前の状態に戻す</td>
 </tr>
-
 <tr>
 <td>mvn javadoc:javadoc</td>
 <td>JavaDocを作成する</td>
 </tr>
 </tbody>
 </table>
-
-<h3 id="mavenのディレクトリ構成">Mavenのディレクトリ構成</h3>
-
+<h3 id="maven2">Mavenのディレクトリ構成</h3>
 <p>Mavenプロジェクトの標準ディレクトリ構成は以下の通り。
 基本的にはデフォルトのまま利用する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">プロジェクトルート
@@ -305,11 +320,9 @@ Javaでは、開発環境や実行環境におけるJVMのバージョンやラ�
     |    |--- site      <span style="color:#75715e"># Webサイトの情報を格納するディレクトリ</span>
     |
     |--- target
-    　      |--- classes <span style="color:#75715e"># mvn compileでコンパイルされたクラスファイルを格納するディレクトリ</span></code></pre></div>
-<h2 id="pom-project-object-model">POM(Project Object Model)</h2>
-
+    　      |--- classes <span style="color:#75715e"># mvn compileでコンパイルされたクラスファイルを格納するディレクトリ</span>
+</code></pre></div><h2 id="pomproject-object-model">POM(Project Object Model)</h2>
 <p>Mavenでは、プロジェクトのライフサイクルをPOM（Project Object Model）という考え方に基づいて管理している。</p>
-
 <link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="/mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >
@@ -320,76 +333,52 @@ graph LR;
     D --> E[インストール<br>mvn install]
     E --> F[公開<br>mvn deploy]
 </div>
-
 <p>このライフサイクルを規定するための設定ファイルが、<code>pom.xml</code>である。</p>
-
-<h3 id="mvnコマンド">mvnコマンド</h3>
-
+<h3 id="mvn">mvnコマンド</h3>
 <p>Mavenをコマンドで利用する場合は、<code>mvn</code>コマンドを使用する。
 <code>mvn</code>コマンドを利用するためには、環境変数<code>JAVA_HOME</code>の設定が必要となっている。</p>
-
 <p>mvn オプション 実行内容:ゴール</p>
-
 <p><code>mvn archetype:generate</code>コマンドを利用し、プロジェクトの雛形を作成する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn archetype:generate <span style="color:#ae81ff">\ </span>     <span style="color:#75715e"># コマンドの実行(archetype:generateで雛形作成)</span>
   -DarchetypeArtifactId<span style="color:#f92672">=</span>maven-archetype-quickstart <span style="color:#ae81ff">\ </span> <span style="color:#75715e"># 雛形の選択(今回はquickstart)</span>
   -DinteractiveMode<span style="color:#f92672">=</span>false <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 対話形式での雛形作成をOFF</span>
-  -DgroupId<span style="color:#f92672">={</span>group-id<span style="color:#f92672">}</span> <span style="color:#ae81ff">\ </span>   <span style="color:#75715e"># プロジェクトルートパッケージ、一般的には社名など</span>
-  -DartifactId<span style="color:#f92672">={</span>project-name<span style="color:#f92672">}</span> <span style="color:#75715e"># プロジェクト名</span></code></pre></div>
-<p>コマンドを実行すると、POMを設定するためのpom.xmlが自動生成される。</p>
+  -DgroupId<span style="color:#f92672">=</span><span style="color:#f92672">{</span>group-id<span style="color:#f92672">}</span> <span style="color:#ae81ff">\ </span>   <span style="color:#75715e"># プロジェクトルートパッケージ、一般的には社名など</span>
+  -DartifactId<span style="color:#f92672">=</span><span style="color:#f92672">{</span>project-name<span style="color:#f92672">}</span> <span style="color:#75715e"># プロジェクト名</span>
+</code></pre></div><p>コマンドを実行すると、POMを設定するためのpom.xmlが自動生成される。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0&#34;</span>
   <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
   <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0
 </span><span style="color:#e6db74">                      http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;modelVersion&gt;</span>4.0.0<span style="color:#f92672">&lt;/modelVersion&gt;</span>
+  <span style="color:#f92672">&lt;modelVersion</span><span style="color:#f92672">&gt;</span>4.0.0<span style="color:#f92672">&lt;/modelVersion&gt;</span>
 
-  <span style="color:#f92672">&lt;groupId&gt;</span>co.jp.fullness<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId&gt;</span>sample-project<span style="color:#f92672">&lt;/artifactId&gt;</span>
-  <span style="color:#f92672">&lt;version&gt;</span>1.0<span style="color:#f92672">&lt;/version&gt;</span>
+  <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>co.jp.fullness<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>sample-project<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.0<span style="color:#f92672">&lt;/version&gt;</span>
   ・・・
-<span style="color:#f92672">&lt;/project&gt;</span></code></pre></div>
-<h2 id="eclipseでのmavenプロジェクト作成">EclipseでのMavenプロジェクト作成</h2>
-
+<span style="color:#f92672">&lt;/project&gt;</span>
+</code></pre></div><h2 id="eclipsemaven">EclipseでのMavenプロジェクト作成</h2>
 <p>Eclipseでは、同梱のMavenを利用してMavenプロジェクトを作成することができる。
 Eclipse2019.10での同梱Mavenバージョンは3.5である。</p>
-
 <p>Eclipseの[ファイル]→[新規]→[Mavenプロジェクト]で新規作成を行う。</p>
-
-<p><img src="/images/java/maven/eclipse-generate01.png?classes=border,shadow&amp;width=70%" alt="Eclipseでのプロジェクト作成01" /></p>
-
+<p><img src="/images/java/maven/eclipse-generate01.png?classes=border,shadow&amp;width=70%25" alt="Eclipseでのプロジェクト作成01"></p>
 <p>次画面はデフォルトのまま移動し、その次の画面にて、雛形を指定する。</p>
-
-<p><img src="/images/java/maven/eclipse-generate02.png?classes=border,shadow&amp;width=70%" alt="Eclipseでのプロジェクト作成02" /></p>
-
+<p><img src="/images/java/maven/eclipse-generate02.png?classes=border,shadow&amp;width=70%25" alt="Eclipseでのプロジェクト作成02"></p>
 <p>次画面にて、groupIdおよびartifactId、作成パッケージなどを設定し、プロジェクト作成が完了する。</p>
-
-<p><img src="/images/java/maven/eclipse-generate03.png?classes=border,shadow&amp;width=70%" alt="Eclipseでのプロジェクト作成03" /></p>
-
+<p><img src="/images/java/maven/eclipse-generate03.png?classes=border,shadow&amp;width=70%25" alt="Eclipseでのプロジェクト作成03"></p>
 <p>Mavenで作成したプロジェクトは、Java1.5ベースとなっているため、ビルドパスを変更する必要がある。
 作成されたプロジェクトを選択し、ビルドパスの構成を選択する。</p>
-
-<p><img src="/images/java/maven/eclipse-generate04.png?classes=border,shadow&amp;width=70%" alt="Eclipseでのプロジェクト作成04" /></p>
-
+<p><img src="/images/java/maven/eclipse-generate04.png?classes=border,shadow&amp;width=70%25" alt="Eclipseでのプロジェクト作成04"></p>
 <p>ビルドパスの構成画面にて「ライブラリー」タグを選択し、JREシステムライブラリー(1.5)を除去する。
 除去後、ライブラリーの追加を実施する。</p>
-
-<p><img src="/images/java/maven/eclipse-generate05.png?classes=border,shadow&amp;width=70%" alt="Eclipseでのプロジェクト作成05" /></p>
-
+<p><img src="/images/java/maven/eclipse-generate05.png?classes=border,shadow&amp;width=70%25" alt="Eclipseでのプロジェクト作成05"></p>
 <p>JREシステムライブラリーを選択する。</p>
-
-<p><img src="/images/java/maven/eclipse-generate06.png?classes=border,shadow&amp;width=70%" alt="Eclipseでのプロジェクト作成06" /></p>
-
+<p><img src="/images/java/maven/eclipse-generate06.png?classes=border,shadow&amp;width=70%25" alt="Eclipseでのプロジェクト作成06"></p>
 <p>ワークスペースで登録済みのJREまたはインストールされている別のJREを選択し、完了する。</p>
-
-<p><img src="/images/java/maven/eclipse-generate07.png?classes=border,shadow&amp;width=70%" alt="Eclipseでのプロジェクト作成07" /></p>
-
+<p><img src="/images/java/maven/eclipse-generate07.png?classes=border,shadow&amp;width=70%25" alt="Eclipseでのプロジェクト作成07"></p>
 <p>JREシステムライブラリーが指定したバージョンに変更されていることを確認したら、適用して完了となる。</p>
-
-<p><img src="/images/java/maven/eclipse-generate08.png?classes=border,shadow&amp;width=70%" alt="Eclipseでのプロジェクト作成08" /></p>
-
+<p><img src="/images/java/maven/eclipse-generate08.png?classes=border,shadow&amp;width=70%25" alt="Eclipseでのプロジェクト作成08"></p>
 <p>ビルドパスの設定が完了したら、Mavenプロジェクトとして開発が可能となる。</p>
-
-<p><img src="/images/java/maven/eclipse-generate09.png?classes=border,shadow&amp;width=70%" alt="Eclipseでのプロジェクト作成09" /></p>
+<p><img src="/images/java/maven/eclipse-generate09.png?classes=border,shadow&amp;width=70%25" alt="Eclipseでのプロジェクト作成09"></p>
 
     
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5de07c32251c84e0"></script>
@@ -424,7 +413,7 @@ Eclipse2019.10での同梱Mavenバージョンは3.5である。</p>
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/java/install/eclipse/" title="Eclipseのインストールと設定"> <i class="fa fa-chevron-left"></i><label>Eclipseのインストールと設定</label></a>
-    <a class="nav nav-next" href="/java/install/" title="環境設定" style="margin-right: 0px;"><label>環境設定</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/typescript/" title="Typescript" style="margin-right: 0px;"><label>Typescript</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>

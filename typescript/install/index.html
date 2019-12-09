@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2019-12-09T16:37:12 JST">
-<title>Pythonインストーラによるインストール :: MID-S</title>
+<title>Install :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -18,13 +18,13 @@
       var baseurl = "https:\/\/midsatoh.github.io\/";
 </script>
 <link href="/css/custom.css" rel="stylesheet">
-<meta name="description" content="Pythonインストール手順（インストーラ版）。MacおよびWindowsでのインストール手順となります。">
+<meta name="description" content="TypeScriptのインストールや個人的な開発環境について解説しています。">
 
 
 
     
   </head>
-  <body data-url="/python/install/install_soft/">
+  <body data-url="/typescript/install/">
     
       <header>
   <div class="logo">
@@ -46,11 +46,10 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item parent haschildren
+    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item haschildren
         ">
       <div>
-      <a href="/python/">Python</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="https://midsatoh.github.io/python/python_aspects/" class="dd-item">
@@ -60,11 +59,10 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-    <li data-nav-id="https://midsatoh.github.io/python/install/" class="dd-item parent haschildren
+    <li data-nav-id="https://midsatoh.github.io/python/install/" class="dd-item haschildren
         ">
       <div>
-      <a href="/python/install/">環境設定</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/python/install/">環境設定</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="https://midsatoh.github.io/python/install/select_soft/" class="dd-item">
@@ -74,7 +72,7 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="https://midsatoh.github.io/python/install/install_soft/" class="dd-item active">
+      <li data-nav-id="https://midsatoh.github.io/python/install/install_soft/" class="dd-item">
         <div>
           <a href="/python/install/install_soft/">
             Pythonインストーラによるインストール
@@ -143,13 +141,14 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="https://midsatoh.github.io/typescript/" class="dd-item haschildren
+    <li data-nav-id="https://midsatoh.github.io/typescript/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/typescript/">Typescript</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/typescript/">Typescript</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="https://midsatoh.github.io/typescript/install/" class="dd-item">
+      <li data-nav-id="https://midsatoh.github.io/typescript/install/" class="dd-item active">
         <div>
           <a href="/typescript/install/">
             Install
@@ -194,22 +193,13 @@
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/python/" >
-   Python</option> 
-      <option value="/python/python_aspects/" >- Pythonの特徴</option>
-    <option value="/python/install/" >
-  - 
-   環境設定</option> 
-      <option value="/python/install/select_soft/" >-- インストール方法の選択</option>
-      <option value="/python/install/install_soft/"  selected>-- Pythonインストーラによるインストール</option>
-      <option value="/python/install/anaconda/" >-- Anacondaのインストール</option>
-      <option value="/python/install/pyenv/" >-- pyenvによるインストール</option>
-      <option value="/python/install/pyenv-win/" >-- pyenv-winによるインストール</option>
-  
-  
+   Python</option>
     <option value="/java/" >
    Java</option>
     <option value="/typescript/" >
-   Typescript</option>
+   Typescript</option> 
+      <option value="/typescript/install/"  selected>- Install</option>
+  
     <option value="/mac/" >
    Mac</option>
     <option value="/javascript/" >
@@ -221,15 +211,20 @@
       </center>
     </div>
 
-    <h1>Pythonインストーラによるインストール</h1>
+    <h1>Install</h1>
 
     
     <section>
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">インストーラの入手</a></li>
-    <li><a href="#heading1">インストール</a></li>
-    <li><a href="#heading2">インストールの確認</a></li>
+    <li><a href="#typescript">TypeScriptコンパイラの取得</a>
+      <ul>
+        <li><a href="#npm">npmとは</a></li>
+        <li><a href="#npmtypescript">npmによるTypeScriptコンパイラの取得</a></li>
+      </ul>
+    </li>
+    <li><a href="#typescript1">TypeScript対応エディタ</a></li>
+    <li><a href="#typescript2">TypeScriptの実行</a></li>
   </ul>
 </nav>
     </section>
@@ -239,29 +234,61 @@
     
     
     <div class="addthis_inline_share_toolbox" id="addThis"></div>
-    <h2 id="heading">インストーラの入手</h2>
-<p>インストーラは、Pythonの公式サイトから入手する。</p>
-<p>Python公式サイト：<a href="https://www.python.org/"><a href="https://www.python.org/">https://www.python.org/</a></a></p>
-<p>公式サイトの「Downloads」リンクからダウンロード可能。
-ただし、Downloadsに記載されているボタンからダウンロードすると32bit版のインストーラになるため、必ずOS別のリンクに一度移動する。</p>
-<p><img src="/images/python/install/install_download.png?classes=border,shadow&amp;width=70%25" alt="Python公式サイト"></p>
-<p>OSの選択が完了したら、バージョンの選択をする。
-先頭にアクセス時の最新バージョンが記載されているため、そちらを選択する。</p>
-<p><img src="/images/python/install/install_releases_select.png?classes=border,shadow&amp;width=70%25" alt="バージョンの選択"></p>
-<p>バージョン別のダウンロードサイトへ移動する。</p>
-<p><img src="/images/python/install/install_soft_download01.png?classes=border,shadow&amp;width=70%25" alt="ダウンロード画面1"></p>
-<p>ダウンロードサイトの下部に、OS別のインストーラを選択するリンクがあるため、そちらからOS別のインストーラを使用してインストールする。</p>
-<p><img src="/images/python/install/install_soft_download02.png?classes=border,shadow&amp;width=70%25" alt="ダウンロード画面2"></p>
-<p>Macの場合はpkgファイル、Windowsの場合はexeファイルがダウンロードされるため、ダウンロード後は指示に従ってインストールする。</p>
-<h2 id="heading1">インストール</h2>
-<p>基本的にはデフォルト設定のままでインストールする。</p>
-<h2 id="heading2">インストールの確認</h2>
-<p>コマンドプロンプト（Macの場合はターミナル）を起動し、Macの場合は<code>python3</code>、Windowsの場合は<code>python</code>コマンドを実行する。
-実行結果が以下のような画面となればインストール完了。</p>
-<p><img src="/images/python/install/python_command.png?classes=border,shadow&amp;width=70%25" alt="Pythonコマンド"></p>
-<p>終了する場合は、<code>quit()</code>または<code>exit()</code>を入力し、終了させる。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;&gt;&gt; quit<span style="color:#f92672">(</span><span style="color:#f92672">)</span>
-</code></pre></div>
+    <h2 id="typescript">TypeScriptコンパイラの取得</h2>
+<p>TypeScriptを利用するためには、TypeScriptのコンパイラが必要となる。
+コンパイラはnpmで配布されているものを取得する方法が公式でも推奨されているため、まずはnpmが自身の環境で利用できるかどうかを確認する必要がある。</p>
+<h3 id="npm">npmとは</h3>
+<p>npm(Node Package Manager)とは、サーバーサイドJavaScript環境であるNode.jsのパッケージ管理システムである。
+Node.jsをインストールするとバンドルされている。</p>
+<p>Node.jsがインストールされているかどうかは以下のコマンドで確認する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% node --version    <span style="color:#75715e"># Node.jsのバージョン確認用コマンド</span>
+% npm --version     <span style="color:#75715e"># npmのバージョン確認用コマンド</span>
+</code></pre></div><p>インストールされていない場合は、公式サイトからインストーラをダウンロードするか、Macの場合はHomebrewなどでインストールする。</p>
+<ul>
+<li><a href="https://nodejs.org/ja/">Node.js公式サイト（日本語）</a></li>
+<li><a href="https://midsatoh.github.io/mac/homebrew/">Homebrewのインストール</a></li>
+</ul>
+<h3 id="npmtypescript">npmによるTypeScriptコンパイラの取得</h3>
+<p>npmが利用できる状態であれば、以下のコマンドでTypeScriptのコンパイラをインストールすることができる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% npm install -g typescript
+</code></pre></div><p>TypeScriptのコンパイラは、<code>tsc</code>コマンドで実行が可能となる。
+npmでのインストールが完了しているか確認するためには、以下のバージョン確認用コマンドを利用する</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tsc --version
+</code></pre></div><h2 id="typescript1">TypeScript対応エディタ</h2>
+<p>TypeScriptの対応エディタとしては、基本的にはJavaScriptに対応しているものであれば問題はない。
+現在、TypeScriptを開発・メンテナンスしているのがMicrosoftであるため、</p>
+<ul>
+<li>VisualStudio</li>
+<li>VisualStudio Code</li>
+</ul>
+<p>のどちらかを利用すると良いだろう。<a href="https://visualstudio.microsoft.com/ja/">VisualStudioシリーズ公式サイト</a></p>
+<p>他にも、</p>
+<ul>
+<li>WebStorm</li>
+<li>Eclipse</li>
+<li>NetBeans</li>
+</ul>
+<p>などのIDEや、</p>
+<ul>
+<li>Sublime Text</li>
+<li>Emacs</li>
+<li>Atom</li>
+</ul>
+<p>などの高機能エディタも対応している。</p>
+<p>ちなみに、VisualStudio2019はNode.jsを自動インストールするため、マシンスペックなどに余裕がある場合はVisualStudio、単純に動かすだけで良い・環境構築は自分でできるということであればVisualStudio Codeという選択をお勧めする。</p>
+<h2 id="typescript2">TypeScriptの実行</h2>
+<p>TypeScriptの実行は、以下の手順で行う。</p>
+<link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+<script defer src="/mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
+<div class="mermaid" align="center" >
+graph LR;
+    A[TypeScriptによる<br>コードの作成] --> B[コンパイラでJavaScriptの<br>jsファイルへ変換]
+    B --> C[JavaScript実行環境へ<br>作成されたjsファイルの反映]
+</div>
+<p>最終的にはJavaScriptとして実行されることに注意。</p>
+<p>JavaScriptとして実行するため、JavaScriptのフレームワークであるReact.jsやVue.js、AngularJSなどの開発で利用することが可能。
+特にVue.jsではTypeScript対応のプロジェクトテンプレートも追加され、追加ツールなども不要となった。</p>
+
     
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5de07c32251c84e0"></script>
 ​<script type="text/javascript">
@@ -294,8 +321,8 @@
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/python/install/select_soft/" title="インストール方法の選択"> <i class="fa fa-chevron-left"></i><label>インストール方法の選択</label></a>
-    <a class="nav nav-next" href="/python/install/anaconda/" title="Anacondaのインストール" style="margin-right: 0px;"><label>Anacondaのインストール</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/typescript/" title="Typescript"> <i class="fa fa-chevron-left"></i><label>Typescript</label></a>
+    <a class="nav nav-next" href="/mac/" title="Mac" style="margin-right: 0px;"><label>Mac</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -305,18 +332,12 @@
 
 <div class="footline">
     
-    <div class="tags"> 
-      
-        <a class="label label-default" href="https://midsatoh.github.io/tags/python">python</a>
-      
-    </div>
-    
 
     
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i>  19/11/2019
+        <i class='fa fa-calendar'></i>  04/12/2019
     </div>
     
 

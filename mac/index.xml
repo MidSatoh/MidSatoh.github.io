@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on MID-S</title>
+    <link>https://midsatoh.github.io/mac/</link>
+    <description>Recent content in Mac on MID-S</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 04 Dec 2019 15:27:30 +0900</lastBuildDate>
+    
+	<atom:link href="https://midsatoh.github.io/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Homebrewのインストール</title>
+      <link>https://midsatoh.github.io/mac/homebrew/</link>
+      <pubDate>Wed, 04 Dec 2019 15:13:09 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/mac/homebrew/</guid>
+      <description>Homebrewとは Homebrewとは、Macで開発を行う場合のパッケージ管理ツールである。 ただし、Homebrewを使用する場合は
+ XCodeまたはApple DeveloperサイトからXCodeコマンドラインツールのインストール インターネットへの安定した接続環境  が前提となる。 XCodeをインストールしている場合は問題がないが、XCodeはMacOSおよびiOS、iPadOS開発用の統合開発環境であるためサイズがかなり大きい。 マシンスペックなどの問題でXCodeをインストールできない場合は、軽量なXCode小マンドラインツールをインストールする必要がある。
+XCodeコマンドラインツールのインストール XCodeコマンドラインツールは、Appleの開発者用サイトからダウンロード可能である。 その際には、Appleアカウントが必要となる。
+Apple Developer Site：https://developer.apple.com/develop/
+ダウンロードリンクを押すと、Appleアカウントでのログインが求められる。 ログインするとツールの検索画面となるので、検索画面に「command line」、ReleaseDateを降順にすると最新版のツールを探すことが可能となる。betaがついていないツールをダウンロードすると良い。
+ダウンロードしたpkgファイルを利用し、インストールする。
+Homebrewのインストール 初めて使用する場合は、以下のサイトからインストールコマンドをコピーして、ターミナルに貼り付けて実行することでインストールが可能。
+Homebrew</description>
+    </item>
+    
+  </channel>
+</rss>

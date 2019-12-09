@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-12-03T17:09:34 JST">
+<meta name="revised" content="2019-12-09T16:37:12 JST">
 <title>Eclipseのインストールと設定 :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -143,6 +143,36 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="https://midsatoh.github.io/typescript/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/typescript/">Typescript</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/typescript/install/" class="dd-item">
+        <div>
+          <a href="/typescript/install/">
+            Install
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/mac/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/mac/">Mac</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/mac/homebrew/" class="dd-item">
+        <div>
+          <a href="/mac/homebrew/">
+            Homebrewのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
     <li data-nav-id="https://midsatoh.github.io/javascript/" class="dd-item
         ">
       <div>
@@ -175,6 +205,10 @@
   
       <option value="/java/spring/maven/" >- Mavenプロジェクトの作成</option>
   
+    <option value="/typescript/" >
+   Typescript</option>
+    <option value="/mac/" >
+   Mac</option>
     <option value="/javascript/" >
    JavaScript</option>
 
@@ -189,13 +223,10 @@
     
     <section>
         <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#eclipseのインストール">Eclipseのインストール</a></li>
-<li><a href="#eclipseの環境設定">Eclipseの環境設定</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#eclipse">Eclipseのインストール</a></li>
+    <li><a href="#eclipse1">Eclipseの環境設定</a></li>
+  </ul>
 </nav>
     </section>
     
@@ -204,50 +235,28 @@
     
     
     <div class="addthis_inline_share_toolbox" id="addThis"></div>
-    
-
-<h2 id="eclipseのインストール">Eclipseのインストール</h2>
-
+    <h2 id="eclipse">Eclipseのインストール</h2>
 <p>Javaの開発用IDEと言えば、基本的に無償で利用可能であるEclipseや有償だが高機能なIntellJ IDEAなどが有名。</p>
-
 <p>Eclipse2018からはMergeDoc ProjectにてSpringToolSuiteも日本語プラグインPleiadesと同梱されるようになったためこちらを利用することにする。</p>
-
-<p>MergeDoc Project公式サイト：<a href="https://mergedoc.osdn.jp" target="_blank">https://mergedoc.osdn.jp</a></p>
-
-<p><img src="/images/java/install/02_MergeDoc_site.png?classes=border,shadow&amp;width=70%" alt="MergeDoc Project公式サイトより" /></p>
-
+<p>MergeDoc Project公式サイト：<a href="https://mergedoc.osdn.jp"><a href="https://mergedoc.osdn.jp">https://mergedoc.osdn.jp</a></a></p>
+<p><img src="/images/java/install/02_MergeDoc_site.png?classes=border,shadow&amp;width=70%25" alt="MergeDoc Project公式サイトより"></p>
 <p>自身のプラットフォームに合わせ、JavaのFull Editionをダウンロードし、zipファイルの解凍をする。</p>
-
-<div class="notices note" ><p>
-Windows の場合はエクスプローラーによる解凍は失敗するため、7Zip<a href="https://sevenzip.osdn.jp">(https://sevenzip.osdn.jp)</a>などの解凍ソフトが必要になる。
-</p></div>
-
-<h2 id="eclipseの環境設定">Eclipseの環境設定</h2>
-
+<!-- raw HTML omitted -->
+<h2 id="eclipse1">Eclipseの環境設定</h2>
 <p>インストールしたOpenJDKをEclipseで適用させるためには、JREの設定が必要となる。</p>
-
 <p>Eclipseの設定（Windowsの場合は[ウィンドウ] -&gt; [設定]、Macの場合は[Eclipse]-&gt;[環境設定])より、[Java]-&gt;[インストール済みのJRE]を開く。</p>
-
-<p><img src="/images/java/install/03_Eclipse_JRE01.png?classes=border,shadow&amp;width=70%" alt="インストール済みのJRE" /></p>
-
+<p><img src="/images/java/install/03_Eclipse_JRE01.png?classes=border,shadow&amp;width=70%25" alt="インストール済みのJRE"></p>
 <p>[追加]ボタンを押下し、標準VMを選択する。</p>
-
-<p><img src="/images/java/install/03_Eclipse_JRE02.png?classes=border,shadow&amp;width=70%" alt="標準VM" /></p>
-
+<p><img src="/images/java/install/03_Eclipse_JRE02.png?classes=border,shadow&amp;width=70%25" alt="標準VM"></p>
 <p>[JREホーム]のディレクトリで、AdoptOpenJDKをインストールした箇所を選択する。JRE名は任意。</p>
-
-<p><img src="/images/java/install/03_Eclipse_JRE03.png?classes=border,shadow&amp;width=70%" alt="JREホーム" /></p>
-
+<p><img src="/images/java/install/03_Eclipse_JRE03.png?classes=border,shadow&amp;width=70%25" alt="JREホーム"></p>
 <p>デフォルトのインストール場所は以下の通り。</p>
-
 <ul>
 <li>Windows : C:\Program Files (x86)\AdoptOpenJDK\jdk-11.0.X.XX-hotspot</li>
 <li>Mac : /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home</li>
 </ul>
-
 <p>追加後、追加したJREにチェックを入れてから適用するとデフォルトでAdoptOpenJDKを利用して実行される。</p>
-
-<p><img src="/images/java/install/03_Eclipse_JRE04.png?classes=border,shadow&amp;width=70%" alt="デフォルトJRE" /></p>
+<p><img src="/images/java/install/03_Eclipse_JRE04.png?classes=border,shadow&amp;width=70%25" alt="デフォルトJRE"></p>
 
     
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5de07c32251c84e0"></script>
@@ -282,7 +291,7 @@ Windows の場合はエクスプローラーによる解凍は失敗するため
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/java/install/openjdk/" title="OpenJDKのインストール"> <i class="fa fa-chevron-left"></i><label>OpenJDKのインストール</label></a>
-    <a class="nav nav-next" href="/javascript/" title="JavaScript" style="margin-right: 0px;"><label>JavaScript</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/java/spring/maven/" title="Mavenプロジェクトの作成" style="margin-right: 0px;"><label>Mavenプロジェクトの作成</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>

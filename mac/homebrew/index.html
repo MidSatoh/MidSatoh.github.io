@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2019-12-09T16:37:12 JST">
-<title>Pythonインストーラによるインストール :: MID-S</title>
+<title>Homebrewのインストール :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -18,13 +18,13 @@
       var baseurl = "https:\/\/midsatoh.github.io\/";
 </script>
 <link href="/css/custom.css" rel="stylesheet">
-<meta name="description" content="Pythonインストール手順（インストーラ版）。MacおよびWindowsでのインストール手順となります。">
+<meta name="description" content="Macのパッケージ管理ツールHomebrewのインストール方法について、Xcodeコマンドラインツールのインストールから解説します。">
 
 
 
     
   </head>
-  <body data-url="/python/install/install_soft/">
+  <body data-url="/mac/homebrew/">
     
       <header>
   <div class="logo">
@@ -46,11 +46,10 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item parent haschildren
+    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item haschildren
         ">
       <div>
-      <a href="/python/">Python</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="https://midsatoh.github.io/python/python_aspects/" class="dd-item">
@@ -60,11 +59,10 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-    <li data-nav-id="https://midsatoh.github.io/python/install/" class="dd-item parent haschildren
+    <li data-nav-id="https://midsatoh.github.io/python/install/" class="dd-item haschildren
         ">
       <div>
-      <a href="/python/install/">環境設定</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/python/install/">環境設定</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="https://midsatoh.github.io/python/install/select_soft/" class="dd-item">
@@ -74,7 +72,7 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="https://midsatoh.github.io/python/install/install_soft/" class="dd-item active">
+      <li data-nav-id="https://midsatoh.github.io/python/install/install_soft/" class="dd-item">
         <div>
           <a href="/python/install/install_soft/">
             Pythonインストーラによるインストール
@@ -158,13 +156,14 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="https://midsatoh.github.io/mac/" class="dd-item haschildren
+    <li data-nav-id="https://midsatoh.github.io/mac/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/mac/">Mac</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/mac/">Mac</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="https://midsatoh.github.io/mac/homebrew/" class="dd-item">
+      <li data-nav-id="https://midsatoh.github.io/mac/homebrew/" class="dd-item active">
         <div>
           <a href="/mac/homebrew/">
             Homebrewのインストール
@@ -194,24 +193,15 @@
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/python/" >
-   Python</option> 
-      <option value="/python/python_aspects/" >- Pythonの特徴</option>
-    <option value="/python/install/" >
-  - 
-   環境設定</option> 
-      <option value="/python/install/select_soft/" >-- インストール方法の選択</option>
-      <option value="/python/install/install_soft/"  selected>-- Pythonインストーラによるインストール</option>
-      <option value="/python/install/anaconda/" >-- Anacondaのインストール</option>
-      <option value="/python/install/pyenv/" >-- pyenvによるインストール</option>
-      <option value="/python/install/pyenv-win/" >-- pyenv-winによるインストール</option>
-  
-  
+   Python</option>
     <option value="/java/" >
    Java</option>
     <option value="/typescript/" >
    Typescript</option>
     <option value="/mac/" >
-   Mac</option>
+   Mac</option> 
+      <option value="/mac/homebrew/"  selected>- Homebrewのインストール</option>
+  
     <option value="/javascript/" >
    JavaScript</option>
 
@@ -221,15 +211,18 @@
       </center>
     </div>
 
-    <h1>Pythonインストーラによるインストール</h1>
+    <h1>Homebrewのインストール</h1>
 
     
     <section>
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">インストーラの入手</a></li>
-    <li><a href="#heading1">インストール</a></li>
-    <li><a href="#heading2">インストールの確認</a></li>
+    <li><a href="#homebrew">Homebrewとは</a>
+      <ul>
+        <li><a href="#xcode">XCodeコマンドラインツールのインストール</a></li>
+        <li><a href="#homebrew1">Homebrewのインストール</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </section>
@@ -239,29 +232,30 @@
     
     
     <div class="addthis_inline_share_toolbox" id="addThis"></div>
-    <h2 id="heading">インストーラの入手</h2>
-<p>インストーラは、Pythonの公式サイトから入手する。</p>
-<p>Python公式サイト：<a href="https://www.python.org/"><a href="https://www.python.org/">https://www.python.org/</a></a></p>
-<p>公式サイトの「Downloads」リンクからダウンロード可能。
-ただし、Downloadsに記載されているボタンからダウンロードすると32bit版のインストーラになるため、必ずOS別のリンクに一度移動する。</p>
-<p><img src="/images/python/install/install_download.png?classes=border,shadow&amp;width=70%25" alt="Python公式サイト"></p>
-<p>OSの選択が完了したら、バージョンの選択をする。
-先頭にアクセス時の最新バージョンが記載されているため、そちらを選択する。</p>
-<p><img src="/images/python/install/install_releases_select.png?classes=border,shadow&amp;width=70%25" alt="バージョンの選択"></p>
-<p>バージョン別のダウンロードサイトへ移動する。</p>
-<p><img src="/images/python/install/install_soft_download01.png?classes=border,shadow&amp;width=70%25" alt="ダウンロード画面1"></p>
-<p>ダウンロードサイトの下部に、OS別のインストーラを選択するリンクがあるため、そちらからOS別のインストーラを使用してインストールする。</p>
-<p><img src="/images/python/install/install_soft_download02.png?classes=border,shadow&amp;width=70%25" alt="ダウンロード画面2"></p>
-<p>Macの場合はpkgファイル、Windowsの場合はexeファイルがダウンロードされるため、ダウンロード後は指示に従ってインストールする。</p>
-<h2 id="heading1">インストール</h2>
-<p>基本的にはデフォルト設定のままでインストールする。</p>
-<h2 id="heading2">インストールの確認</h2>
-<p>コマンドプロンプト（Macの場合はターミナル）を起動し、Macの場合は<code>python3</code>、Windowsの場合は<code>python</code>コマンドを実行する。
-実行結果が以下のような画面となればインストール完了。</p>
-<p><img src="/images/python/install/python_command.png?classes=border,shadow&amp;width=70%25" alt="Pythonコマンド"></p>
-<p>終了する場合は、<code>quit()</code>または<code>exit()</code>を入力し、終了させる。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;&gt;&gt; quit<span style="color:#f92672">(</span><span style="color:#f92672">)</span>
-</code></pre></div>
+    <h2 id="homebrew">Homebrewとは</h2>
+<p>Homebrewとは、Macで開発を行う場合のパッケージ管理ツールである。
+ただし、Homebrewを使用する場合は</p>
+<ul>
+<li>XCodeまたはApple DeveloperサイトからXCodeコマンドラインツールのインストール</li>
+<li>インターネットへの安定した接続環境</li>
+</ul>
+<p>が前提となる。
+XCodeをインストールしている場合は問題がないが、XCodeはMacOSおよびiOS、iPadOS開発用の統合開発環境であるためサイズがかなり大きい。
+マシンスペックなどの問題でXCodeをインストールできない場合は、軽量なXCode小マンドラインツールをインストールする必要がある。</p>
+<h3 id="xcode">XCodeコマンドラインツールのインストール</h3>
+<p>XCodeコマンドラインツールは、Appleの開発者用サイトからダウンロード可能である。
+その際には、Appleアカウントが必要となる。</p>
+<p>Apple Developer Site：<a href="https://developer.apple.com/develop/"><a href="https://developer.apple.com/develop/">https://developer.apple.com/develop/</a></a></p>
+<p><img src="/images/python/install/apple_developer.png?classes=border,shadow&amp;width=70%25" alt="Apple Developer Site"></p>
+<p>ダウンロードリンクを押すと、Appleアカウントでのログインが求められる。
+ログインするとツールの検索画面となるので、検索画面に「command line」、ReleaseDateを降順にすると最新版のツールを探すことが可能となる。betaがついていないツールをダウンロードすると良い。</p>
+<p><img src="/images/python/install/xcode_command_line.png?classes=border,shadow&amp;width=70%25" alt="コマンドラインツールの検索"></p>
+<p>ダウンロードしたpkgファイルを利用し、インストールする。</p>
+<h3 id="homebrew1">Homebrewのインストール</h3>
+<p>初めて使用する場合は、以下のサイトからインストールコマンドをコピーして、ターミナルに貼り付けて実行することでインストールが可能。</p>
+<p><a href="https://brew.sh/index_ja">Homebrew</a></p>
+<p><img src="/images/python/install/homebrew_site.png?classes=border,shadow&amp;width=70%25" alt="Homebrewのサイト"></p>
+
     
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5de07c32251c84e0"></script>
 ​<script type="text/javascript">
@@ -294,8 +288,8 @@
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/python/install/select_soft/" title="インストール方法の選択"> <i class="fa fa-chevron-left"></i><label>インストール方法の選択</label></a>
-    <a class="nav nav-next" href="/python/install/anaconda/" title="Anacondaのインストール" style="margin-right: 0px;"><label>Anacondaのインストール</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/mac/" title="Mac"> <i class="fa fa-chevron-left"></i><label>Mac</label></a>
+    <a class="nav nav-next" href="/javascript/" title="JavaScript" style="margin-right: 0px;"><label>JavaScript</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -305,18 +299,12 @@
 
 <div class="footline">
     
-    <div class="tags"> 
-      
-        <a class="label label-default" href="https://midsatoh.github.io/tags/python">python</a>
-      
-    </div>
-    
 
     
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i>  19/11/2019
+        <i class='fa fa-calendar'></i>  04/12/2019
     </div>
     
 
