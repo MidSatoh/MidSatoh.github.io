@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kotlin on MID-S</title>
+    <link>https://midsatoh.github.io/tags/kotlin/</link>
+    <description>Recent content in Kotlin on MID-S</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 24 Dec 2019 10:04:27 +0900</lastBuildDate>
+    
+	<atom:link href="https://midsatoh.github.io/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kotlin基礎文法</title>
+      <link>https://midsatoh.github.io/kotlin/basic/</link>
+      <pubDate>Tue, 24 Dec 2019 10:04:27 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/kotlin/basic/</guid>
+      <description>サンプルコードはKotlin公式リファレンスKotlin公式リファレンス：https://kotlinlang.org/docs/reference/に補足・和訳した物を利用している。
+関数 main関数 プログラム全体のエントリポイント（実行開始ポイント）となるのが、main関数である。 拡張子（.kt）のファイルに作成する。
+fun main(){ println(&amp;#34;Hello World!&amp;#34;) } 関数の作成 エントリポイントの他に、処理の集まりとして関数を作成することができる。
+fun 関数名(仮引数:仮引数の型, ・・・): 戻り値の型 { 関数内の処理 return 戻り値 } 例えば、仮引数の加算結果を戻り値とする関数は以下の通りとなる。
+fun sum(a:Int, b:Int):Int { return a + b } 処理が単文で記述可能な場合、戻り値の型やブロックを省略することができる。
+fun sum(a:Int, b:Int) = a + b 戻り値なしの関数の場合、戻り値の型はUnitである。
+fun sumPrint(a:Int, b:Int):Unit { println(&amp;#34;$a と $b の加算の結果は ${a + b}&amp;#34;) } Unit型は省略が可能である。
+fun sumPrint(a:Int, b:Int) { println(&amp;#34;$a と $b の加算の結果は ${a + b}&amp;#34;) } 変数 再代入不可の変数定義 Kotlinの場合、再代入ができない変数の定義にはvalキーワードを用いる。
+val 変数名: データ型 = 初期値 val 変数名 = データ型 // 型推論による代入 val 変数名: データ型 // 変数定義 変数名 = 初期値 // 初期値の代入 例えば、Int型の変数にそれぞれ初期値を代入する方法は以下の通りである。</description>
+    </item>
+    
+  </channel>
+</rss>

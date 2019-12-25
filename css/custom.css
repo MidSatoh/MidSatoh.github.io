@@ -44,7 +44,7 @@
 
 #TableOfContents>ul>li>ul {
     list-style: none;
-    margin-left: -1rem;
+    margin-left: 0;
     margin-right: 0;
 }
 

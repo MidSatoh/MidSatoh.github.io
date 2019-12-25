@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-12-13T13:33:13 JST">
+<meta name="revised" content="2019-12-25T10:53:19 JST">
 <title>eclipse :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -177,6 +177,21 @@
       <a href="/javascript/">JavaScript</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
+    <li data-nav-id="https://midsatoh.github.io/kotlin/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/kotlin/">Kotlin</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/kotlin/basic/" class="dd-item">
+        <div>
+          <a href="/kotlin/basic/">
+            Kotlin基礎文法
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
 
 
 
@@ -201,6 +216,8 @@
    Mac</option>
     <option value="/javascript/" >
    JavaScript</option>
+    <option value="/kotlin/" >
+   Kotlin</option>
 
 
 
@@ -296,7 +313,7 @@ Mavenでできること Mavenは以下のようなコマンドが用意されて
 Eclipse2018からはMergeDoc ProjectにてSpringToolSuiteも日本語プラグインPleiadesと同梱されるようになったためこちらを利用することにする。
 MergeDoc Project公式サイト：https://mergedoc.osdn.jp
 自身のプラットフォームに合わせ、JavaのFull Editionをダウンロードし、zipファイルの解凍をする。
-Eclipseの環境設定 インストールしたOpenJDKをEclipseで適用させるためには、JREの設定が必要となる。
+ Windows の場合はエクスプローラーによる解凍は失敗するため、7Zip(https://sevenzip.osdn.jp)などの解凍ソフトが必要になる。  Eclipseの環境設定 インストールしたOpenJDKをEclipseで適用させるためには、JREの設定が必要となる。
 Eclipseの設定（Windowsの場合は[ウィンドウ] -&gt; [設定]、Macの場合は[Eclipse]-&gt;[環境設定])より、[Java]-&gt;[インストール済みのJRE]を開く。
 [追加]ボタンを押下し、標準VMを選択する。
 [JREホーム]のディレクトリで、AdoptOpenJDKをインストールした箇所を選択する。JRE名は任意。

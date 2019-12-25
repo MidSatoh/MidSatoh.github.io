@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2019-12-25T10:53:19 JST">
-<title>Categories :: MID-S</title>
+<title>Kotlin :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 
     
   </head>
-  <body data-url="/categories/">
+  <body data-url="/tags/kotlin/">
     
       <header>
   <div class="logo">
@@ -225,7 +225,7 @@
       </center>
     </div>
 
-    <h1>Categories</h1>
+    <h1>Kotlin</h1>
 
     
     <script src="/js/custom_toc.js"></script>
@@ -238,18 +238,47 @@
 <div class="extra-pagination inner">
 <nav class="pagination" role="navigation">
 		
-		<span class="page-number"> 1  0</span>
+		<span class="page-number"> 1  1</span>
 		
 </nav>
 </div>
 
+
+   <article class="post kotlin">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/kotlin/basic/">Kotlin基礎文法</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>サンプルコードはKotlin公式リファレンスKotlin公式リファレンス：https://kotlinlang.org/docs/reference/に補足・和訳した物を利用している。
+関数 main関数 プログラム全体のエントリポイント（実行開始ポイント）となるのが、main関数である。 拡張子（.kt）のファイルに作成する。
+fun main(){ println(&#34;Hello World!&#34;) } 関数の作成 エントリポイントの他に、処理の集まりとして関数を作成することができる。
+fun 関数名(仮引数:仮引数の型, ・・・): 戻り値の型 { 関数内の処理 return 戻り値 } 例えば、仮引数の加算結果を戻り値とする関数は以下の通りとなる。
+fun sum(a:Int, b:Int):Int { return a + b } 処理が単文で記述可能な場合、戻り値の型やブロックを省略することができる。
+fun sum(a:Int, b:Int) = a + b 戻り値なしの関数の場合、戻り値の型はUnitである。
+fun sumPrint(a:Int, b:Int):Unit { println(&#34;$a と $b の加算の結果は ${a + b}&#34;) } Unit型は省略が可能である。
+fun sumPrint(a:Int, b:Int) { println(&#34;$a と $b の加算の結果は ${a + b}&#34;) } 変数 再代入不可の変数定義 Kotlinの場合、再代入ができない変数の定義にはvalキーワードを用いる。
+val 変数名: データ型 = 初期値 val 変数名 = データ型 // 型推論による代入 val 変数名: データ型 // 変数定義 変数名 = 初期値 // 初期値の代入 例えば、Int型の変数にそれぞれ初期値を代入する方法は以下の通りである。 <a class="read-more" href="/kotlin/basic/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="https://midsatoh.github.io/tags/kotlin/">Kotlin</a>
+            
+        
+
+    </footer>
+</article>
 
 
 <div style="margin-bottom:2rem"></div>
 
 <nav class="pagination" role="navigation">
 		
-		<span class="page-number"> 1  0</span>
+		<span class="page-number"> 1  1</span>
 		
 </nav>
 
@@ -272,6 +301,10 @@
 
     
 
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i>  24/12/2019
+    </div>
     
 
     

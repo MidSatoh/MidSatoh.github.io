@@ -21,14 +21,13 @@
 そのため、macOSではOSプリインストールのPythonはpython、インストーラでインストールした場合のPython3系についてはpython3というコマンドを使用することで切り替えているが、今後macOSのアップデートによりOSプリインストールのPythonバージョンが変わった場合どのようになるかは不明な部分が多い。
 また、マイナーバージョン（3.5と3.8など）を複数インストールする必要がある場合はインストーラとaliasを切り替えるなどで対応可能だが、パッチバージョン（3.6.0と3.6.5など）を同一のマシンにインストールすることができない。
 そこで、Macで複数のPythonをインストールし、開発環境を切り替えるためのツールがpyenvである。
-pyenvをインストールするには、MacportやHomebrewというMacでのパッケージ管理システムを利用してインストールすることが多い。
+ pyenvはあくまで複数のPythonのバージョンをパッチレベルまで切り替えるためのツールである。 ただし、Macの場合は今後OSプリインストールのPythonとの共存がどのように扱われるか不明であるため、柔軟な対応ができるpyenvを紹介しておく。  pyenvをインストールするには、MacportやHomebrewというMacでのパッケージ管理システムを利用してインストールすることが多い。
 本サイトでは、Homebrewからpyenvをインストールする。 Homebrewが未インストールの場合は、Homebrewのインストール を参考とすること。
 pyenvのインストール homebrewがインストールされると、brewコマンドが利用可能となる。brew install インストールするパッケージで様々な開発ツールがインストール可能となる。
 brew installコマンドを実施する際には、インターネットに接続されている必要がある。 pyenvのインストールは、以下のコマンドとなる。
 % brew install pyenv Mac OS Catalinaからは、ターミナルのデフォルトシェルがbashからzshとなった。 そのため、pyenvの設定内容を~/.zprofileに以下を追加する。
-export PYENV_ROOT=${HOME}/.pyenv if [ -d &amp;#34;${PYENV_ROOT}&amp;#34; ]; then export PATH=${PYENV_ROOT}/bin:$PATH eval &amp;#34;$(pyenv init -)&amp;#34; fi  zshではなくbashを利用しているMacの場合は、上記の内容は「~/.bash_profile」に記載する。
- pyenvインストールの確認 pyenvのコマンドを実行し、インストールが完了しているか確認する。 今回はpyenvでインストールできるバージョンの一覧を表示させてみる。
-% pyenv install -l Available versions: 2.1.3 2.2.3 2.3.7 2.4 2.4.1 2.4.2 2.4.3 2.4.4 .........  pyenv install -l でインストールしたいバージョンが表示されない場合は、pyenvのバージョンが古くなっている場合がある。 その場合は、pyenv自体のアップグレードを行う必要がある。pyenvのアップグレードコマンドは以下の通り。
+export PYENV_ROOT=${HOME}/.pyenv if [ -d &amp;#34;${PYENV_ROOT}&amp;#34; ]; then export PATH=${PYENV_ROOT}/bin:$PATH eval &amp;#34;$(pyenv init -)&amp;#34; fi  zshではなくbashを利用しているMacの場合は、上記の内容は「~/.bash_profile」に記載する。 pyenvインストールの確認 pyenvのコマンドを実行し、インストールが完了しているか確認する。 今回はpyenvでインストールできるバージョンの一覧を表示させてみる。
+% pyenv install -l Available versions: 2.1.3 2.2.3 2.3.7 2.4 2.4.1 2.4.2 2.4.3 2.4.4 .........  pyenv install -l でインストールしたいバージョンが表示されない場合は、pyenvのバージョンが古くなっている場合がある。その場合は、pyenv自体のアップグレードを行う必要がある。pyenvのアップグレードコマンドは以下の通り。
 % brew upgrade pyenv  pyenvによる使用バージョンのインストール pyenv install バージョン指定で必要なバージョンのインストールが可能となる。 例えば、3.</description>
     </item>
     

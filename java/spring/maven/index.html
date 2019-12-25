@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-12-13T13:33:13 JST">
+<meta name="revised" content="2019-12-25T10:53:19 JST">
 <title>Mavenプロジェクトの作成 :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -178,6 +178,21 @@
       <a href="/javascript/">JavaScript</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
+    <li data-nav-id="https://midsatoh.github.io/kotlin/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/kotlin/">Kotlin</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/kotlin/basic/" class="dd-item">
+        <div>
+          <a href="/kotlin/basic/">
+            Kotlin基礎文法
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
 
 
 
@@ -207,6 +222,8 @@
    Mac</option>
     <option value="/javascript/" >
    JavaScript</option>
+    <option value="/kotlin/" >
+   Kotlin</option>
 
 
 
@@ -298,29 +315,29 @@ Javaでは、開発環境や実行環境におけるJVMのバージョンやラ�
 <h3 id="maven2">Mavenのディレクトリ構成</h3>
 <p>Mavenプロジェクトの標準ディレクトリ構成は以下の通り。
 基本的にはデフォルトのまま利用する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">プロジェクトルート
-    |--- LICENSE.txt    <span style="color:#75715e"># プロジェクトのライセンス情報を記述するファイル</span>
-    |--- README.txt     <span style="color:#75715e"># プロジェクト情報を記述するファイル</span>
-    |--- NOTICE.txt     <span style="color:#75715e"># プロジェクトの帰属通知を記述するファイル</span>
-    |--- pom.xml        <span style="color:#75715e"># mavenのライフサイクル規定を記述する設定ファイル</span>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">プロジェクトルート
+    |--- LICENSE.txt    <span style="color:#09f;font-style:italic"># プロジェクトのライセンス情報を記述するファイル</span>
+    |--- README.txt     <span style="color:#09f;font-style:italic"># プロジェクト情報を記述するファイル</span>
+    |--- NOTICE.txt     <span style="color:#09f;font-style:italic"># プロジェクトの帰属通知を記述するファイル</span>
+    |--- pom.xml        <span style="color:#09f;font-style:italic"># mavenのライフサイクル規定を記述する設定ファイル</span>
     |
     |--- src
-    |    |--- main      <span style="color:#75715e"># 実装するJavaやWebアプリのパッケージを格納するディレクトリ</span>
-    |    |     |--- java    <span style="color:#75715e"># Javaのソースファイルを格納するディレクトリ</span>
-    |    |     |--- resources   <span style="color:#75715e"># 実行時に利用する設定情報（リソース）ファイルを格納するディレクトリ</span>
-    |    |     |--- webapp  <span style="color:#75715e"># Webアプリに関係するHTMLやCSS、JSPなどを格納するディレクトリ</span>
-    |    |     |--- filters <span style="color:#75715e"># ターゲットとしてフィルタリングするリソースファイルを格納するディレクトリ</span>
+    |    |--- main      <span style="color:#09f;font-style:italic"># 実装するJavaやWebアプリのパッケージを格納するディレクトリ</span>
+    |    |     |--- java    <span style="color:#09f;font-style:italic"># Javaのソースファイルを格納するディレクトリ</span>
+    |    |     |--- resources   <span style="color:#09f;font-style:italic"># 実行時に利用する設定情報（リソース）ファイルを格納するディレクトリ</span>
+    |    |     |--- webapp  <span style="color:#09f;font-style:italic"># Webアプリに関係するHTMLやCSS、JSPなどを格納するディレクトリ</span>
+    |    |     |--- filters <span style="color:#09f;font-style:italic"># ターゲットとしてフィルタリングするリソースファイルを格納するディレクトリ</span>
     |    |
-    |    |--- test  <span style="color:#75715e"># JUnitテストで利用するJavaや設定情報を格納するディレクトリ</span>
-    |    |     |--- java    <span style="color:#75715e"># テストコード（ファイル名はTest**.java、**Test.java、**TestCase.javaのいずれか）</span>
-    |    |     |--- resources <span style="color:#75715e"># テスト実行時に利用する設定情報（リソース）ファイルを格納するディレクトリ</span>
-    |    |     |--- filters <span style="color:#75715e"># テスト環境ごとにフィルタリングするリソースファイルを格納するディレクトリ</span>
+    |    |--- <span style="color:#366">test</span>  <span style="color:#09f;font-style:italic"># JUnitテストで利用するJavaや設定情報を格納するディレクトリ</span>
+    |    |     |--- java    <span style="color:#09f;font-style:italic"># テストコード（ファイル名はTest**.java、**Test.java、**TestCase.javaのいずれか）</span>
+    |    |     |--- resources <span style="color:#09f;font-style:italic"># テスト実行時に利用する設定情報（リソース）ファイルを格納するディレクトリ</span>
+    |    |     |--- filters <span style="color:#09f;font-style:italic"># テスト環境ごとにフィルタリングするリソースファイルを格納するディレクトリ</span>
     |    |
-    |    |--- config    <span style="color:#75715e"># Mavenプロジェクトの設定ファイルを格納するディレクトリ</span>
-    |    |--- site      <span style="color:#75715e"># Webサイトの情報を格納するディレクトリ</span>
+    |    |--- config    <span style="color:#09f;font-style:italic"># Mavenプロジェクトの設定ファイルを格納するディレクトリ</span>
+    |    |--- site      <span style="color:#09f;font-style:italic"># Webサイトの情報を格納するディレクトリ</span>
     |
     |--- target
-    　      |--- classes <span style="color:#75715e"># mvn compileでコンパイルされたクラスファイルを格納するディレクトリ</span>
+    　      |--- classes <span style="color:#09f;font-style:italic"># mvn compileでコンパイルされたクラスファイルを格納するディレクトリ</span>
 </code></pre></div><h2 id="pomproject-object-model">POM(Project Object Model)</h2>
 <p>Mavenでは、プロジェクトのライフサイクルをPOM（Project Object Model）という考え方に基づいて管理している。</p>
 <link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
@@ -339,23 +356,23 @@ graph LR;
 <code>mvn</code>コマンドを利用するためには、環境変数<code>JAVA_HOME</code>の設定が必要となっている。</p>
 <p>mvn オプション 実行内容:ゴール</p>
 <p><code>mvn archetype:generate</code>コマンドを利用し、プロジェクトの雛形を作成する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn archetype:generate <span style="color:#ae81ff">\ </span>     <span style="color:#75715e"># コマンドの実行(archetype:generateで雛形作成)</span>
-  -DarchetypeArtifactId<span style="color:#f92672">=</span>maven-archetype-quickstart <span style="color:#ae81ff">\ </span> <span style="color:#75715e"># 雛形の選択(今回はquickstart)</span>
-  -DinteractiveMode<span style="color:#f92672">=</span>false <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 対話形式での雛形作成をOFF</span>
-  -DgroupId<span style="color:#f92672">=</span><span style="color:#f92672">{</span>group-id<span style="color:#f92672">}</span> <span style="color:#ae81ff">\ </span>   <span style="color:#75715e"># プロジェクトルートパッケージ、一般的には社名など</span>
-  -DartifactId<span style="color:#f92672">=</span><span style="color:#f92672">{</span>project-name<span style="color:#f92672">}</span> <span style="color:#75715e"># プロジェクト名</span>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn archetype:generate <span style="color:#c30;font-weight:bold">\ </span>     <span style="color:#09f;font-style:italic"># コマンドの実行(archetype:generateで雛形作成)</span>
+  -DarchetypeArtifactId<span style="color:#555">=</span>maven-archetype-quickstart <span style="color:#c30;font-weight:bold">\ </span> <span style="color:#09f;font-style:italic"># 雛形の選択(今回はquickstart)</span>
+  -DinteractiveMode<span style="color:#555">=</span><span style="color:#366">false</span> <span style="color:#c30;font-weight:bold">\ </span><span style="color:#09f;font-style:italic"># 対話形式での雛形作成をOFF</span>
+  -DgroupId<span style="color:#555">=</span><span style="color:#555">{</span>group-id<span style="color:#555">}</span> <span style="color:#c30;font-weight:bold">\ </span>   <span style="color:#09f;font-style:italic"># プロジェクトルートパッケージ、一般的には社名など</span>
+  -DartifactId<span style="color:#555">=</span><span style="color:#555">{</span>project-name<span style="color:#555">}</span> <span style="color:#09f;font-style:italic"># プロジェクト名</span>
 </code></pre></div><p>コマンドを実行すると、POMを設定するためのpom.xmlが自動生成される。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0&#34;</span>
-  <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
-  <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0
-</span><span style="color:#e6db74">                      http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;modelVersion</span><span style="color:#f92672">&gt;</span>4.0.0<span style="color:#f92672">&lt;/modelVersion&gt;</span>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#309;font-weight:bold">&lt;project</span> <span style="color:#309">xmlns=</span><span style="color:#c30">&#34;http://maven.apache.org/POM/4.0.0&#34;</span>
+  <span style="color:#309">xmlns:xsi=</span><span style="color:#c30">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+  <span style="color:#309">xsi:schemaLocation=</span><span style="color:#c30">&#34;http://maven.apache.org/POM/4.0.0
+</span><span style="color:#c30">                      http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#309;font-weight:bold">&gt;</span>
+  <span style="color:#309;font-weight:bold">&lt;modelVersion</span><span style="color:#309;font-weight:bold">&gt;</span>4.0.0<span style="color:#309;font-weight:bold">&lt;/modelVersion&gt;</span>
 
-  <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>co.jp.fullness<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>sample-project<span style="color:#f92672">&lt;/artifactId&gt;</span>
-  <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.0<span style="color:#f92672">&lt;/version&gt;</span>
+  <span style="color:#309;font-weight:bold">&lt;groupId</span><span style="color:#309;font-weight:bold">&gt;</span>co.jp.fullness<span style="color:#309;font-weight:bold">&lt;/groupId&gt;</span>
+  <span style="color:#309;font-weight:bold">&lt;artifactId</span><span style="color:#309;font-weight:bold">&gt;</span>sample-project<span style="color:#309;font-weight:bold">&lt;/artifactId&gt;</span>
+  <span style="color:#309;font-weight:bold">&lt;version</span><span style="color:#309;font-weight:bold">&gt;</span>1.0<span style="color:#309;font-weight:bold">&lt;/version&gt;</span>
   ・・・
-<span style="color:#f92672">&lt;/project&gt;</span>
+<span style="color:#309;font-weight:bold">&lt;/project&gt;</span>
 </code></pre></div><h2 id="eclipsemaven">EclipseでのMavenプロジェクト作成</h2>
 <p>Eclipseでは、同梱のMavenを利用してMavenプロジェクトを作成することができる。
 Eclipse2019.10での同梱Mavenバージョンは3.5である。</p>
@@ -387,26 +404,7 @@ Eclipse2019.10での同梱Mavenバージョンは3.5である。</p>
         addthis_config.data_track_addressbar = false;
         addthis_config.data_track_clickback = false;
 </script>
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
     
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "https-midsatoh-github-io" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     
     

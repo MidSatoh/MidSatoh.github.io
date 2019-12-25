@@ -68,6 +68,21 @@
   </url>
   
   <url>
+    <loc>https://midsatoh.github.io/tags/kotlin/</loc>
+    <lastmod>2019-12-24T10:04:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/kotlin/basic/</loc>
+    <lastmod>2019-12-24T10:04:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/tags/</loc>
+    <lastmod>2019-12-24T10:04:27+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://midsatoh.github.io/typescript/install/</loc>
     <lastmod>2019-12-04T16:01:51+09:00</lastmod>
   </url>
@@ -108,11 +123,6 @@
   </url>
   
   <url>
-    <loc>https://midsatoh.github.io/tags/</loc>
-    <lastmod>2019-11-25T09:12:42+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://midsatoh.github.io/tags/pyenv/</loc>
     <lastmod>2019-11-20T13:23:47+09:00</lastmod>
   </url>
@@ -135,6 +145,11 @@
   <url>
     <loc>https://midsatoh.github.io/</loc>
     <lastmod>2019-11-19T11:19:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/kotlin/</loc>
+    <lastmod>2019-11-19T09:32:02+09:00</lastmod>
   </url>
   
   <url>

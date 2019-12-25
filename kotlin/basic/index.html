@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MID-S</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-12-25T10:53:19 JST">
+<title>Kotlin基礎文法 :: MID-S</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/midsatoh.github.io\/";
+</script>
+<link href="/css/custom.css" rel="stylesheet">
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/kotlin/basic/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="https://midsatoh.github.io/">MID-S</a>
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/python/python_aspects/" class="dd-item">
+        <div>
+          <a href="/python/python_aspects/">
+            Pythonの特徴
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/python/install/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/python/install/">環境設定</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/python/install/select_soft/" class="dd-item">
+        <div>
+          <a href="/python/install/select_soft/">
+            インストール方法の選択
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/install_soft/" class="dd-item">
+        <div>
+          <a href="/python/install/install_soft/">
+            Pythonインストーラによるインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/anaconda/" class="dd-item">
+        <div>
+          <a href="/python/install/anaconda/">
+            Anacondaのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/pyenv/" class="dd-item">
+        <div>
+          <a href="/python/install/pyenv/">
+            pyenvによるインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/pyenv-win/" class="dd-item">
+        <div>
+          <a href="/python/install/pyenv-win/">
+            pyenv-winによるインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/java/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java/">Java</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="https://midsatoh.github.io/java/install/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java/install/">環境設定</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/java/install/openjdk/" class="dd-item">
+        <div>
+          <a href="/java/install/openjdk/">
+            OpenJDKのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/java/install/eclipse/" class="dd-item">
+        <div>
+          <a href="/java/install/eclipse/">
+            Eclipseのインストールと設定
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/java/spring/maven/" class="dd-item">
+        <div>
+          <a href="/java/spring/maven/">
+            Mavenプロジェクトの作成
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/typescript/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/typescript/">Typescript</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/typescript/install/" class="dd-item">
+        <div>
+          <a href="/typescript/install/">
+            Install
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/mac/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/mac/">Mac</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/mac/homebrew/" class="dd-item">
+        <div>
+          <a href="/mac/homebrew/">
+            Homebrewのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/javascript/" class="dd-item
+        ">
+      <div>
+      <a href="/javascript/">JavaScript</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/kotlin/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/kotlin/">Kotlin</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/kotlin/basic/" class="dd-item active">
+        <div>
+          <a href="/kotlin/basic/">
+            Kotlin基礎文法
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/python/" >
+   Python</option>
+    <option value="/java/" >
+   Java</option>
+    <option value="/typescript/" >
+   Typescript</option>
+    <option value="/mac/" >
+   Mac</option>
+    <option value="/javascript/" >
+   JavaScript</option>
+    <option value="/kotlin/" >
+   Kotlin</option> 
+      <option value="/kotlin/basic/"  selected>- Kotlin基礎文法</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+
+    <h1>Kotlin基礎文法</h1>
+
+    
+    <section>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading">関数</a>
+      <ul>
+        <li><a href="#main">main関数</a></li>
+        <li><a href="#heading1">関数の作成</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading2">変数</a>
+      <ul>
+        <li><a href="#heading3">再代入不可の変数定義</a></li>
+        <li><a href="#heading4">再代入可の変数定義</a></li>
+        <li><a href="#null">Null値の扱い</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading5">分岐</a>
+      <ul>
+        <li><a href="#if--else-if--else">if - else if - else</a></li>
+        <li><a href="#range">Range</a></li>
+        <li><a href="#when">when</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading6">ループ</a>
+      <ul>
+        <li><a href="#whiledo--while">whileとdo - while</a></li>
+        <li><a href="#breakcontinue">break、continueラベル</a></li>
+        <li><a href="#for">for</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </section>
+    
+    <script src="/js/custom_toc.js"></script>
+    
+    
+    
+    <div class="addthis_inline_share_toolbox" id="addThis"></div>
+    <p>サンプルコードはKotlin公式リファレンス<a href="https://kotlinlang.org/docs/reference/">Kotlin公式リファレンス：https://kotlinlang.org/docs/reference/</a>に補足・和訳した物を利用している。</p>
+<h2 id="heading">関数</h2>
+<h3 id="main">main関数</h3>
+<p>プログラム全体のエントリポイント（実行開始ポイント）となるのが、main関数である。
+拡張子（.kt）のファイルに作成する。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">fun</span> <span style="color:#c0f">main</span>(){
+    println(<span style="color:#c30">&#34;Hello World!&#34;</span>)
+}
+</code></pre></div><h3 id="heading1">関数の作成</h3>
+<p>エントリポイントの他に、処理の集まりとして関数を作成することができる。</p>
+<pre><code>fun 関数名(仮引数:仮引数の型, ・・・): 戻り値の型 {
+    関数内の処理
+    return 戻り値
+}
+</code></pre><p>例えば、仮引数の加算結果を戻り値とする関数は以下の通りとなる。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">fun</span> <span style="color:#c0f">sum</span>(a:Int, b:Int):Int {
+    <span style="color:#069;font-weight:bold">return</span> a + b
+}
+</code></pre></div><p>処理が単文で記述可能な場合、戻り値の型やブロックを省略することができる。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">fun</span> <span style="color:#c0f">sum</span>(a:Int, b:Int) = a + b
+</code></pre></div><p>戻り値なしの関数の場合、戻り値の型は<code>Unit</code>である。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">fun</span> <span style="color:#c0f">sumPrint</span>(a:Int, b:Int):Unit {
+    println(<span style="color:#c30">&#34;$a と $b の加算の結果は ${a + b}&#34;</span>)
+}
+</code></pre></div><p><code>Unit</code>型は省略が可能である。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">fun</span> <span style="color:#c0f">sumPrint</span>(a:Int, b:Int) {
+    println(<span style="color:#c30">&#34;$a と $b の加算の結果は ${a + b}&#34;</span>)
+}
+</code></pre></div><h2 id="heading2">変数</h2>
+<h3 id="heading3">再代入不可の変数定義</h3>
+<p>Kotlinの場合、再代入ができない変数の定義には<code>val</code>キーワードを用いる。</p>
+<pre><code>val 変数名: データ型 = 初期値
+val 変数名 = データ型   // 型推論による代入
+val 変数名: データ型    // 変数定義
+変数名 = 初期値         // 初期値の代入
+</code></pre><p>例えば、Int型の変数にそれぞれ初期値を代入する方法は以下の通りである。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> a: Int = <span style="color:#f60">1</span>
+<span style="color:#069;font-weight:bold">val</span> b = <span style="color:#f60">2</span>
+<span style="color:#069;font-weight:bold">val</span> c: Int
+c = <span style="color:#f60">3</span>
+</code></pre></div><h3 id="heading4">再代入可の変数定義</h3>
+<p>再代入可能な変数定義には、<code>var</code>キーワードを用いる。
+それ以外の利用方法については、<code>val</code>の場合と同じ。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">var</span> a: Int = <span style="color:#f60">1</span>
+<span style="color:#069;font-weight:bold">var</span> b = <span style="color:#f60">2</span>
+a += <span style="color:#f60">1</span>
+b = b + a
+</code></pre></div><h3 id="null">Null値の扱い</h3>
+<p>Kotlinでは、変数や戻り値などに<code>null</code>値を利用することは基本的にできない。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> s: String = <span style="color:#069;font-weight:bold">null</span>    <span style="color:#09f;font-style:italic">// コンパイルエラー
+</span></code></pre></div><p>Javaのライブラリを使用する場合など、どうしても<code>null</code>値を利用しなければならない場合などは型指定部分に<code>?</code>を付与する。これをnull許容型という。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> s: String? = <span style="color:#069;font-weight:bold">null</span>
+
+<span style="color:#069;font-weight:bold">fun</span> <span style="color:#c0f">returnNullFunc</span>():String? {
+    <span style="color:#069;font-weight:bold">return</span> <span style="color:#069;font-weight:bold">null</span>
+}
+
+<span style="color:#069;font-weight:bold">fun</span> <span style="color:#c0f">getNullFunc</span>(s: String?){
+    <span style="color:#069;font-weight:bold">if</span>(s == <span style="color:#069;font-weight:bold">null</span>) println(<span style="color:#c30">&#34;引数はnull&#34;</span>)
+    <span style="color:#069;font-weight:bold">else</span> println(<span style="color:#c30">&#34;引数は $s&#34;</span>)
+}
+</code></pre></div><p>null許容型へアクセスする場合、変数名の後ろやメソッド実行後に<code>?</code>を付与する。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> s: String? = <span style="color:#069;font-weight:bold">null</span>
+println(s<span style="color:#555">?.</span>length)
+println(s<span style="color:#555">?.</span>toIntOrNull()<span style="color:#555">?.</span>plus(<span style="color:#f60">10</span>))
+</code></pre></div><p>変数にnullが代入されている場合に<code>?</code>でアクセスした結果はnullとなる。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">var</span> s: String? = <span style="color:#069;font-weight:bold">null</span>
+println(s<span style="color:#555">?.</span>length)  <span style="color:#09f;font-style:italic">// 実行結果：「null」と表示
+</span><span style="color:#09f;font-style:italic"></span>println(s<span style="color:#555">?.</span>length<span style="color:#555">?.</span>plus(<span style="color:#f60">10</span>))    <span style="color:#09f;font-style:italic">// 実行結果：「null」と表示
+</span><span style="color:#09f;font-style:italic"></span>
+</code></pre></div><p>null許容型へのアクセスで確実にnullではないことが保証される場合、変数名の後ろに<code>!!</code>を付与する。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">var</span> s: String? = <span style="color:#c30">&#34;Sample&#34;</span>
+println(s<span style="color:#555">!!</span>.length)
+</code></pre></div><p>nullの場合に代入する値を<code>?:</code>で指定することも可能。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> s: String? = <span style="color:#069;font-weight:bold">null</span>
+<span style="color:#069;font-weight:bold">val</span> len = s<span style="color:#555">?.</span>length <span style="color:#555">?:</span> -<span style="color:#f60">1</span>     <span style="color:#09f;font-style:italic">// nullの場合は-1が代入される
+</span></code></pre></div><h2 id="heading5">分岐</h2>
+<p>プログラム一般で利用される<code>if - else if - else</code>と、<code>when</code>（他言語におけるswitchと同等）が利用可能。</p>
+<h3 id="if--else-if--else">if - else if - else</h3>
+<pre><code>if (条件式1) {
+    条件式1がtrueの場合の処理
+} else if  (条件式２) {
+    条件式1はfalse、条件式2がtrueの場合の処理
+} else {
+    全条件が全てfalseの場合の処理
+}
+</code></pre><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">fun</span> <span style="color:#c0f">maxOf</span>(a: Int, b: Int): Int {
+    <span style="color:#069;font-weight:bold">if</span> (a &gt; b) {
+        <span style="color:#069;font-weight:bold">return</span> a
+    } <span style="color:#069;font-weight:bold">else</span> {
+        <span style="color:#069;font-weight:bold">return</span> b
+    }
+}
+</code></pre></div><p>Kotlinの場合、ifブロックの最終ステートメントは戻り値を表す。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> a = <span style="color:#f60">10</span>
+<span style="color:#069;font-weight:bold">val</span> b = <span style="color:#f60">12</span>
+<span style="color:#069;font-weight:bold">val</span> max = <span style="color:#069;font-weight:bold">if</span>(a &gt; b){
+    println(<span style="color:#c30">&#34;a &gt; b&#34;</span>)
+    a   <span style="color:#09f;font-style:italic">// if の戻り値はa
+</span><span style="color:#09f;font-style:italic"></span>} <span style="color:#069;font-weight:bold">else</span> {
+    println(<span style="color:#c30">&#34;a &lt;= b&#34;</span>)
+    b   <span style="color:#09f;font-style:italic">// if の戻り値はb
+</span><span style="color:#09f;font-style:italic"></span>}
+println(max)    <span style="color:#09f;font-style:italic">// 変数bの値「12」がmaxに代入される
+</span></code></pre></div><p>処理が単文で記述可能な場合、<code>{}</code>を省略可能。また、戻り値を利用することにより3項演算子のような利用方法も可能。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">fun</span> <span style="color:#c0f">maxOf</span>(a: Int, b: Int) = <span style="color:#069;font-weight:bold">if</span> (a &gt; b) a <span style="color:#069;font-weight:bold">else</span> b
+</code></pre></div><h3 id="range">Range</h3>
+<p><code>in ..</code>を利用することにより、数値などの範囲を指定することが可能。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> a = <span style="color:#f60">5</span>
+<span style="color:#069;font-weight:bold">if</span> (a <span style="color:#069;font-weight:bold">in</span> <span style="color:#f60">0.</span>.<span style="color:#f60">5</span>){
+    println(<span style="color:#c30">&#34;0以上5以下の範囲内&#34;</span>)
+} <span style="color:#069;font-weight:bold">else</span> {
+    println(<span style="color:#c30">&#34;範囲外&#34;</span>)
+}
+</code></pre></div><p><code>!in ..</code>で範囲外を表すことも可能。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> a = <span style="color:#f60">6</span>
+<span style="color:#069;font-weight:bold">if</span> (a !<span style="color:#069;font-weight:bold">in</span> <span style="color:#f60">0.</span>.<span style="color:#f60">5</span>){
+    println(<span style="color:#c30">&#34;0より小さいか5より大きい&#34;</span>)
+} <span style="color:#069;font-weight:bold">else</span> {
+    println(<span style="color:#c30">&#34;範囲外&#34;</span>)
+}
+</code></pre></div><h3 id="when">when</h3>
+<p>when構文は他言語における<code>switch</code>と似たような記述方式となるが、さらに複雑な記述が可能となっている。
+ifと同様、ブロックの最終ステートメントが戻り値となる。</p>
+<pre><code>when (変数){
+    値1 -&gt; {
+        処理1    // 変数 == 値1となる場合の処理
+    }
+    値2 -&gt; 処理2    // 変数 == 値2となる場合の処理
+    else -&gt; 条件に当てはまらない場合の処理
+}
+</code></pre><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> x = <span style="color:#f60">2</span>
+<span style="color:#069;font-weight:bold">val</span> message =
+    <span style="color:#069;font-weight:bold">when</span> (x) {
+        <span style="color:#f60">1</span> -&gt; <span style="color:#c30">&#34;x == 1&#34;</span>
+        <span style="color:#f60">2</span> -&gt; <span style="color:#c30">&#34;x == 2&#34;</span>
+        <span style="color:#069;font-weight:bold">else</span> -&gt; {
+            println(<span style="color:#c30">&#34;xは1または2ではない&#34;</span>)
+            <span style="color:#c30">&#34;x == $x&#34;</span>
+        }
+    }
+println(message)
+</code></pre></div><p>whenの場合、比較する値を複数指定することも可能。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> x = <span style="color:#f60">2</span>
+<span style="color:#069;font-weight:bold">val</span> message =
+    <span style="color:#069;font-weight:bold">when</span> (x) {
+        <span style="color:#f60">1</span>, <span style="color:#f60">2</span> -&gt; <span style="color:#c30">&#34;x == 1 または x == 2&#34;</span>
+        <span style="color:#069;font-weight:bold">else</span> -&gt; {
+            print(<span style="color:#c30">&#34;xは1または2ではない&#34;</span>)
+            <span style="color:#c30">&#34;x == $x&#34;</span>
+        }
+    }
+println(message)
+</code></pre></div><p><code>in ..</code>やRange変数などを利用することも可能。また、Boolean型を返すような関数や演算子を利用することも可能。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> validNumbers: IntRange = -<span style="color:#f60">10.</span>.<span style="color:#f60">0</span>     <span style="color:#09f;font-style:italic">// Range変数
+</span><span style="color:#09f;font-style:italic"></span>
+<span style="color:#069;font-weight:bold">fun</span> <span style="color:#c0f">checkRange</span>(x: Any) =        <span style="color:#09f;font-style:italic">// Any型：null許容でない全てのクラスのスーパークラス
+</span><span style="color:#09f;font-style:italic"></span>    <span style="color:#069;font-weight:bold">when</span> (x) {
+        <span style="color:#069;font-weight:bold">in</span> <span style="color:#f60">1.</span>.<span style="color:#f60">10</span> -&gt; <span style="color:#c30">&#34;xは1から10の範囲内&#34;</span>
+        <span style="color:#069;font-weight:bold">in</span> validNumbers -&gt; <span style="color:#c30">&#34;xは-10から0の範囲内&#34;</span>
+        <span style="color:#069;font-weight:bold">is</span> Double -&gt; <span style="color:#c30">&#34;浮動小数点型&#34;</span>         <span style="color:#09f;font-style:italic">// is データ型 でデータ型チェックが可能
+</span><span style="color:#09f;font-style:italic"></span>        <span style="color:#069;font-weight:bold">else</span> -&gt; <span style="color:#c30">&#34;いずれでもない&#34;</span>
+    }
+</code></pre></div><h2 id="heading6">ループ</h2>
+<h3 id="whiledo--while">whileとdo - while</h3>
+<p>Kotlinにおける<code>while</code>と<code>do - while</code> は、Javaなどと同等。</p>
+<pre><code>while(条件式){
+    ループ処理
+}
+
+do {
+    ループ処理
+} while (条件式)
+</code></pre><p>break、continueも利用可能。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">var</span> x = <span style="color:#f60">0</span>
+<span style="color:#069;font-weight:bold">while</span>(x &lt; <span style="color:#f60">10</span>){
+    x++
+    <span style="color:#069;font-weight:bold">if</span> (x == <span style="color:#f60">8</span>){
+        println(<span style="color:#c30">&#34;break&#34;</span>)
+        <span style="color:#069;font-weight:bold">break</span>
+    }
+    <span style="color:#069;font-weight:bold">if</span> (x % <span style="color:#f60">2</span> == <span style="color:#f60">0</span>) <span style="color:#069;font-weight:bold">continue</span>
+    println(x)
+}
+</code></pre></div><h3 id="breakcontinue">break、continueラベル</h3>
+<p>Kotlinの場合、ネストされたループのbreak先・continue先をラベルにて指定することが可能。
+通常のbreakやcontinueの場合、ネストされたループの場合はbreakやcontinueが記述されたループのみが対象となる。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">var</span> x = <span style="color:#f60">0</span>
+<span style="color:#069;font-weight:bold">while</span>(x &lt; <span style="color:#f60">3</span>){  <span style="color:#09f;font-style:italic">// (1)
+</span><span style="color:#09f;font-style:italic"></span>    x++
+    <span style="color:#069;font-weight:bold">var</span> y = <span style="color:#f60">0</span>
+    <span style="color:#069;font-weight:bold">while</span> (<span style="color:#069;font-weight:bold">true</span>) {  <span style="color:#09f;font-style:italic">// (2)
+</span><span style="color:#09f;font-style:italic"></span>        <span style="color:#069;font-weight:bold">if</span> (y == <span style="color:#f60">3</span>) <span style="color:#069;font-weight:bold">break</span>   <span style="color:#09f;font-style:italic">// (2)のループのみbreakする
+</span><span style="color:#09f;font-style:italic"></span>        y++
+        println(<span style="color:#c30">&#34;x=$x,y=$y&#34;</span>)
+    }
+}
+</code></pre></div><p>実行結果</p>
+<pre><code>x=1,y=1
+x=1,y=2
+x=1,y=3
+x=2,y=1
+x=2,y=2
+x=2,y=3
+x=3,y=1
+x=3,y=2
+x=3,y=3
+</code></pre><p>breakやcontinueでラベルを指定することにより、ネストされたループの対象を指定することができる。
+<code>ラベル名@</code>でbreakやcontinueの指定先を、<code>break@ラベル名</code>や<code>continue@ラベル名</code>でラベルに移動するためのキーワードを指定する。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">var</span> x = <span style="color:#f60">0</span>
+loop<span style="color:#a00;background-color:#faa">@</span> <span style="color:#069;font-weight:bold">while</span>(x &lt; <span style="color:#f60">3</span>){ <span style="color:#09f;font-style:italic">// break対象「ラベル名@」で指定
+</span><span style="color:#09f;font-style:italic"></span>    x++
+    <span style="color:#069;font-weight:bold">var</span> y = <span style="color:#f60">0</span>
+    <span style="color:#069;font-weight:bold">while</span> (<span style="color:#069;font-weight:bold">true</span>) {
+        <span style="color:#069;font-weight:bold">if</span> (y == <span style="color:#f60">3</span>) <span style="color:#069;font-weight:bold">break</span>@loop  <span style="color:#09f;font-style:italic">// breakの移動先を「@ラベル名」で指定
+</span><span style="color:#09f;font-style:italic"></span>        y++
+        println(<span style="color:#c30">&#34;x=$x,y=$y&#34;</span>)
+    }
+}
+</code></pre></div><p>実行結果</p>
+<pre><code>x=1,y=1
+x=1,y=2
+x=1,y=3
+</code></pre><h3 id="for">for</h3>
+<p>Kotlinのfor文は、Pythonのfor文やJavaでいう拡張for文のような利用方法となる。</p>
+<pre><code>for 変数 in 範囲を持つ値 {
+    ループ処理
+}
+</code></pre><p>範囲を持つ値（iteratableな値）とは、以下のルールが必須となる。</p>
+<ul>
+<li>iterator()メソッドを持つ</li>
+<li><code>next()</code>メソッドと<code>hasNext()</code>メソッド（戻り値はBoolean型）を持つ</li>
+</ul>
+<p>一般的にはコレクション型である、またはRange型であれば上記の条件を満たす。</p>
+<p>例えば、1から3の間処理を繰り返すようなfor文は以下の通り。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">for</span>(i <span style="color:#069;font-weight:bold">in</span> <span style="color:#f60">1.</span>.<span style="color:#f60">3</span>){     <span style="color:#09f;font-style:italic">// [1, 2, 3]の数列からiに要素を代入し、要素が無くなるまでループする
+</span><span style="color:#09f;font-style:italic"></span>    print(<span style="color:#c30">&#34;$i &#34;</span>)
+}
+</code></pre></div><p>数値の範囲であれば、<code>downTo</code>を利用することにより降順の数列を作ることも可能。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">for</span>(i <span style="color:#069;font-weight:bold">in</span> <span style="color:#f60">3</span> downTo <span style="color:#f60">1</span>){   <span style="color:#09f;font-style:italic">// [3, 2, 1]の数列からiに要素を代入し、要素が無くなるまでループする
+</span><span style="color:#09f;font-style:italic"></span>    print(<span style="color:#c30">&#34;$i &#34;</span>)
+}
+</code></pre></div><p>また、<code>step</code>と組み合わせることにより要素の増減値を指定することも可能。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">for</span>(i <span style="color:#069;font-weight:bold">in</span> <span style="color:#f60">1.</span>.<span style="color:#f60">10</span> step <span style="color:#f60">2</span>){   <span style="color:#09f;font-style:italic">// [1, 3, 5, 7, 9]の数列からiに要素を代入し、要素が無くなるまでループする
+</span><span style="color:#09f;font-style:italic"></span>    print(<span style="color:#c30">&#34;$i &#34;</span>)
+}
+</code></pre></div><p><code>until</code>を利用すると、最後の値を含まないような数列も作成できる。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">for</span>(i <span style="color:#069;font-weight:bold">in</span> <span style="color:#f60">1</span> until <span style="color:#f60">3</span>){   <span style="color:#09f;font-style:italic">// [1, 2](3は含まない)の数列からiに要素を代入し、要素が無くなるまでループする
+</span><span style="color:#09f;font-style:italic"></span>    print(<span style="color:#c30">&#34;$i &#34;</span>)
+}
+</code></pre></div><p>コレクション（リストなど）の場合も同様。ただし、変数に対するデータ型指定はあった方が良い。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> list = listOf&lt;String&gt;(<span style="color:#c30">&#34;a&#34;</span>, <span style="color:#c30">&#34;b&#34;</span>, <span style="color:#c30">&#34;c&#34;</span>)
+<span style="color:#069;font-weight:bold">for</span>(s:String <span style="color:#069;font-weight:bold">in</span> list){
+    print(<span style="color:#c30">&#34;$s &#34;</span>)
+}
+</code></pre></div>
+    
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5de07c32251c84e0"></script>
+​<script type="text/javascript">
+    var addthis_config = addthis_config||{};
+        addthis_config.data_track_addressbar = false;
+        addthis_config.data_track_clickback = false;
+</script>
+    
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/kotlin/" title="Kotlin"> <i class="fa fa-chevron-left"></i><label>Kotlin</label></a>
+    <a class="nav nav-next" href="/python/" title="Python" style="margin-right: 0px;"><label>Python</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://midsatoh.github.io/tags/kotlin">Kotlin</a>
+      
+    </div>
+    
+
+    
+
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i>  24/12/2019
+    </div>
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

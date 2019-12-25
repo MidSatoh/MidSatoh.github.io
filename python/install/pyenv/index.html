@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-12-13T13:33:13 JST">
+<meta name="revised" content="2019-12-25T10:53:19 JST">
 <title>pyenvによるインストール :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -179,6 +179,21 @@
       <a href="/javascript/">JavaScript</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
+    <li data-nav-id="https://midsatoh.github.io/kotlin/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/kotlin/">Kotlin</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/kotlin/basic/" class="dd-item">
+        <div>
+          <a href="/kotlin/basic/">
+            Kotlin基礎文法
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
 
 
 
@@ -214,6 +229,8 @@
    Mac</option>
     <option value="/javascript/" >
    JavaScript</option>
+    <option value="/kotlin/" >
+   Kotlin</option>
 
 
 
@@ -248,7 +265,10 @@
 <p>そのため、macOSではOSプリインストールのPythonは<code>python</code>、インストーラでインストールした場合のPython3系については<code>python3</code>というコマンドを使用することで切り替えているが、今後macOSのアップデートによりOSプリインストールのPythonバージョンが変わった場合どのようになるかは不明な部分が多い。</p>
 <p>また、マイナーバージョン（3.5と3.8など）を複数インストールする必要がある場合はインストーラとaliasを切り替えるなどで対応可能だが、パッチバージョン（3.6.0と3.6.5など）を同一のマシンにインストールすることができない。</p>
 <p>そこで、Macで複数のPythonをインストールし、開発環境を切り替えるためのツールがpyenvである。</p>
-<!-- raw HTML omitted -->
+<div class="notices info" ><p>
+pyenvはあくまで複数のPythonのバージョンをパッチレベルまで切り替えるためのツールである。
+ただし、Macの場合は今後OSプリインストールのPythonとの共存がどのように扱われるか不明であるため、柔軟な対応ができるpyenvを紹介しておく。
+</p></div>
 <p>pyenvをインストールするには、MacportやHomebrewというMacでのパッケージ管理システムを利用してインストールすることが多い。</p>
 <p>本サイトでは、Homebrewからpyenvをインストールする。
 Homebrewが未インストールの場合は、<a href="/mac/homebrew/">Homebrewのインストール</a> を参考とすること。</p>
@@ -256,22 +276,21 @@ Homebrewが未インストールの場合は、<a href="/mac/homebrew/">Homebrew
 <p>homebrewがインストールされると、brewコマンドが利用可能となる。<code>brew install インストールするパッケージ</code>で様々な開発ツールがインストール可能となる。</p>
 <p><code>brew install</code>コマンドを実施する際には、インターネットに接続されている必要がある。
 pyenvのインストールは、以下のコマンドとなる。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% brew install pyenv
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% brew install pyenv
 </code></pre></div><p>Mac OS Catalinaからは、ターミナルのデフォルトシェルがbashからzshとなった。
 そのため、pyenvの設定内容を<code>~/.zprofile</code>に以下を追加する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">export PYENV_ROOT<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/.pyenv
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>PYENV_ROOT<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-    export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>PYENV_ROOT<span style="color:#e6db74">}</span>/bin:$PATH
-    eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>pyenv init -<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-<span style="color:#66d9ef">fi</span>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#366">export</span> <span style="color:#033">PYENV_ROOT</span><span style="color:#555">=</span><span style="color:#a00">${</span><span style="color:#033">HOME</span><span style="color:#a00">}</span>/.pyenv
+<span style="color:#069;font-weight:bold">if</span> <span style="color:#555">[</span> -d <span style="color:#c30">&#34;</span><span style="color:#a00">${</span><span style="color:#033">PYENV_ROOT</span><span style="color:#a00">}</span><span style="color:#c30">&#34;</span> <span style="color:#555">]</span>; <span style="color:#069;font-weight:bold">then</span>
+    <span style="color:#366">export</span> <span style="color:#033">PATH</span><span style="color:#555">=</span><span style="color:#a00">${</span><span style="color:#033">PYENV_ROOT</span><span style="color:#a00">}</span>/bin:<span style="color:#033">$PATH</span>
+    <span style="color:#366">eval</span> <span style="color:#c30">&#34;</span><span style="color:#069;font-weight:bold">$(</span>pyenv init -<span style="color:#069;font-weight:bold">)</span><span style="color:#c30">&#34;</span>
+<span style="color:#069;font-weight:bold">fi</span>
 </code></pre></div>
-<div class="panel panel-primary"><div class="panel-body"><p>zshではなくbashを利用しているMacの場合は、上記の内容は「~/.bash_profile」に記載する。</p>
-</div></div>
+<div class="panel panel-primary"><div class="panel-body">zshではなくbashを利用しているMacの場合は、上記の内容は「~/.bash_profile」に記載する。</div></div>
 
 <h3 id="pyenv2">pyenvインストールの確認</h3>
 <p>pyenvのコマンドを実行し、インストールが完了しているか確認する。
 今回はpyenvでインストールできるバージョンの一覧を表示させてみる。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% pyenv install -l
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% pyenv install -l
 Available versions:
     2.1.3
     2.2.3
@@ -283,42 +302,41 @@ Available versions:
     2.4.4
     .........
 </code></pre></div>
-<div class="panel panel-primary"><div class="panel-body"><p>pyenv install -l でインストールしたいバージョンが表示されない場合は、pyenvのバージョンが古くなっている場合がある。
-その場合は、pyenv自体のアップグレードを行う必要がある。pyenvのアップグレードコマンドは以下の通り。</p>
-<pre><code>% brew upgrade pyenv
-</code></pre></div></div>
+<div class="panel panel-primary"><div class="panel-body"><p>pyenv install -l でインストールしたいバージョンが表示されない場合は、pyenvのバージョンが古くなっている場合がある。その場合は、pyenv自体のアップグレードを行う必要がある。pyenvのアップグレードコマンドは以下の通り。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% brew upgrade pyenv
+</code></pre></div></div></div>
 
 <h4 id="pyenv3">pyenvによる使用バージョンのインストール</h4>
 <p><code>pyenv install バージョン指定</code>で必要なバージョンのインストールが可能となる。
 例えば、3.8.0と3.6.9をインストールする場合は以下のようになる。pyenvもインターネットへの接続が必須である。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% pyenv install 3.8.0
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% pyenv install 3.8.0
 ・・・
 % pyenv install 3.6.9
 </code></pre></div><p>pyenvでインストールされたPythonは、<code>~/.pyenv</code>以下にインストールされている。
 インストールされているバージョンを確認するためのコマンドは、<code>pyenv versions</code>である。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">$ pyenv versions
-system <span style="color:#f92672">(</span>set by /Users/ユーザー名/.pyenv/version<span style="color:#f92672">)</span>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">$ pyenv versions
+system <span style="color:#555">(</span><span style="color:#366">set</span> by /Users/ユーザー名/.pyenv/version<span style="color:#555">)</span>
     3.8.0
     3.6.9
 </code></pre></div><h4 id="python">使用するPythonのバージョンを確定する</h4>
 <p>デフォルトで使用したいバージョンを指定する場合は<code>global</code>、特定のディレクトリのみで使用するバージョンを指定するには、使用したいフォルダに移動したのち<code>local</code>オプションを使用する。
 Macの場合は、基本的にはglovalは使用しない方が良い。
 例えば、<code>~/Python38</code>では3.8.0を、<code>~/Python36</code>では3.6.9を設定したいとする。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% mkdir ~/Python38  <span style="color:#75715e"># ディレクトリの作成</span>
-% cd ~/Python38     <span style="color:#75715e"># ディレクトリへ移動</span>
-% pyenv local 3.8.0 <span style="color:#75715e"># 現在のディレクトリで使用するPythonのバージョンを指定</span>
-% python --version  <span style="color:#75715e"># pythonコマンドのバージョン確認</span>
- Python3.8.0        <span style="color:#75715e"># 実行結果</span>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% mkdir ~/Python38  <span style="color:#09f;font-style:italic"># ディレクトリの作成</span>
+% <span style="color:#366">cd</span> ~/Python38     <span style="color:#09f;font-style:italic"># ディレクトリへ移動</span>
+% pyenv <span style="color:#366">local</span> 3.8.0 <span style="color:#09f;font-style:italic"># 現在のディレクトリで使用するPythonのバージョンを指定</span>
+% python --version  <span style="color:#09f;font-style:italic"># pythonコマンドのバージョン確認</span>
+ Python3.8.0        <span style="color:#09f;font-style:italic"># 実行結果</span>
 % mkdir ~/Python36
-% cd ~/Python36
-% pyenv local 3.6.9
+% <span style="color:#366">cd</span> ~/Python36
+% pyenv <span style="color:#366">local</span> 3.6.9
 % python --version
  Python3.6.9
 </code></pre></div><p>上記の例の場合、<code>~/Python38</code>と<code>~/Python36</code>では指定のバージョンが、それ以外のディレクトリではOSでプリインストールされたpythonが使用される。</p>
 <h3 id="pyenvanaconda">pyenvでのAnacondaインストール</h3>
 <p>pyenvでもAnacondaのインストールが可能である。ただし、pyenvに最新版のAnacondaが反映されるには公式でのダウンロードよりも若干のタイムラグが発生するため注意。</p>
 <p>pyenvでインストールできるAnacondaのバージョンを確認するには、grepと組み合わせると良い。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% pyenv install -l | grep anaconda3
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% pyenv install -l | grep anaconda3
   ・・・
   anaconda3-4.2.0
   anaconda3-4.3.0
@@ -336,7 +354,7 @@ Macの場合は、基本的にはglovalは使用しない方が良い。
   anaconda3-2019.10
 </code></pre></div><p>2018年12月からは、Anacondaのバージョンは発行年.発行月という表記方法に変わったので、2019年11月現在での最新版はanaconda3-2019.10である。</p>
 <p>インストール方法は通常のPythonインストールと同様に<code>pyenv install</code>コマンドで指定する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% pyenv install anaconda3-2019.10
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% pyenv install anaconda3-2019.10
 </code></pre></div><p>pyenvでインストールした場合でも、インストーラを使用した場合と同様にツールも含めてインストールされる。</p>
 
     
@@ -346,26 +364,7 @@ Macの場合は、基本的にはglovalは使用しない方が良い。
         addthis_config.data_track_addressbar = false;
         addthis_config.data_track_clickback = false;
 </script>
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
     
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "https-midsatoh-github-io" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     
     
