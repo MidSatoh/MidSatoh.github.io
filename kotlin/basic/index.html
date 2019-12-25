@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-12-25T10:53:19 JST">
+<meta name="revised" content="2019-12-25T14:13:31 JST">
 <title>Kotlin基礎文法 :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -191,6 +191,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="https://midsatoh.github.io/kotlin/foreach/" class="dd-item">
+        <div>
+          <a href="/kotlin/foreach/">
+            forEachの使い方
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
         </ul>
     </li>
 
@@ -220,6 +227,7 @@
     <option value="/kotlin/" >
    Kotlin</option> 
       <option value="/kotlin/basic/"  selected>- Kotlin基礎文法</option>
+      <option value="/kotlin/foreach/" >- forEachの使い方</option>
   
 
 
@@ -331,7 +339,7 @@ b = b + a
     <span style="color:#069;font-weight:bold">if</span>(s == <span style="color:#069;font-weight:bold">null</span>) println(<span style="color:#c30">&#34;引数はnull&#34;</span>)
     <span style="color:#069;font-weight:bold">else</span> println(<span style="color:#c30">&#34;引数は $s&#34;</span>)
 }
-</code></pre></div><p>null許容型へアクセスする場合、変数名の後ろやメソッド実行後に<code>?</code>を付与する。</p>
+</code></pre></div><p>null許容型へアクセスする場合、変数名の後ろや関数実行後に<code>?</code>を付与する。</p>
 <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> s: String? = <span style="color:#069;font-weight:bold">null</span>
 println(s<span style="color:#555">?.</span>length)
 println(s<span style="color:#555">?.</span>toIntOrNull()<span style="color:#555">?.</span>plus(<span style="color:#f60">10</span>))
@@ -500,8 +508,8 @@ x=1,y=3
 }
 </code></pre><p>範囲を持つ値（iteratableな値）とは、以下のルールが必須となる。</p>
 <ul>
-<li>iterator()メソッドを持つ</li>
-<li><code>next()</code>メソッドと<code>hasNext()</code>メソッド（戻り値はBoolean型）を持つ</li>
+<li>iterator()関数を持つ</li>
+<li><code>next()</code>関数と<code>hasNext()</code>関数（戻り値はBoolean型）を持つ</li>
 </ul>
 <p>一般的にはコレクション型である、またはRange型であれば上記の条件を満たす。</p>
 <p>例えば、1から3の間処理を繰り返すようなfor文は以下の通り。</p>
@@ -520,7 +528,7 @@ x=1,y=3
 <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">for</span>(i <span style="color:#069;font-weight:bold">in</span> <span style="color:#f60">1</span> until <span style="color:#f60">3</span>){   <span style="color:#09f;font-style:italic">// [1, 2](3は含まない)の数列からiに要素を代入し、要素が無くなるまでループする
 </span><span style="color:#09f;font-style:italic"></span>    print(<span style="color:#c30">&#34;$i &#34;</span>)
 }
-</code></pre></div><p>コレクション（リストなど）の場合も同様。ただし、変数に対するデータ型指定はあった方が良い。</p>
+</code></pre></div><p>Collection（リストなど）の場合も同様。ただし、変数に対するデータ型指定はあった方が良い。</p>
 <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> list = listOf&lt;String&gt;(<span style="color:#c30">&#34;a&#34;</span>, <span style="color:#c30">&#34;b&#34;</span>, <span style="color:#c30">&#34;c&#34;</span>)
 <span style="color:#069;font-weight:bold">for</span>(s:String <span style="color:#069;font-weight:bold">in</span> list){
     print(<span style="color:#c30">&#34;$s &#34;</span>)
@@ -540,7 +548,7 @@ x=1,y=3
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/kotlin/" title="Kotlin"> <i class="fa fa-chevron-left"></i><label>Kotlin</label></a>
-    <a class="nav nav-next" href="/python/" title="Python" style="margin-right: 0px;"><label>Python</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/kotlin/foreach/" title="forEachの使い方" style="margin-right: 0px;"><label>forEachの使い方</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>

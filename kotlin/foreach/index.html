@@ -5,8 +5,8 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-12-25T14:13:32 JST">
-<title>Kotlin :: MID-S</title>
+<meta name="revised" content="2019-12-25T14:13:31 JST">
+<title>forEachの使い方 :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -18,13 +18,13 @@
       var baseurl = "https:\/\/midsatoh.github.io\/";
 </script>
 <link href="/css/custom.css" rel="stylesheet">
-<meta name="description" content="Kotlin">
+<meta name="description" content="">
 
 
 
     
   </head>
-  <body data-url="/kotlin/">
+  <body data-url="/kotlin/foreach/">
     
       <header>
   <div class="logo">
@@ -177,7 +177,7 @@
       <a href="/javascript/">JavaScript</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
-    <li data-nav-id="https://midsatoh.github.io/kotlin/" class="dd-item parent active haschildren
+    <li data-nav-id="https://midsatoh.github.io/kotlin/" class="dd-item parent haschildren
         ">
       <div>
       <a href="/kotlin/">Kotlin</a>
@@ -191,7 +191,7 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="https://midsatoh.github.io/kotlin/foreach/" class="dd-item">
+      <li data-nav-id="https://midsatoh.github.io/kotlin/foreach/" class="dd-item active">
         <div>
           <a href="/kotlin/foreach/">
             forEachの使い方
@@ -224,10 +224,10 @@
    Mac</option>
     <option value="/javascript/" >
    JavaScript</option>
-    <option value="/kotlin/"  selected>
+    <option value="/kotlin/" >
    Kotlin</option> 
       <option value="/kotlin/basic/" >- Kotlin基礎文法</option>
-      <option value="/kotlin/foreach/" >- forEachの使い方</option>
+      <option value="/kotlin/foreach/"  selected>- forEachの使い方</option>
   
 
 
@@ -236,36 +236,56 @@
       </center>
     </div>
 
-    <h1>Kotlin</h1>
+    <h1>forEachの使い方</h1>
 
+    
+    <section>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#foreach">forEach関数</a></li>
+  </ul>
+</nav>
+    </section>
     
     <script src="/js/custom_toc.js"></script>
     
     
     
+    <div class="addthis_inline_share_toolbox" id="addThis"></div>
+    <h2 id="foreach">forEach関数</h2>
+<p>Collectionに対してループ処理を行う構文としては、<code>for</code>がある。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> list = listOf&lt;String&gt;(<span style="color:#c30">&#34;a&#34;</span>, <span style="color:#c30">&#34;b&#34;</span>, <span style="color:#c30">&#34;c&#34;</span>)
+<span style="color:#069;font-weight:bold">for</span>(s:String <span style="color:#069;font-weight:bold">in</span> list){
+    print(<span style="color:#c30">&#34;$s &#34;</span>)
+}
+</code></pre></div><p>似たような形で、Collectionの要素1つ1つに対する処理を実行したい場合はforEach関数を利用することができる。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> list = listOf&lt;String&gt;(<span style="color:#c30">&#34;a&#34;</span>, <span style="color:#c30">&#34;b&#34;</span>, <span style="color:#c30">&#34;c&#34;</span>)
+list.forEach { print(<span style="color:#c30">&#34;$it &#34;</span>) } <span style="color:#09f;font-style:italic">// it : リストの要素1つを表す
+</span></code></pre></div><p>関数なので、戻り値を返すことも可能。（ただし戻り値はUnit）</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> list = listOf&lt;String&gt;(<span style="color:#c30">&#34;a&#34;</span>, <span style="color:#c30">&#34;b&#34;</span>, <span style="color:#c30">&#34;c&#34;</span>)
+<span style="color:#069;font-weight:bold">val</span> result = list.forEach { print(<span style="color:#c30">&#34;$it &#34;</span>) } <span style="color:#09f;font-style:italic">// resultの値はUnit型
+</span></code></pre></div><p>関数なので、breakは利用不可（continueは使える）。どうしてもbreakを利用したい場合はラベルとreturnによるループ停止を利用する。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Kotlin" data-lang="Kotlin"><span style="color:#069;font-weight:bold">val</span> list = listOf&lt;String&gt;(<span style="color:#c30">&#34;a&#34;</span>, <span style="color:#c30">&#34;b&#34;</span>, <span style="color:#c30">&#34;c&#34;</span>)
+list.forEach {
+    <span style="color:#069;font-weight:bold">if</span> (it != <span style="color:#c30">&#34;b&#34;</span>) print(<span style="color:#c30">&#34;$it &#34;</span>)
+    <span style="color:#069;font-weight:bold">else</span> <span style="color:#069;font-weight:bold">return</span>@forEach     <span style="color:#09f;font-style:italic">// forEachに対してreturn(ループの終了)を行う
+</span><span style="color:#09f;font-style:italic"></span>}
+</code></pre></div><p>ただし、基本的にはループの制御が必要な場合などはforEachではなくfor文を利用した方が可読性が高くなる。</p>
 
-<h2 id="kotlin">Kotlinに関するメモ</h2>
-<p>Kotlinとは、JVM上で実行されるオブジェクト指向プログラミング言語。</p>
-<p>Java、Scalaなどを元にしており、Javaよりも簡潔に記述ができることを目標にJetBrainsJetBrains社により開発されている。
-基本的な文法はScalaに近く、関数型言語的な側面も持つ。</p>
-<p>Android開発に採用されたことにより、ここ数年開発者や採用プロジェクトが劇的に増えている。</p>
-<p>また、SpringFramworkでも採用されたことにより、Androidなどのクライアントアプリケーションの開発だけでなくサーバーサイドでの利用シーンも今後増えている。</p>
-<ul class="children children-li">
-<p><span><li>
-<a href="/kotlin/basic/" >Kotlin基礎文法</a></li>
-</span></p>
-<p><span><li>
-<a href="/kotlin/foreach/" >forEachの使い方</a></li>
-</span></p>
-</ul>
-
-
+    
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5de07c32251c84e0"></script>
+​<script type="text/javascript">
+    var addthis_config = addthis_config||{};
+        addthis_config.data_track_addressbar = false;
+        addthis_config.data_track_clickback = false;
+</script>
+    
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/javascript/" title="JavaScript"> <i class="fa fa-chevron-left"></i><label>JavaScript</label></a>
+<a class="nav nav-prev" href="/kotlin/basic/" title="Kotlin基礎文法"> <i class="fa fa-chevron-left"></i><label>Kotlin基礎文法</label></a>
     <a class="nav nav-next" href="/kotlin/basic/" title="Kotlin基礎文法" style="margin-right: 0px;"><label>Kotlin基礎文法</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
@@ -276,12 +296,20 @@
 
 <div class="footline">
     
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://midsatoh.github.io/tags/kotlin">Kotlin</a>
+      
+        <a class="label label-default" href="https://midsatoh.github.io/tags/kotlin">kotlin</a>
+      
+    </div>
+    
 
     
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i>  19/11/2019
+        <i class='fa fa-calendar'></i>  25/12/2019
     </div>
     
 

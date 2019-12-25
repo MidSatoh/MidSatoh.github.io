@@ -6,7 +6,7 @@
     <description>Recent content in Kotlin on MID-S</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 24 Dec 2019 10:04:27 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 25 Dec 2019 13:35:19 +0900</lastBuildDate>
     
 	<atom:link href="https://midsatoh.github.io/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,6 +26,32 @@ fun sum(a:Int, b:Int) = a + b 戻り値なしの関数の場合、戻り値の�
 fun sumPrint(a:Int, b:Int):Unit { println(&amp;#34;$a と $b の加算の結果は ${a + b}&amp;#34;) } Unit型は省略が可能である。
 fun sumPrint(a:Int, b:Int) { println(&amp;#34;$a と $b の加算の結果は ${a + b}&amp;#34;) } 変数 再代入不可の変数定義 Kotlinの場合、再代入ができない変数の定義にはvalキーワードを用いる。
 val 変数名: データ型 = 初期値 val 変数名 = データ型 // 型推論による代入 val 変数名: データ型 // 変数定義 変数名 = 初期値 // 初期値の代入 例えば、Int型の変数にそれぞれ初期値を代入する方法は以下の通りである。</description>
+    </item>
+    
+    <item>
+      <title>forEachの使い方</title>
+      <link>https://midsatoh.github.io/kotlin/foreach/</link>
+      <pubDate>Wed, 25 Dec 2019 13:35:19 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/kotlin/foreach/</guid>
+      <description>forEach関数 Collectionに対してループ処理を行う構文としては、forがある。
+val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) for(s:String in list){ print(&amp;#34;$s &amp;#34;) } 似たような形で、Collectionの要素1つ1つに対する処理を実行したい場合はforEach関数を利用することができる。
+val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) list.forEach { print(&amp;#34;$it &amp;#34;) } // it : リストの要素1つを表す 関数なので、戻り値を返すことも可能。（ただし戻り値はUnit）
+val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) val result = list.forEach { print(&amp;#34;$it &amp;#34;) } // resultの値はUnit型 関数なので、breakは利用不可（continueは使える）。どうしてもbreakを利用したい場合はラベルとreturnによるループ停止を利用する。
+val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) list.forEach { if (it != &amp;#34;b&amp;#34;) print(&amp;#34;$it &amp;#34;) else return@forEach // forEachに対してreturn(ループの終了)を行う } ただし、基本的にはループの制御が必要な場合などはforEachではなくfor文を利用した方が可読性が高くなる。</description>
+    </item>
+    
+    <item>
+      <title>forEachの使い方</title>
+      <link>https://midsatoh.github.io/kotlin/foreach/</link>
+      <pubDate>Wed, 25 Dec 2019 13:35:19 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/kotlin/foreach/</guid>
+      <description>forEach関数 Collectionに対してループ処理を行う構文としては、forがある。
+val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) for(s:String in list){ print(&amp;#34;$s &amp;#34;) } 似たような形で、Collectionの要素1つ1つに対する処理を実行したい場合はforEach関数を利用することができる。
+val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) list.forEach { print(&amp;#34;$it &amp;#34;) } // it : リストの要素1つを表す 関数なので、戻り値を返すことも可能。（ただし戻り値はUnit）
+val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) val result = list.forEach { print(&amp;#34;$it &amp;#34;) } // resultの値はUnit型 関数なので、breakは利用不可（continueは使える）。どうしてもbreakを利用したい場合はラベルとreturnによるループ停止を利用する。
+val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) list.forEach { if (it != &amp;#34;b&amp;#34;) print(&amp;#34;$it &amp;#34;) else return@forEach // forEachに対してreturn(ループの終了)を行う } ただし、基本的にはループの制御が必要な場合などはforEachではなくfor文を利用した方が可読性が高くなる。</description>
     </item>
     
   </channel>

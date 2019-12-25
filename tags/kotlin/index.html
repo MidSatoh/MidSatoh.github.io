@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-12-25T10:53:19 JST">
+<meta name="revised" content="2019-12-25T14:13:31 JST">
 <title>Kotlin :: MID-S</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -190,6 +190,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="https://midsatoh.github.io/kotlin/foreach/" class="dd-item">
+        <div>
+          <a href="/kotlin/foreach/">
+            forEachの使い方
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
         </ul>
     </li>
 
@@ -273,6 +280,60 @@ val 変数名: データ型 = 初期値 val 変数名 = データ型 // 型推�
     </footer>
 </article>
 
+   <article class="post kotlin">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/kotlin/foreach/">forEachの使い方</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>forEach関数 Collectionに対してループ処理を行う構文としては、forがある。
+val list = listOf&lt;String&gt;(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;) for(s:String in list){ print(&#34;$s &#34;) } 似たような形で、Collectionの要素1つ1つに対する処理を実行したい場合はforEach関数を利用することができる。
+val list = listOf&lt;String&gt;(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;) list.forEach { print(&#34;$it &#34;) } // it : リストの要素1つを表す 関数なので、戻り値を返すことも可能。（ただし戻り値はUnit）
+val list = listOf&lt;String&gt;(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;) val result = list.forEach { print(&#34;$it &#34;) } // resultの値はUnit型 関数なので、breakは利用不可（continueは使える）。どうしてもbreakを利用したい場合はラベルとreturnによるループ停止を利用する。
+val list = listOf&lt;String&gt;(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;) list.forEach { if (it != &#34;b&#34;) print(&#34;$it &#34;) else return@forEach // forEachに対してreturn(ループの終了)を行う } ただし、基本的にはループの制御が必要な場合などはforEachではなくfor文を利用した方が可読性が高くなる。 <a class="read-more" href="/kotlin/foreach/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="https://midsatoh.github.io/tags/kotlin/">Kotlin</a>
+            
+                <a class="label label-default" href="https://midsatoh.github.io/tags/kotlin/">kotlin</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post kotlin">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/kotlin/foreach/">forEachの使い方</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>forEach関数 Collectionに対してループ処理を行う構文としては、forがある。
+val list = listOf&lt;String&gt;(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;) for(s:String in list){ print(&#34;$s &#34;) } 似たような形で、Collectionの要素1つ1つに対する処理を実行したい場合はforEach関数を利用することができる。
+val list = listOf&lt;String&gt;(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;) list.forEach { print(&#34;$it &#34;) } // it : リストの要素1つを表す 関数なので、戻り値を返すことも可能。（ただし戻り値はUnit）
+val list = listOf&lt;String&gt;(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;) val result = list.forEach { print(&#34;$it &#34;) } // resultの値はUnit型 関数なので、breakは利用不可（continueは使える）。どうしてもbreakを利用したい場合はラベルとreturnによるループ停止を利用する。
+val list = listOf&lt;String&gt;(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;) list.forEach { if (it != &#34;b&#34;) print(&#34;$it &#34;) else return@forEach // forEachに対してreturn(ループの終了)を行う } ただし、基本的にはループの制御が必要な場合などはforEachではなくfor文を利用した方が可読性が高くなる。 <a class="read-more" href="/kotlin/foreach/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="https://midsatoh.github.io/tags/kotlin/">Kotlin</a>
+            
+                <a class="label label-default" href="https://midsatoh.github.io/tags/kotlin/">kotlin</a>
+            
+        
+
+    </footer>
+</article>
+
 
 <div style="margin-bottom:2rem"></div>
 
@@ -303,7 +364,7 @@ val 変数名: データ型 = 初期値 val 変数名 = データ型 // 型推�
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i>  24/12/2019
+        <i class='fa fa-calendar'></i>  25/12/2019
     </div>
     
 

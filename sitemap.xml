@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://midsatoh.github.io/kotlin/basic/</loc>
+    <lastmod>2019-12-24T10:04:27+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://midsatoh.github.io/python/install/select_soft/</loc>
     <lastmod>2019-11-20T16:44:20+09:00</lastmod>
   </url>
@@ -20,6 +25,11 @@
   <url>
     <loc>https://midsatoh.github.io/java/install/openjdk/</loc>
     <lastmod>2019-10-30T11:03:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://midsatoh.github.io/kotlin/foreach/</loc>
+    <lastmod>2019-12-25T13:35:19+09:00</lastmod>
   </url>
   
   <url>
@@ -69,17 +79,12 @@
   
   <url>
     <loc>https://midsatoh.github.io/tags/kotlin/</loc>
-    <lastmod>2019-12-24T10:04:27+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://midsatoh.github.io/kotlin/basic/</loc>
-    <lastmod>2019-12-24T10:04:27+09:00</lastmod>
+    <lastmod>2019-12-25T13:35:19+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://midsatoh.github.io/tags/</loc>
-    <lastmod>2019-12-24T10:04:27+09:00</lastmod>
+    <lastmod>2019-12-25T13:35:19+09:00</lastmod>
   </url>
   
   <url>
