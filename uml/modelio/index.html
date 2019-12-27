@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MID-S</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-12-27T11:33:56 JST">
+<title>Modelioの使い方 :: MID-S</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/midsatoh.github.io\/";
+</script>
+<link href="/css/custom.css" rel="stylesheet">
+<meta name="description" content="オープンソースのUMLモデリングツールModelioについての解説">
+
+
+
+    
+  </head>
+  <body data-url="/uml/modelio/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="https://midsatoh.github.io/">MID-S</a>
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="https://midsatoh.github.io/python/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/python/python_aspects/" class="dd-item">
+        <div>
+          <a href="/python/python_aspects/">
+            Pythonの特徴
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/python/install/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/python/install/">環境設定</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/python/install/select_soft/" class="dd-item">
+        <div>
+          <a href="/python/install/select_soft/">
+            インストール方法の選択
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/install_soft/" class="dd-item">
+        <div>
+          <a href="/python/install/install_soft/">
+            Pythonインストーラによるインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/anaconda/" class="dd-item">
+        <div>
+          <a href="/python/install/anaconda/">
+            Anacondaのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/pyenv/" class="dd-item">
+        <div>
+          <a href="/python/install/pyenv/">
+            pyenvによるインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/python/install/pyenv-win/" class="dd-item">
+        <div>
+          <a href="/python/install/pyenv-win/">
+            pyenv-winによるインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/java/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java/">Java</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="https://midsatoh.github.io/java/install/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java/install/">環境設定</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/java/install/openjdk/" class="dd-item">
+        <div>
+          <a href="/java/install/openjdk/">
+            OpenJDKのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/java/install/eclipse/" class="dd-item">
+        <div>
+          <a href="/java/install/eclipse/">
+            Eclipseのインストールと設定
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/java/spring/maven/" class="dd-item">
+        <div>
+          <a href="/java/spring/maven/">
+            Mavenプロジェクトの作成
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/uml/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/uml/">UML</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/uml/modelio/" class="dd-item active">
+        <div>
+          <a href="/uml/modelio/">
+            Modelioの使い方
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/typescript/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/typescript/">Typescript</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/typescript/install/" class="dd-item">
+        <div>
+          <a href="/typescript/install/">
+            TypeScriptのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/mac/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/mac/">Mac</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/mac/homebrew/" class="dd-item">
+        <div>
+          <a href="/mac/homebrew/">
+            Homebrewのインストール
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/javascript/" class="dd-item
+        ">
+      <div>
+      <a href="/javascript/">JavaScript</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="https://midsatoh.github.io/kotlin/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/kotlin/">Kotlin</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://midsatoh.github.io/kotlin/basic/" class="dd-item">
+        <div>
+          <a href="/kotlin/basic/">
+            Kotlin基礎文法
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://midsatoh.github.io/kotlin/foreach/" class="dd-item">
+        <div>
+          <a href="/kotlin/foreach/">
+            forEachの使い方
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/python/" >
+   Python</option>
+    <option value="/java/" >
+   Java</option>
+    <option value="/uml/" >
+   UML</option> 
+      <option value="/uml/modelio/"  selected>- Modelioの使い方</option>
+  
+    <option value="/typescript/" >
+   Typescript</option>
+    <option value="/mac/" >
+   Mac</option>
+    <option value="/javascript/" >
+   JavaScript</option>
+    <option value="/kotlin/" >
+   Kotlin</option>
+
+
+
+        </select>
+      </center>
+    </div>
+
+    <h1>Modelioの使い方</h1>
+
+    
+    <section>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#modelio">Modelioのインストール</a></li>
+    <li><a href="#heading">プロジェクトの設定</a>
+      <ul>
+        <li><a href="#heading1">プロジェクトの作成</a></li>
+        <li><a href="#heading2">プロジェクトの設定</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading3">クラス図の作成</a>
+      <ul>
+        <li><a href="#heading4">クラス名の指定</a></li>
+        <li><a href="#heading5">属性の指定</a></li>
+        <li><a href="#heading6">メソッドの指定</a></li>
+        <li><a href="#heading7">継承の指定</a></li>
+        <li><a href="#heading8">インターフェースの作成と設定</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading9">シーケンス図の作成</a></li>
+  </ul>
+</nav>
+    </section>
+    
+    <script src="/js/custom_toc.js"></script>
+    
+    
+    
+    <div class="addthis_inline_share_toolbox" id="addThis"></div>
+    <p>UMLのモデリングツールとしては<a href="http://astah.change-vision.com/ja/">Astah</a>が有名だが、無料のCommunity版が廃止されたことから別のツールへの移行が進んでいる。
+オープンソースで高機能な<a href="https://www.modelio.org/">Modelio</a>について基本的な使い方を解説する。</p>
+<h2 id="modelio">Modelioのインストール</h2>
+<p><a href="https://www.modelio.org/downloads/download-modelio.html">Modelioのダウンロードサイト</a>より、自身の環境に合わせたインストーラをダウンロードする。</p>
+<p><img src="/images/uml/modelio/modelio_download.png?classes=border,shadow&amp;width=70%25" alt="Modelioサイトより"></p>
+<p>2019年12月現在の最新版はModelio4.0で、64bitOSにのみ対応している。
+インストーラの指示に合わせて実行すると、インストールは完了。基本的にはデフォルト指定で問題ない。</p>
+<h2 id="heading">プロジェクトの設定</h2>
+<p>Modelioでは、プロジェクトという単位でファイルを管理する。</p>
+<h3 id="heading1">プロジェクトの作成</h3>
+<p>[File]-&gt;[Create a Project]で、新規プロジェクトを作成する。</p>
+<p><img src="/images/uml/modelio/modelio_02.jpg?classes=border,shadow&amp;width=70%25" alt="プロジェクト新規作成"></p>
+<h3 id="heading2">プロジェクトの設定</h3>
+<p>プロジェクトにJavaを利用する場合は、プロジェクトの設定が必要となる。
+[Configuration]-&gt;[Preferences]にて設定画面を開く。</p>
+<p><img src="/images/uml/modelio/modelio_03.jpg?classes=border,shadow&amp;width=70%25" alt="プロジェクト設定1"></p>
+<p>設定画面で「Libraries」タグを指定し、「Add from update site」ボタンを押下する。</p>
+<p><img src="/images/uml/modelio/modelio_04.jpg?classes=border,shadow&amp;width=70%25" alt="プロジェクト設定2"></p>
+<p>「JDK」の「Add」をチェックし、「Add to Project」ボタンを押下する。（反映までは少し時間がかかる）</p>
+<p><img src="/images/uml/modelio/modelio_05.jpg?classes=border,shadow&amp;width=70%25" alt="プロジェクト設定3"></p>
+<h2 id="heading3">クラス図の作成</h2>
+<p>プロジェクトのUMLアイコンからパッケージを選択し、「Create Diagram」を選択する。</p>
+<p><img src="/images/uml/modelio/modelio_08.jpg?classes=border,shadow&amp;width=70%25" alt="クラス図作成1"></p>
+<p>Creation wizard画面より、「Class diagram」を選択する。</p>
+<p><img src="/images/uml/modelio/modelio_09.jpg?classes=border,shadow&amp;width=70%25" alt="クラス図作成2"></p>
+<h3 id="heading4">クラス名の指定</h3>
+<p>作成されたClass図に、クラスアイコンからクラスを追加する。</p>
+<p><img src="/images/uml/modelio/modelio_10.jpg?classes=border,shadow&amp;width=70%25" alt="クラス図作成2"></p>
+<p>クラス全体を選択すると、Propertiesタグが開かれるため、そこで<code>name</code>プロパティにクラス名を指定する。</p>
+<p><img src="/images/uml/modelio/modelio_12.jpg?classes=border,shadow&amp;width=70%25" alt="クラス図作成2"></p>
+<h3 id="heading5">属性の指定</h3>
+<p>クラス全体を選択した状態で右クリック-&gt;[Create element]-&gt;[Attribute]で、属性の追加を行うことができる。</p>
+<p><img src="/images/uml/modelio/modelio_13.jpg?classes=border,shadow&amp;width=70%25" alt="クラス図作成3"></p>
+<p>追加した属性を選択し、Propertiesタグにて属性の詳細を設定する。</p>
+<p><img src="/images/uml/modelio/modelio_14.jpg?classes=border,shadow&amp;width=70%25" alt="クラス図作成4"></p>
+<p>基本的な設定項目は以下の通り。</p>
+<ul>
+<li>name : 属性名</li>
+<li>Type : 属性の型、<code>Ctrl + Space</code>でJavaの型指定を行うことも可能。（プリミティブ型は未対応）</li>
+<li>Visibility : 可視性（public, privateなど）</li>
+<li>Multiplicity min/max : 配列の場合はminに<code>1</code>、maxに<code>*</code>を設定する</li>
+<li>Class : static属性にしたい場合はチェックを入れる</li>
+</ul>
+<h3 id="heading6">メソッドの指定</h3>
+<p>属性同様、クラス全体を選択した状態で右クリック-&gt;[Create element]-&gt;[Operation]で、メソッドの追加を行うことができる。</p>
+<p><img src="/images/uml/modelio/modelio_15.jpg?classes=border,shadow&amp;width=70%25" alt="クラス図作成4"></p>
+<p>作成したメソッドをダブルクリックすると、編集画面が開くため必要な項目を修正する。</p>
+<p><img src="/images/uml/modelio/modelio_16.jpg?classes=border,shadow&amp;width=70%25" alt="クラス図作成5"></p>
+<ul>
+<li>name : メソッド名</li>
+<li>Type : メソッドタイプ（通常のメソッド:Operation、コンストラクタ: Constructor を選択）</li>
+<li>Visibility : 可視性（public, privateなど）</li>
+<li>Class : staticメソッドにしたい場合はチェックを入れる</li>
+<li>P＋アイコン : 引数の追加
+<ul>
+<li>name : 仮引数名</li>
+<li>Type : 仮引数の型</li>
+<li>Multilicity : 配列の場合は<code>1..*</code>を選択</li>
+</ul>
+</li>
+<li>←＋アイコン : 戻り値の追加、詳細は引数と同じ</li>
+</ul>
+<h3 id="heading7">継承の指定</h3>
+<p>サブクラスからスーパークラスに向けて継承の矢印（白抜き矢印）を引くことにより、継承について記載ができる。</p>
+<p><img src="/images/uml/modelio/modelio_23.jpg?classes=border,shadow&amp;width=70%25" alt="クラス図作成6"></p>
+<h3 id="heading8">インターフェースの作成と設定</h3>
+<p>インターフェースアイコン（○）からクラス図に追加したのち、右クリック-&gt;[Create element]-&gt;[Operation]で、Abstractメソッドを追加することができる。</p>
+<p><img src="/images/uml/modelio/modelio_26.jpg?classes=border,shadow&amp;width=70%25" alt="クラス図作成7"></p>
+<p>クラスと同様、追加したメソッドをダブルクリックしてメソッドの詳細を設定する。
+<code>Abstract</code>へのチェックを追加する以外はクラスのメソッドと同様。</p>
+<p><img src="/images/uml/modelio/modelio_27.jpg?classes=border,shadow&amp;width=70%25" alt="クラス図作成8"></p>
+<h2 id="heading9">シーケンス図の作成</h2>
+<p>シーケンス図は、基本的にクラス図作成後に実施する。
+プロジェクトのUMLアイコンからパッケージを選択し、「Create Diagram」を選択する。</p>
+<p><img src="/images/uml/modelio/modelio_32.jpg?classes=border,shadow&amp;width=70%25" alt="シーケンス図作成1"></p>
+<p>クラスを取得してライフラインを設定する。</p>
+<p><img src="/images/uml/modelio/modelio_34.gif?classes=border,shadow&amp;width=70%25" alt="シーケンス図作成2"></p>
+<p>各メソッド毎に実行仕様（ExecutionSpecification）を設定し、createやメッセージの矢印を指定する。</p>
+<p><img src="/images/uml/modelio/modelio_37.gif?classes=border,shadow&amp;width=70%25" alt="シーケンス図作成3"></p>
+
+    
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5de07c32251c84e0"></script>
+​<script type="text/javascript">
+    var addthis_config = addthis_config||{};
+        addthis_config.data_track_addressbar = false;
+        addthis_config.data_track_clickback = false;
+</script>
+    
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/uml/" title="UML"> <i class="fa fa-chevron-left"></i><label>UML</label></a>
+    <a class="nav nav-next" href="/typescript/" title="Typescript" style="margin-right: 0px;"><label>Typescript</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i>  26/12/2019
+    </div>
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

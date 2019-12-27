@@ -12,6 +12,32 @@
     
     
     <item>
+      <title>Modelioの使い方</title>
+      <link>https://midsatoh.github.io/uml/modelio/</link>
+      <pubDate>Thu, 26 Dec 2019 16:22:54 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/uml/modelio/</guid>
+      <description>UMLのモデリングツールとしてはAstahが有名だが、無料のCommunity版が廃止されたことから別のツールへの移行が進んでいる。 オープンソースで高機能なModelioについて基本的な使い方を解説する。
+Modelioのインストール Modelioのダウンロードサイトより、自身の環境に合わせたインストーラをダウンロードする。
+2019年12月現在の最新版はModelio4.0で、64bitOSにのみ対応している。 インストーラの指示に合わせて実行すると、インストールは完了。基本的にはデフォルト指定で問題ない。
+プロジェクトの設定 Modelioでは、プロジェクトという単位でファイルを管理する。
+プロジェクトの作成 [File]-&amp;gt;[Create a Project]で、新規プロジェクトを作成する。
+プロジェクトの設定 プロジェクトにJavaを利用する場合は、プロジェクトの設定が必要となる。 [Configuration]-&amp;gt;[Preferences]にて設定画面を開く。
+設定画面で「Libraries」タグを指定し、「Add from update site」ボタンを押下する。
+「JDK」の「Add」をチェックし、「Add to Project」ボタンを押下する。（反映までは少し時間がかかる）
+クラス図の作成 プロジェクトのUMLアイコンからパッケージを選択し、「Create Diagram」を選択する。
+Creation wizard画面より、「Class diagram」を選択する。
+クラス名の指定 作成されたClass図に、クラスアイコンからクラスを追加する。
+クラス全体を選択すると、Propertiesタグが開かれるため、そこでnameプロパティにクラス名を指定する。
+属性の指定 クラス全体を選択した状態で右クリック-&amp;gt;[Create element]-&amp;gt;[Attribute]で、属性の追加を行うことができる。
+追加した属性を選択し、Propertiesタグにて属性の詳細を設定する。
+基本的な設定項目は以下の通り。
+ name : 属性名 Type : 属性の型、Ctrl + SpaceでJavaの型指定を行うことも可能。（プリミティブ型は未対応） Visibility : 可視性（public, privateなど） Multiplicity min/max : 配列の場合はminに1、maxに*を設定する Class : static属性にしたい場合はチェックを入れる  メソッドの指定 属性同様、クラス全体を選択した状態で右クリック-&amp;gt;[Create element]-&amp;gt;[Operation]で、メソッドの追加を行うことができる。
+作成したメソッドをダブルクリックすると、編集画面が開くため必要な項目を修正する。
+ name : メソッド名 Type : メソッドタイプ（通常のメソッド:Operation、コンストラクタ: Constructor を選択） Visibility : 可視性（public, privateなど） Class : staticメソッドにしたい場合はチェックを入れる P＋アイコン : 引数の追加  name : 仮引数名 Type : 仮引数の型 Multilicity : 配列の場合は1.</description>
+    </item>
+    
+    <item>
       <title>Kotlin基礎文法</title>
       <link>https://midsatoh.github.io/kotlin/basic/</link>
       <pubDate>Tue, 24 Dec 2019 10:04:27 +0900</pubDate>

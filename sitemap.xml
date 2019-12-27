@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://midsatoh.github.io/uml/modelio/</loc>
+    <lastmod>2019-12-26T16:22:54+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://midsatoh.github.io/kotlin/basic/</loc>
     <lastmod>2019-12-24T10:04:27+09:00</lastmod>
   </url>
