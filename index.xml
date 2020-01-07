@@ -249,7 +249,7 @@ jsファイルへ変換] B -- C[JavaScript実行環境へ</description>
       
       <guid>https://midsatoh.github.io/mac/homebrew/</guid>
       <description>Homebrewとは Homebrewとは、Macで開発を行う場合のパッケージ管理ツールである。 ただし、Homebrewを使用する場合は
- XCodeまたはApple DeveloperサイトからXCodeコマンドラインツールのインストール インターネットへの安定した接続環境  が前提となる。 XCodeをインストールしている場合は問題がないが、XCodeはMacOSおよびiOS、iPadOS開発用の統合開発環境であるためサイズがかなり大きい。 マシンスペックなどの問題でXCodeをインストールできない場合は、軽量なXCode小マンドラインツールをインストールする必要がある。
+ XCodeまたはApple DeveloperサイトからXCodeコマンドラインツールのインストール インターネットへの安定した接続環境  が前提となる。 XCodeをインストールしている場合は問題がないが、XCodeはMacOSおよびiOS、iPadOS開発用の統合開発環境であるためサイズがかなり大きい。 マシンスペックなどの問題でXCodeをインストールできない場合は、軽量なXCodeコマンドラインツールをインストールする必要がある。
 XCodeコマンドラインツールのインストール XCodeコマンドラインツールは、Appleの開発者用サイトからダウンロード可能である。 その際には、Appleアカウントが必要となる。
 Apple Developer Site：https://developer.apple.com/develop/
 ダウンロードリンクを押すと、Appleアカウントでのログインが求められる。 ログインするとツールの検索画面となるので、検索画面に「command line」、ReleaseDateを降順にすると最新版のツールを探すことが可能となる。betaがついていないツールをダウンロードすると良い。
