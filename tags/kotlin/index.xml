@@ -17,15 +17,16 @@
       <pubDate>Tue, 24 Dec 2019 10:04:27 +0900</pubDate>
       
       <guid>https://midsatoh.github.io/kotlin/basic/</guid>
-      <description>サンプルコードはKotlin公式リファレンスKotlin公式リファレンス：https://kotlinlang.org/docs/reference/に補足・和訳した物を利用している。
-関数 main関数 プログラム全体のエントリポイント（実行開始ポイント）となるのが、main関数である。 拡張子（.kt）のファイルに作成する。
-fun main(){ println(&amp;#34;Hello World!&amp;#34;) } 関数の作成 エントリポイントの他に、処理の集まりとして関数を作成することができる。
-fun 関数名(仮引数:仮引数の型, ・・・): 戻り値の型 { 関数内の処理 return 戻り値 } 例えば、仮引数の加算結果を戻り値とする関数は以下の通りとなる。
-fun sum(a:Int, b:Int):Int { return a + b } 処理が単文で記述可能な場合、戻り値の型やブロックを省略することができる。
-fun sum(a:Int, b:Int) = a + b 戻り値なしの関数の場合、戻り値の型はUnitである。
-fun sumPrint(a:Int, b:Int):Unit { println(&amp;#34;$a と $b の加算の結果は ${a + b}&amp;#34;) } Unit型は省略が可能である。
-fun sumPrint(a:Int, b:Int) { println(&amp;#34;$a と $b の加算の結果は ${a + b}&amp;#34;) } 変数 再代入不可の変数定義 Kotlinの場合、再代入ができない変数の定義にはvalキーワードを用いる。
-val 変数名: データ型 = 初期値 val 変数名 = データ型 // 型推論による代入 val 変数名: データ型 // 変数定義 変数名 = 初期値 // 初期値の代入 例えば、Int型の変数にそれぞれ初期値を代入する方法は以下の通りである。</description>
+      <description>サンプルコードはKotlin公式リファレンスKotlin公式リファレンス：https://kotlinlang.org/docs/refer</description>
+    </item>
+    
+    <item>
+      <title>Kotlin基礎文法</title>
+      <link>https://midsatoh.github.io/kotlin/basic/</link>
+      <pubDate>Tue, 24 Dec 2019 10:04:27 +0900</pubDate>
+      
+      <guid>https://midsatoh.github.io/kotlin/basic/</guid>
+      <description>サンプルコードはKotlin公式リファレンスKotlin公式リファレンス：https://kotlinlang.org/docs/refer</description>
     </item>
     
     <item>
@@ -34,11 +35,7 @@ val 変数名: データ型 = 初期値 val 変数名 = データ型 // 型推�
       <pubDate>Wed, 25 Dec 2019 13:35:19 +0900</pubDate>
       
       <guid>https://midsatoh.github.io/kotlin/foreach/</guid>
-      <description>forEach関数 Collectionに対してループ処理を行う構文としては、forがある。
-val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) for(s:String in list){ print(&amp;#34;$s &amp;#34;) } 似たような形で、Collectionの要素1つ1つに対する処理を実行したい場合はforEach関数を利用することができる。
-val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) list.forEach { print(&amp;#34;$it &amp;#34;) } // it : リストの要素1つを表す 関数なので、戻り値を返すことも可能。（ただし戻り値はUnit）
-val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) val result = list.forEach { print(&amp;#34;$it &amp;#34;) } // resultの値はUnit型 関数なので、breakは利用不可（continueは使える）。どうしてもbreakを利用したい場合はラベルとreturnによるループ停止を利用する。
-val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) list.forEach { if (it != &amp;#34;b&amp;#34;) print(&amp;#34;$it &amp;#34;) else return@forEach // forEachに対してreturn(ループの終了)を行う } ただし、基本的にはループの制御が必要な場合などはforEachではなくfor文を利用した方が可読性が高くなる。</description>
+      <description>forEach関数 Collectionに対してループ処理を行う構文としては、forがある。 val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) for(s:String in list){ print(&amp;#34;$s &amp;#34;) } 似たような形で、Colle</description>
     </item>
     
     <item>
@@ -47,11 +44,7 @@ val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;
       <pubDate>Wed, 25 Dec 2019 13:35:19 +0900</pubDate>
       
       <guid>https://midsatoh.github.io/kotlin/foreach/</guid>
-      <description>forEach関数 Collectionに対してループ処理を行う構文としては、forがある。
-val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) for(s:String in list){ print(&amp;#34;$s &amp;#34;) } 似たような形で、Collectionの要素1つ1つに対する処理を実行したい場合はforEach関数を利用することができる。
-val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) list.forEach { print(&amp;#34;$it &amp;#34;) } // it : リストの要素1つを表す 関数なので、戻り値を返すことも可能。（ただし戻り値はUnit）
-val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) val result = list.forEach { print(&amp;#34;$it &amp;#34;) } // resultの値はUnit型 関数なので、breakは利用不可（continueは使える）。どうしてもbreakを利用したい場合はラベルとreturnによるループ停止を利用する。
-val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) list.forEach { if (it != &amp;#34;b&amp;#34;) print(&amp;#34;$it &amp;#34;) else return@forEach // forEachに対してreturn(ループの終了)を行う } ただし、基本的にはループの制御が必要な場合などはforEachではなくfor文を利用した方が可読性が高くなる。</description>
+      <description>forEach関数 Collectionに対してループ処理を行う構文としては、forがある。 val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) for(s:String in list){ print(&amp;#34;$s &amp;#34;) } 似たような形で、Colle</description>
     </item>
     
   </channel>

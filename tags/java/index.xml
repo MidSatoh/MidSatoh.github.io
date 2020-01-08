@@ -17,15 +17,7 @@
       <pubDate>Wed, 20 Nov 2019 16:44:20 +0900</pubDate>
       
       <guid>https://midsatoh.github.io/python/install/select_soft/</guid>
-      <description>バージョンやソフトウェアの選択方法 Pythonのインストール方法は、利用する環境やプログラムの方針によって選択する必要がある。
-mermaid.initialize({startOnLoad:true}); graph LR; A{複数の
-パッチバージョン*注
-の切り替え} A --|必要| B[pyenvまたはpyenv-winで
-インストールする] A --|不要| C{統計などで
-利用する} C --|利用する| D[Anacondaを
-インストールする] C --|利用しない or
-わからない| E[Pythonインストーラで
-インストールする]   注：3.6.0と3.6.5などのバージョン違い。  </description>
+      <description>バージョンやソフトウェアの選択方法 Pythonのインストール方法は、利用する環境やプログラムの方針によって選択する必要がある。 mermaid.initialize({startOnLoad:true}); graph LR; A{複数</description>
     </item>
     
     <item>
@@ -34,17 +26,7 @@ mermaid.initialize({startOnLoad:true}); graph LR; A{複数の
       <pubDate>Wed, 30 Oct 2019 11:03:04 +0900</pubDate>
       
       <guid>https://midsatoh.github.io/java/install/openjdk/</guid>
-      <description>OpenJDK OracleJavaが有償化されたため、現在無償でJavaでの開発を行う際にはOpenJDKを利用する必要がある。
-OpenJDK公式サイト：http://openjdk.java.net
-よりソースコードからコンパイルする方法もあるが、初級者が学習する際にはバイナリでの提供を行っている団体のサイトより取得する。
-今回は、様々なプラットフォームに対応済みであるAdoptOpenJDKを利用する。
-AdoptOpenJDK公式サイト：https://adoptopenjdk.net
-AdoptOpenJDK 公式サイトにアクセスすると、以下のような画面となる。
-  Choose a Version
- OpenJDKのバージョンを指定する。基本的にLTS（long term support：長期間サポートあり)を選択する。    Choose a JVM
- JavaVMを指定する。HotSpotはサン・マイクロシステムズが開発したオリジナルのJVM、OpenJ9はIBMが開発した別実装のJVMとなる。基本的にはHotSpotで問題ない。    ダウンロード
- 1、2 を指定後、ダウンロード可能となる。基本的にサイトにアクセスしたプラットフォームで利用可能なバージョンがダウンロード可能となるが、必要に応じてOther platformsのリンクより別のプラットフォーム向けのダウンロードも可能。    インストール
- macの場合はpkgファイル、Windowsの場合はmsiファイルでのダウンロードとなるため、実行後は指示に従ってインストールを実施する。    </description>
+      <description>OpenJDK OracleJavaが有償化されたため、現在無償でJavaでの開発を行う際にはOpenJDKを利用する必要がある。 OpenJDK公式サイト</description>
     </item>
     
     <item>
@@ -53,11 +35,7 @@ AdoptOpenJDK 公式サイトにアクセスすると、以下のような画面�
       <pubDate>Mon, 25 Nov 2019 09:12:42 +0900</pubDate>
       
       <guid>https://midsatoh.github.io/java/spring/maven/</guid>
-      <description>Mavenとは Mavenとは、プログラム開発を行う際のコンパイル・テストなどのコマンドやライブラリの自動配置などを担うためのツール群である。 Javaでは、開発環境や実行環境におけるJVMのバージョンやライブラリのバージョンなどが相互に影響しているため、手作業で環境を作成するためには幅広い知識が必要になる。 また、ライブラリによっては相互関係のあるライブラリが多岐にわたっており、それぞれのバージョンを手作業で合わせるのはかなり困難であり、開発者間で環境を合わせることも そのため、ライブラリ管理やコンパイル時・実行時のパス設定などを自動的に設定するためのツールとしてMavenやGradle、過去にはAntが多くのプロジェクトで利用されている。
-統合開発ツールであるEclipseでは、最新の2019.09ではMavenとGradleについては標準で対応している。
-Mavenでできること Mavenは以下のようなコマンドが用意されている。
-   コマンド 概要     mvn architype:generate Mavenプロジェクトを作成する   mvn validate プロジェクトの配置やコンパイルエラーなどがないかを確認する（コンパイルは未実行）   mvn compile プロジェクトのコンパイルを実行し、targetディレクトリを作成する   mvn test テスト（JUnit）を実行する   mvn package jarやwarなどの成果物を作成する（valiate、compile、testを実行し、問題がなければ作成）   mvn install ローカルのリポジトリにパッケージングされた成果物を配置する   mvn deploy インターネット上のリポジトリにパッケージを配置する   mvn clean targetディレクトリを削除し、コンパイル前の状態に戻す   mvn javadoc:javadoc JavaDocを作成する    Mavenのディレクトリ構成 Mavenプロジェクトの標準ディレクトリ構成は以下の通り。 基本的にはデフォルトのまま利用する。
-プロジェクトルート |--- LICENSE.txt # プロジェクトのライセンス情報を記述するファイル |--- README.</description>
+      <description>Mavenとは Mavenとは、プログラム開発を行う際のコンパイル・テストなどのコマンドやライブラリの自動配置などを担うためのツール群である。</description>
     </item>
     
     <item>
@@ -66,16 +44,7 @@ Mavenでできること Mavenは以下のようなコマンドが用意されて
       <pubDate>Wed, 30 Oct 2019 14:01:47 +0900</pubDate>
       
       <guid>https://midsatoh.github.io/java/install/eclipse/</guid>
-      <description>Eclipseのインストール Javaの開発用IDEと言えば、基本的に無償で利用可能であるEclipseや有償だが高機能なIntellJ IDEAなどが有名。
-Eclipse2018からはMergeDoc ProjectにてSpringToolSuiteも日本語プラグインPleiadesと同梱されるようになったためこちらを利用することにする。
-MergeDoc Project公式サイト：https://mergedoc.osdn.jp
-自身のプラットフォームに合わせ、JavaのFull Editionをダウンロードし、zipファイルの解凍をする。
- Windows の場合はエクスプローラーによる解凍は失敗するため、7Zip(https://sevenzip.osdn.jp)などの解凍ソフトが必要になる。  Eclipseの環境設定 インストールしたOpenJDKをEclipseで適用させるためには、JREの設定が必要となる。
-Eclipseの設定（Windowsの場合は[ウィンドウ] -&amp;gt; [設定]、Macの場合は[Eclipse]-&amp;gt;[環境設定])より、[Java]-&amp;gt;[インストール済みのJRE]を開く。
-[追加]ボタンを押下し、標準VMを選択する。
-[JREホーム]のディレクトリで、AdoptOpenJDKをインストールした箇所を選択する。JRE名は任意。
-デフォルトのインストール場所は以下の通り。
- Windows : C:\Program Files (x86)\AdoptOpenJDK\jdk-11.0.X.XX-hotspot Mac : /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home  追加後、追加したJREにチェックを入れてから適用するとデフォルトでAdoptOpenJDKを利用して実行される。</description>
+      <description>Eclipseのインストール Javaの開発用IDEと言えば、基本的に無償で利用可能であるEclipseや有償だが高機能なIntellJ IDE</description>
     </item>
     
   </channel>

@@ -17,11 +17,7 @@
       <pubDate>Mon, 25 Nov 2019 09:12:42 +0900</pubDate>
       
       <guid>https://midsatoh.github.io/java/spring/maven/</guid>
-      <description>Mavenとは Mavenとは、プログラム開発を行う際のコンパイル・テストなどのコマンドやライブラリの自動配置などを担うためのツール群である。 Javaでは、開発環境や実行環境におけるJVMのバージョンやライブラリのバージョンなどが相互に影響しているため、手作業で環境を作成するためには幅広い知識が必要になる。 また、ライブラリによっては相互関係のあるライブラリが多岐にわたっており、それぞれのバージョンを手作業で合わせるのはかなり困難であり、開発者間で環境を合わせることも そのため、ライブラリ管理やコンパイル時・実行時のパス設定などを自動的に設定するためのツールとしてMavenやGradle、過去にはAntが多くのプロジェクトで利用されている。
-統合開発ツールであるEclipseでは、最新の2019.09ではMavenとGradleについては標準で対応している。
-Mavenでできること Mavenは以下のようなコマンドが用意されている。
-   コマンド 概要     mvn architype:generate Mavenプロジェクトを作成する   mvn validate プロジェクトの配置やコンパイルエラーなどがないかを確認する（コンパイルは未実行）   mvn compile プロジェクトのコンパイルを実行し、targetディレクトリを作成する   mvn test テスト（JUnit）を実行する   mvn package jarやwarなどの成果物を作成する（valiate、compile、testを実行し、問題がなければ作成）   mvn install ローカルのリポジトリにパッケージングされた成果物を配置する   mvn deploy インターネット上のリポジトリにパッケージを配置する   mvn clean targetディレクトリを削除し、コンパイル前の状態に戻す   mvn javadoc:javadoc JavaDocを作成する    Mavenのディレクトリ構成 Mavenプロジェクトの標準ディレクトリ構成は以下の通り。 基本的にはデフォルトのまま利用する。
-プロジェクトルート |--- LICENSE.txt # プロジェクトのライセンス情報を記述するファイル |--- README.</description>
+      <description>Mavenとは Mavenとは、プログラム開発を行う際のコンパイル・テストなどのコマンドやライブラリの自動配置などを担うためのツール群である。</description>
     </item>
     
   </channel>
