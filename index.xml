@@ -34,7 +34,7 @@ Creation wizard画面より、「Class diagram」を選択する。
 基本的な設定項目は以下の通り。
  name : 属性名 Type : 属性の型、Ctrl + SpaceでJavaの型指定を行うことも可能。（プリミティブ型は未対応） Visibility : 可視性（public, privateなど） Multiplicity min/max : 配列の場合はminに1、maxに*を設定する Class : static属性にしたい場合はチェックを入れる  メソッドの指定 属性同様、クラス全体を選択した状態で右クリック-&amp;gt;[Create element]-&amp;gt;[Operation]で、メソッドの追加を行うことができる。
 作成したメソッドをダブルクリックすると、編集画面が開くため必要な項目を修正する。
- name : メソッド名 Type : メソッドタイプ（通常のメソッド:Operation、コンストラクタ: Constructor を選択） Visibility : 可視性（public, privateなど） Class : staticメソッドにしたい場合はチェックを入れる P＋アイコン : 引数の追加  name : 仮引数名 Type : 仮引数の型 Multilicity : 配列の場合は1.</description>
+ name : メソッド名 Type : メソッドタイプ（通常のメソッド:Operation、コンストラクタ: Constructor を選択） Visibility : 可視性（public, privateなど） Class : staticメソッドにしたい場合はチェックを入れる P＋アイコン : 引数の追加  name : 仮引数名 Type : 仮引数の型 Multiplicity : 配列の場合は1.</description>
     </item>
     
     <item>
