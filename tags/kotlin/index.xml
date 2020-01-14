@@ -21,24 +21,6 @@
     </item>
     
     <item>
-      <title>Kotlin基礎文法</title>
-      <link>https://midsatoh.github.io/kotlin/basic/</link>
-      <pubDate>Tue, 24 Dec 2019 10:04:27 +0900</pubDate>
-      
-      <guid>https://midsatoh.github.io/kotlin/basic/</guid>
-      <description>サンプルコードはKotlin公式リファレンスKotlin公式リファレンス：https://kotlinlang.org/docs/refer</description>
-    </item>
-    
-    <item>
-      <title>forEachの使い方</title>
-      <link>https://midsatoh.github.io/kotlin/foreach/</link>
-      <pubDate>Wed, 25 Dec 2019 13:35:19 +0900</pubDate>
-      
-      <guid>https://midsatoh.github.io/kotlin/foreach/</guid>
-      <description>forEach関数 Collectionに対してループ処理を行う構文としては、forがある。 val list = listOf&amp;lt;String&amp;gt;(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;) for(s:String in list){ print(&amp;#34;$s &amp;#34;) } 似たような形で、Colle</description>
-    </item>
-    
-    <item>
       <title>forEachの使い方</title>
       <link>https://midsatoh.github.io/kotlin/foreach/</link>
       <pubDate>Wed, 25 Dec 2019 13:35:19 +0900</pubDate>
